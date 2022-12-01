@@ -13,6 +13,10 @@
       <sound>sound\sndWallJump</sound>
       <sound>sound\sndShoot</sound>
       <sound>sound\sndDeath</sound>
+      <sounds name="New">
+        <sound>sound\sndPlatformBreak</sound>
+        <sound>sound\sndPlatformCrash</sound>
+      </sounds>
     </sounds>
     <sounds name="music">
       <sound>sound\musOnDeath</sound>
@@ -62,7 +66,13 @@
       <sprite>sprites\sprMiniDown</sprite>
       <sprites name="Snowstorm">
         <sprite>sprites\sprSnowstormUp</sprite>
+        <sprite>sprites\sprSnowstormRight</sprite>
+        <sprite>sprites\sprSnowstormLeft</sprite>
+        <sprite>sprites\sprSnowstormDown</sprite>
         <sprite>sprites\sprSnowstormMiniUp</sprite>
+        <sprite>sprites\sprSnowstormMiniRight</sprite>
+        <sprite>sprites\sprSnowstormMiniLeft</sprite>
+        <sprite>sprites\sprSnowstormMiniDown</sprite>
       </sprites>
       <sprite>sprites\sprCherry</sprite>
     </sprites>
@@ -90,6 +100,12 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bAllTiles</background>
+    <backgrounds name="Red Borders">
+      <background>background\bRedEdgeGlowB</background>
+      <background>background\bRedEdgeGlowL</background>
+      <background>background\bRedEdgeGlowR</background>
+      <background>background\bRedEdgeGlowT</background>
+    </backgrounds>
     <backgrounds name="Snowstorm">
       <background>background\bSnowstormTiles2</background>
       <background>background\bSnowstormTiles4</background>
@@ -140,6 +156,7 @@
       <object>objects\objDifficultyMenu</object>
       <object>objects\objOptionsMenu</object>
       <object>objects\objKeyboardControlsMenu</object>
+      <object>objects\objRedBorderDrawer</object>
     </objects>
     <objects name="player">
       <object>objects\objPlayerStart</object>
@@ -216,6 +233,10 @@
     <room>rooms\rSnow1</room>
     <room>rooms\rSnow2</room>
     <room>rooms\rSnow3</room>
+    <room>rooms\rSnow4</room>
+    <room>rooms\rSnow5</room>
+    <room>rooms\rSnow6</room>
+    <room>rooms\rSnow7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

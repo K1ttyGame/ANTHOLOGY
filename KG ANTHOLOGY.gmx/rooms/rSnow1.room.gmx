@@ -68,6 +68,7 @@
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_AB87B031" locked="0" code="roomTo = rSnow2&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="320" y="480" name="inst_A2C5AD10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="736" y="480" name="inst_7BC75A6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="416" y="576" name="inst_E08A9D82" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSnowstormTiles3" x="160" y="288" w="128" h="128" xo="0" yo="0" id="10002244" name="inst_F491A271" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -32,6 +32,8 @@ acceleration = .1
 accSpeed = 0
 
 bounce = false
+
+
 </string>
           </argument>
         </arguments>
@@ -58,6 +60,7 @@ bounce = false
 
 if (phase == 0 &amp;&amp; instance_place(x, y-1, objPlayer)) {
     phase = 1
+    audio_play_sound(sndPlatformBreak, 10, false)
 }
 
 if (phase == 1) {
@@ -74,6 +77,7 @@ if (phase == 1) {
             sprite_index = sprFallingPlatform
             visible = true
             }
+        audio_play_sound(sndPlatformCrash, 10, false)
         instance_destroy()
     }
     //audio_play_sound(sndShoot, 10, false)

@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>switch (room) {
     case rSnow1:
+    case rSnow2:
+    case rSnow3:
+    case rSnow4:
+    case rSnow5:
+    case rSnow6:
+    case rSnow7:
         sprite_index = sprSnowstormMiniUp
         break;
 }
