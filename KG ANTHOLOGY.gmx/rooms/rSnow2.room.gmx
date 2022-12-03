@@ -86,7 +86,7 @@
     <instance objName="objBlock" x="352" y="176" name="inst_7AE5E74A" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="432" y="80" name="inst_58212CB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="464" y="80" name="inst_2D49B2FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSave" x="496" y="80" name="inst_6F6F0BD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSave" x="384" y="176" name="inst_6F6F0BD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="640" y="144" name="inst_94CC8070" locked="0" code="" scaleX="1" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="640" y="416" name="inst_AB5A7033" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="480" y="416" name="inst_902E4C7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -105,7 +105,6 @@
     <instance objName="objBlock" x="256" y="448" name="inst_ED7D73B0" locked="0" code="" scaleX="3" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="objMiniUp" x="320" y="416" name="inst_49230AA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMiniUp" x="256" y="416" name="inst_8FC2C7F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMiniDown" x="224" y="368" name="inst_466F1D5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="144" y="560" name="inst_D806A0CC" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="144" y="528" name="inst_E1FB4CF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="80" y="544" name="inst_88CC8672" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
@@ -127,7 +126,6 @@
     <instance objName="objSpikeUp" x="48" y="560" name="inst_FE133B4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="80" y="432" name="inst_88D54EB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="64" y="304" name="inst_A72355AE" locked="0" code="" scaleX="1.5" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objMiniDown" x="80" y="368" name="inst_26ACE127" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="224" y="432" name="inst_27FB4680" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="224" y="464" name="inst_5FA6C63E" locked="0" code="" scaleX="2" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="80" y="464" name="inst_8AD37518" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -164,7 +162,7 @@
     <instance objName="objSpikeDown" x="224" y="224" name="inst_8C973DCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="224" y="192" name="inst_97258E7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_5668220D" locked="0" code="roomTo = rSnow1&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="400" y="80" name="inst_D6EEA4D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="416" y="176" name="inst_D6EEA4D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="640" y="80" name="inst_D09EF3A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_CD298FF8" locked="0" code="roomTo = rSnow3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="560" y="576" name="inst_EB17DF49" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>

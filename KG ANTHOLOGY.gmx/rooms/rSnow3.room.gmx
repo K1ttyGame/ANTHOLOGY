@@ -100,7 +100,6 @@
     <instance objName="objFallingPlatform" x="592" y="304" name="inst_17CE6922" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMiniUp" x="688" y="560" name="inst_DD46B751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="560" y="560" name="inst_795F6B5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="528" y="256" name="inst_2E7086C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="528" y="224" name="inst_8109F388" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="640" y="272" name="inst_9AA411AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="672" y="224" name="inst_87065A0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -191,7 +190,6 @@
     <instance objName="objSpikeRight" x="656" y="448" name="inst_C24F1D37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="656" y="576" name="inst_AD02BD12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="624" y="560" name="inst_22794C83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMiniDown" x="624" y="480" name="inst_BCE92F56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="400" y="464" name="inst_1583A280" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMiniRight" x="128" y="128" name="inst_59803663" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMiniLeft" x="128" y="128" name="inst_B47EB588" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -205,6 +203,7 @@
     <instance objName="objMiniDown" x="128" y="464" name="inst_3C73EB1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_D26C968C" locked="0" code="roomTo = rSnow4&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="288" y="576" name="inst_679612A6" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objMiniDown" x="528" y="256" name="inst_0C3B26B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSnowstormTiles3" x="128" y="512" w="128" h="128" xo="0" yo="0" id="10003049" name="inst_8C991E59" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

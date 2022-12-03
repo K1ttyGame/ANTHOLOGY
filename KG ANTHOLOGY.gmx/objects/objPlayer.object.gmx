@@ -162,6 +162,12 @@ if (h != 0)  //player is moving
                 else if (L)
                     hspeed = maxSpeed * h * .5
             }
+            if (objWindControl.windMode == 0) {
+                if (R)
+                    hspeed = maxSpeed * h
+                else if (L)
+                    hspeed = maxSpeed * h
+            }
         sprite_index = sprPlayerRunning;
             image_speed = 0.5;
         }

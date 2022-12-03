@@ -111,6 +111,7 @@
       <background>background\bSnowstormTiles4</background>
       <background>background\bSnowstormTiles3</background>
       <background>background\bSnowstormTiles1</background>
+      <background>background\bSnowstormWarningSign</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -152,6 +153,7 @@
     </objects>
     <objects name="world">
       <object>objects\objWorld</object>
+      <object>objects\objSmoothCamera</object>
       <object>objects\objTitleMenu</object>
       <object>objects\objDifficultyMenu</object>
       <object>objects\objOptionsMenu</object>
@@ -216,6 +218,7 @@
     <objects name="warps">
       <object>objects\objRoomChanger</object>
       <object>objects\objOutsideRoomChanger</object>
+      <object>objects\objSpecialSnowstormORC</object>
       <object>objects\objWarp</object>
     </objects>
   </objects>
@@ -237,6 +240,7 @@
     <room>rooms\rSnow5</room>
     <room>rooms\rSnow6</room>
     <room>rooms\rSnow7</room>
+    <room>rooms\rSnow8</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

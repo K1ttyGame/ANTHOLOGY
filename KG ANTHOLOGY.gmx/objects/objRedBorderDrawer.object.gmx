@@ -119,26 +119,26 @@ draw_text(16, 63, string(dontDrawBottom)+"Down")*/
 
 if (!dontDrawLeft) {
     draw_set_alpha((100-drawLeftSlider)/200)
-    for (i = view_yview; i &lt; view_yview+view_hview; i += 32)
-        draw_background(bRedEdgeGlowL, view_xview, i);
+    for (i = 0; i &lt; 608; i += 32)
+        draw_background(bRedEdgeGlowL, 0, i);
 }
 
 if (!dontDrawRight) {
     draw_set_alpha((100-drawRightSlider)/200)
-    for (i = view_yview; i &lt; view_yview+view_hview; i += 32)
-        draw_background(bRedEdgeGlowR, view_xview+view_wview-32, i);
+    for (i = 0; i &lt; 608; i += 32)
+        draw_background(bRedEdgeGlowR, 800-32, i);
 }
 
 if (!dontDrawTop) {
     draw_set_alpha((100-drawTopSlider)/200)
-    for (i = view_xview; i &lt; view_xview+view_wview; i += 32)
-        draw_background(bRedEdgeGlowT, i, view_yview);
+    for (i = 0; i &lt; 800; i += 32)
+        draw_background(bRedEdgeGlowT, i, 0);
 }
 
 if (!dontDrawBottom) {
     draw_set_alpha((100-drawBottomSlider)/200)
-    for (i = view_xview; i &lt; view_xview+view_wview; i += 32)
-        draw_background(bRedEdgeGlowB, i, view_yview+view_hview-32);
+    for (i = 0; i &lt; 800; i += 32)
+        draw_background(bRedEdgeGlowB, i, 608-32);
 }
 
 

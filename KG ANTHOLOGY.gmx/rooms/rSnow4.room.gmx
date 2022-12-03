@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -175,6 +175,12 @@
     <instance objName="objSaveBlocker" x="640" y="512" name="inst_2E36CDE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_B7310AF9" locked="0" code="roomTo = rSnow3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="128" y="576" name="inst_B9979EDC" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="0" y="320" name="inst_1E40215B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="352" name="inst_520C6CD7" locked="0" code="roomTo = rSnow5&#xA;warpX = room_width*2 - 15&#xA;warpY = y+22&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="320" y="400" name="inst_0262C112" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="320" y="368" name="inst_664924AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="352" y="400" name="inst_DD7D5ED0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="352" y="368" name="inst_A88F1397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSnowstormTiles3" x="672" y="416" w="128" h="128" xo="0" yo="0" id="10003471" name="inst_CF38780D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -406,6 +412,7 @@
     <tile bgName="bSnowstormTiles1" x="672" y="352" w="32" h="16" xo="0" yo="0" id="10003349" name="inst_3CEB9BFB" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles1" x="496" y="560" w="32" h="16" xo="0" yo="0" id="10003427" name="inst_0770E35F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles1" x="528" y="560" w="16" h="16" xo="16" yo="16" id="10003428" name="inst_906CEC37" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSnowstormTiles1" x="0" y="320" w="32" h="32" xo="0" yo="0" id="10003531" name="inst_10DE6673" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles2" x="0" y="384" w="128" h="128" xo="0" yo="0" id="10003350" name="inst_BD017F76" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles2" x="0" y="512" w="128" h="112" xo="0" yo="0" id="10003352" name="inst_997C3A17" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles2" x="128" y="416" w="64" h="128" xo="0" yo="0" id="10003353" name="inst_501C13A0" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -456,6 +463,7 @@
     <tile bgName="bSnowstormTiles2" x="0" y="176" w="80" h="96" xo="0" yo="0" id="10003406" name="inst_87737E6F" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles2" x="0" y="272" w="80" h="48" xo="48" yo="32" id="10003407" name="inst_710CAC06" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles2" x="496" y="560" w="48" h="16" xo="48" yo="48" id="10003429" name="inst_9851A42C" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSnowstormTiles2" x="0" y="320" w="32" h="32" xo="64" yo="64" id="10003532" name="inst_FE4572BA" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles4" x="0" y="384" w="96" h="32" xo="32" yo="32" id="10003408" name="inst_C44DA318" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles4" x="96" y="320" w="32" h="32" xo="0" yo="32" id="10003409" name="inst_AECA5790" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles4" x="128" y="160" w="32" h="32" xo="0" yo="32" id="10003410" name="inst_7E853CB2" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
