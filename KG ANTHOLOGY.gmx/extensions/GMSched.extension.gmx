@@ -25,7 +25,7 @@
   <iosThirdPartyFrameworks/>
   <ConfigOptions>
     <Config name="Default">
-      <CopyToMask>1048640</CopyToMask>
+      <CopyToMask>9223372036854775807</CopyToMask>
     </Config>
   </ConfigOptions>
   <androidPermissions/>

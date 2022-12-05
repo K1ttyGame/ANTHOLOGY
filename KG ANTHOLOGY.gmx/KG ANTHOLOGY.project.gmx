@@ -16,6 +16,7 @@
       <sounds name="New">
         <sound>sound\sndPlatformBreak</sound>
         <sound>sound\sndPlatformCrash</sound>
+        <sound>sound\sndNumberBeep</sound>
       </sounds>
     </sounds>
     <sounds name="music">
@@ -97,9 +98,21 @@
     <sprites name="warps">
       <sprite>sprites\sprWarp</sprite>
     </sprites>
+    <sprites name="misc">
+      <sprite>sprites\sprSpotlight</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bAllTiles</background>
+    <backgrounds name="Cave">
+      <background>background\bCaveTileset1</background>
+      <background>background\tempcavestag</background>
+      <background>background\bCaveTileset3</background>
+      <background>background\bCaveTileset2</background>
+      <background>background\bFactoryTileset1</background>
+      <background>background\bFactoryTileset2</background>
+      <background>background\bCaveJunk</background>
+    </backgrounds>
     <backgrounds name="Red Borders">
       <background>background\bRedEdgeGlowB</background>
       <background>background\bRedEdgeGlowL</background>
@@ -138,6 +151,7 @@
       <script>scripts\scrGetMusic.gml</script>
       <script>scripts\scrPlayMusic.gml</script>
       <script>scripts\scrStopMusic.gml</script>
+      <script>scripts\scrBalanceSound.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -148,8 +162,11 @@
   </fonts>
   <objects name="objects">
     <objects name="Gimmicks">
-      <object>objects\objWindControl</object>
-      <object>objects\objFallingPlatform</object>
+      <objects name="Frozen Over">
+        <object>objects\objWindControl</object>
+        <object>objects\objFallingPlatform</object>
+        <object>objects\objSpotlightControl</object>
+      </objects>
     </objects>
     <objects name="world">
       <object>objects\objWorld</object>
@@ -241,6 +258,7 @@
     <room>rooms\rSnow6</room>
     <room>rooms\rSnow7</room>
     <room>rooms\rSnow8</room>
+    <room>rooms\rCave1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
