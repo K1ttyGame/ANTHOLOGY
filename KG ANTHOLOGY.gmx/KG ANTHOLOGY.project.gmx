@@ -16,7 +16,10 @@
       <sounds name="New">
         <sound>sound\sndPlatformBreak</sound>
         <sound>sound\sndPlatformCrash</sound>
+        <sound>sound\sndNumberBeep2</sound>
+        <sound>sound\sndSwitch</sound>
         <sound>sound\sndNumberBeep</sound>
+        <sound>sound\sndSpringBounce</sound>
       </sounds>
     </sounds>
     <sounds name="music">
@@ -54,7 +57,6 @@
     <sprites name="platforms">
       <sprite>sprites\sprPlatform</sprite>
       <sprite>sprites\sprMovingPlatform</sprite>
-      <sprite>sprites\sprFallingPlatform</sprite>
     </sprites>
     <sprites name="killers">
       <sprite>sprites\sprSpikeUp</sprite>
@@ -65,6 +67,12 @@
       <sprite>sprites\sprMiniRight</sprite>
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
+      <sprites name="Cave">
+        <sprite>sprites\sprCaveSpikeUp</sprite>
+        <sprite>sprites\sprCaveSpikeRight</sprite>
+        <sprite>sprites\sprCaveSpikeLeft</sprite>
+        <sprite>sprites\sprCaveSpikeDown</sprite>
+      </sprites>
       <sprites name="Snowstorm">
         <sprite>sprites\sprSnowstormUp</sprite>
         <sprite>sprites\sprSnowstormRight</sprite>
@@ -100,6 +108,20 @@
     </sprites>
     <sprites name="misc">
       <sprite>sprites\sprSpotlight</sprite>
+    </sprites>
+    <sprites name="New">
+      <sprite>sprites\sprCaveElecDisplayTV</sprite>
+      <sprite>sprites\sprCaveElecDisplayJump</sprite>
+      <sprite>sprites\sprCaveElecDisplaySpring</sprite>
+      <sprite>sprites\sprElectricityIcon</sprite>
+      <sprite>sprites\sprButtonBase</sprite>
+      <sprite>sprites\sprButtonBaseRight</sprite>
+      <sprite>sprites\sprButtonBaseLeft</sprite>
+      <sprite>sprites\sprButtonBaseTop</sprite>
+      <sprite>sprites\sprCaveElecDisplay</sprite>
+      <sprite>sprites\sprCaveSpringGlow</sprite>
+      <sprite>sprites\sprCaveSpring</sprite>
+      <sprite>sprites\sprFallingPlatform</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -159,6 +181,7 @@
     <font>fonts\fDefault24</font>
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
+    <font>fonts\fIkaruga</font>
   </fonts>
   <objects name="objects">
     <objects name="Gimmicks">
@@ -166,6 +189,15 @@
         <object>objects\objWindControl</object>
         <object>objects\objFallingPlatform</object>
         <object>objects\objSpotlightControl</object>
+        <object>objects\objElectricityIcon</object>
+        <object>objects\objGroundButtonBase</object>
+        <object>objects\objSideButtonRight</object>
+        <object>objects\objSideButtonLeft</object>
+        <object>objects\objSideButtonTop</object>
+        <object>objects\objElectricitySpring</object>
+        <object>objects\objElectricityControl</object>
+        <object>objects\objElectricityDisplay</object>
+        <object>objects\objDoubleJumpControl</object>
       </objects>
     </objects>
     <objects name="world">
@@ -259,6 +291,9 @@
     <room>rooms\rSnow7</room>
     <room>rooms\rSnow8</room>
     <room>rooms\rCave1</room>
+    <room>rooms\rCave2</room>
+    <room>rooms\rCave3</room>
+    <room>rooms\rCave4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

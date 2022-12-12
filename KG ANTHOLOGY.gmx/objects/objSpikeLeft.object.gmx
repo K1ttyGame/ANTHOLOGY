@@ -35,6 +35,9 @@
     case rSnow7:
         sprite_index = sprSnowstormLeft
         break;
+    case rCave2:
+        sprite_index = sprCaveSpikeLeft
+        break;
 }
 </string>
           </argument>

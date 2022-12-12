@@ -67,6 +67,8 @@
     <instance objName="objBlock" x="128" y="416" name="inst_54948D50" locked="0" code="" scaleX="5" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="288" y="448" name="inst_44ACA6B0" locked="0" code="" scaleX="6" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="608" y="384" name="inst_F027BCD7" locked="0" code="" scaleX="6" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="256" name="inst_2D28F2E0" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objElectricityIcon" x="608" y="384" name="inst_092B3E1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bCaveTileset2" x="32" y="224" w="128" h="128" xo="0" yo="0" id="10005262" name="inst_6D626474" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -215,6 +217,7 @@
     <tile bgName="bCaveTileset1" x="608" y="192" w="64" h="32" xo="64" yo="160" id="10005452" name="inst_87A4954B" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="672" y="256" w="32" h="32" xo="32" yo="160" id="10005453" name="inst_34777A7C" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="704" y="288" w="96" h="32" xo="0" yo="160" id="10005454" name="inst_EEBA5EBA" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveTileset1" x="64" y="224" w="32" h="32" xo="0" yo="160" id="10005455" name="inst_48FA0950" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
