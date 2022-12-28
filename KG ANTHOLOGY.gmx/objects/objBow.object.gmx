@@ -47,6 +47,7 @@ else
 {
     instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>

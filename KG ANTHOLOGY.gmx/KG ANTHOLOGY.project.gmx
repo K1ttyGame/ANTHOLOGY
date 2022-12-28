@@ -20,6 +20,8 @@
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndNumberBeep</sound>
         <sound>sound\sndSpringBounce</sound>
+        <sound>sound\sndMMBossHit</sound>
+        <sound>sound\sndWarningSound</sound>
       </sounds>
     </sounds>
     <sounds name="music">
@@ -34,15 +36,29 @@
     <sprites name="player">
       <sprite>sprites\sprPlayerMask</sprite>
       <sprite>sprites\sprPlayerMaskFlip</sprite>
-      <sprite>sprites\sprPlayerIdle</sprite>
-      <sprite>sprites\sprPlayerJump</sprite>
-      <sprite>sprites\sprPlayerFall</sprite>
-      <sprite>sprites\sprPlayerRunning</sprite>
-      <sprite>sprites\sprPlayerSliding</sprite>
-      <sprite>sprites\sprBow</sprite>
       <sprite>sprites\sprBullet</sprite>
       <sprite>sprites\sprBlood</sprite>
       <sprite>sprites\sprGameOver</sprite>
+      <sprites name="Players">
+        <sprites name="Default">
+          <sprite>sprites\sprPlayerIdle</sprite>
+          <sprite>sprites\sprPlayerJump</sprite>
+          <sprite>sprites\sprPlayerFall</sprite>
+          <sprite>sprites\sprPlayerRunning</sprite>
+          <sprite>sprites\sprPlayerSliding</sprite>
+          <sprite>sprites\sprBow</sprite>
+        </sprites>
+        <sprites name="Frozen">
+          <sprite>sprites\sprFPlayerIdleMask</sprite>
+          <sprite>sprites\sprFPlayerRunMask</sprite>
+          <sprite>sprites\sprFPlayerFallMask</sprite>
+          <sprite>sprites\sprFPlayerJumpMask</sprite>
+          <sprite>sprites\sprFPlayerIdle</sprite>
+          <sprite>sprites\sprFPlayerRun</sprite>
+          <sprite>sprites\sprFPlayerFall</sprite>
+          <sprite>sprites\sprFPlayerJump</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="blocks">
       <sprite>sprites\sprBlockMask</sprite>
@@ -119,12 +135,32 @@
       <sprite>sprites\sprButtonBaseLeft</sprite>
       <sprite>sprites\sprButtonBaseTop</sprite>
       <sprite>sprites\sprCaveElecDisplay</sprite>
+      <sprite>sprites\sprCaveElecDisplayWater</sprite>
       <sprite>sprites\sprCaveSpringGlow</sprite>
       <sprite>sprites\sprCaveSpring</sprite>
       <sprite>sprites\sprFallingPlatform</sprite>
+      <sprite>sprites\sprElecWaterBottom</sprite>
+      <sprite>sprites\sprElecWaterTop</sprite>
+      <sprite>sprites\sprElecWaterElecTop</sprite>
+      <sprite>sprites\sprElecWaterElecBottom</sprite>
+      <sprite>sprites\sprElecWaterElecRight</sprite>
+      <sprite>sprites\sprElecWaterElecLeft</sprite>
+      <sprite>sprites\sprElecWater</sprite>
+      <sprites name="FrozenBoss">
+        <sprite>sprites\sprMMArmLeft</sprite>
+        <sprite>sprites\sprMMBody</sprite>
+        <sprite>sprites\sprMMBlock</sprite>
+        <sprite>sprites\sprMMSpearSpike</sprite>
+        <sprite>sprites\sprMMLaser</sprite>
+        <sprite>sprites\sprMMWarning</sprite>
+        <sprite>sprites\sprMMProjectile</sprite>
+        <sprite>sprites\sprMMChild1</sprite>
+        <sprite>sprites\sprMMChild2</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
+    <background>background\bGlow</background>
     <background>background\bAllTiles</background>
     <backgrounds name="Cave">
       <background>background\bCaveTileset1</background>
@@ -147,6 +183,8 @@
       <background>background\bSnowstormTiles3</background>
       <background>background\bSnowstormTiles1</background>
       <background>background\bSnowstormWarningSign</background>
+      <background>background\bSnowstormTransitionFG</background>
+      <background>background\bSnowstormTransitionBG</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -175,6 +213,9 @@
       <script>scripts\scrStopMusic.gml</script>
       <script>scripts\scrBalanceSound.gml</script>
     </scripts>
+    <scripts name="misc">
+      <script>scripts\scrMakeCircle.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault30</font>
@@ -184,12 +225,14 @@
     <font>fonts\fIkaruga</font>
   </fonts>
   <objects name="objects">
+    <object>objects\objBETTERBossTemplate</object>
     <objects name="Gimmicks">
       <objects name="Frozen Over">
         <object>objects\objWindControl</object>
         <object>objects\objFallingPlatform</object>
         <object>objects\objSpotlightControl</object>
         <object>objects\objElectricityIcon</object>
+        <object>objects\objElectricityWaterIcon</object>
         <object>objects\objGroundButtonBase</object>
         <object>objects\objSideButtonRight</object>
         <object>objects\objSideButtonLeft</object>
@@ -198,6 +241,20 @@
         <object>objects\objElectricityControl</object>
         <object>objects\objElectricityDisplay</object>
         <object>objects\objDoubleJumpControl</object>
+        <object>objects\objElecWater</object>
+        <objects name="Boss">
+          <object>objects\objFrozenBossMain</object>
+          <object>objects\objBossFogControl</object>
+          <object>objects\objMMWarning</object>
+          <object>objects\objMMMini1</object>
+          <object>objects\objMMMini2</object>
+          <object>objects\objMMSpearSpike</object>
+          <object>objects\objMMProjectile</object>
+          <object>objects\objMMShadow</object>
+          <object>objects\objMMMiniDeath</object>
+          <object>objects\objMMLaser</object>
+        </objects>
+        <object>objects\objCaveTransitionControl</object>
       </objects>
     </objects>
     <objects name="world">
@@ -290,10 +347,15 @@
     <room>rooms\rSnow6</room>
     <room>rooms\rSnow7</room>
     <room>rooms\rSnow8</room>
+    <room>rooms\rSnowCaveTransition</room>
     <room>rooms\rCave1</room>
     <room>rooms\rCave2</room>
     <room>rooms\rCave3</room>
     <room>rooms\rCave4</room>
+    <room>rooms\rCave5</room>
+    <room>rooms\rCave6</room>
+    <room>rooms\rCave7</room>
+    <room>rooms\rFrozenBoss</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -294,6 +294,48 @@ if (onVineL || onVineR)
         }
     }
 }
+
+
+//player sprite changing
+switch (room) {
+    case rSnow1:
+    case rSnow2:
+    case rSnow3:
+    case rSnow4:
+    case rSnow5:
+    case rSnow6:
+    case rSnow7:
+    case rSnow8:
+    {
+        if (sprite_index = sprPlayerIdle)
+            sprite_index = sprFPlayerIdleMask
+        if (sprite_index = sprPlayerRunning)
+            sprite_index = sprFPlayerRunMask
+        if (sprite_index = sprPlayerFall)
+            sprite_index = sprFPlayerFallMask
+        if (sprite_index = sprPlayerJump)
+            sprite_index = sprFPlayerJumpMask
+    }
+        break;
+    case rCave1:
+    case rCave2:
+    case rCave3:
+    case rCave4:
+    case rCave5:
+    case rCave6:
+    case rCave7:
+    {
+        if (sprite_index = sprPlayerIdle)
+            sprite_index = sprFPlayerIdle
+        if (sprite_index = sprPlayerRunning)
+            sprite_index = sprFPlayerRun
+        if (sprite_index = sprPlayerFall)
+            sprite_index = sprFPlayerFall
+        if (sprite_index = sprPlayerJump)
+            sprite_index = sprFPlayerJump
+    }
+        break;
+}
 </string>
           </argument>
         </arguments>

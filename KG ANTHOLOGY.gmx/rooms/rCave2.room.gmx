@@ -141,7 +141,7 @@
     <instance objName="objElectricityIcon" x="416" y="576" name="inst_5A7CE92F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricityIcon" x="704" y="512" name="inst_0172F2F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricityIcon" x="736" y="512" name="inst_270DFAEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="768" y="384" name="inst_5FFE7441" locked="0" code="" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="384" name="inst_5FFE7441" locked="0" code="roomTo = rCave3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="320" name="inst_6A5F48F6" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="96" y="448" name="inst_D089A0C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="672" y="192" name="inst_FB8706C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -152,7 +152,8 @@
     <instance objName="objSpikeRight" x="640" y="352" name="inst_7246A7DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="640" y="384" name="inst_7A5EF5D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="128" name="inst_F9865A4D" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objElectricityDisplay" x="544" y="480" name="inst_686E208A" locked="0" code="sprDraw = sprCaveElecDisplaySpring&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objElectricityDisplay" x="544" y="480" name="inst_686E208A" locked="0" code="sprDraw = sprCaveElecDisplaySpring" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="96" y="352" name="inst_147FF0B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bFactoryTileset2" x="384" y="512" w="32" h="32" xo="32" yo="0" id="10005703" name="inst_84378364" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

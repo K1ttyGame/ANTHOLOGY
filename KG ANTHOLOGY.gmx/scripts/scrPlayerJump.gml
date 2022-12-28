@@ -7,7 +7,7 @@ if (place_meeting(x,y+(global.grav),objBlock) || onPlatform || place_meeting(x,y
 else if (djump == 1 || place_meeting(x,y+(global.grav),objWater2) || global.infJump)
 {
 
-    if (instance_exists(objElectricityControl) && objElectricityControl.electricity == false) {
+    if (instance_exists(objElectricityControl) && instance_exists(objDoubleJumpControl) && objElectricityControl.electricity == false) {
         scrKillPlayer()
     }
   

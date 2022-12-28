@@ -69,6 +69,7 @@ if (activated) {
             if (instance_place(x+1, y, objBlock)) x -= 3
             if (instance_place(x-1, y, objBlock)) x += 3
             objPlayer.y = other.y-2
+            objPlayer.djump = 1
             vspeed = -48
             }
         audio_play_sound(sndSpringBounce, 10, false)

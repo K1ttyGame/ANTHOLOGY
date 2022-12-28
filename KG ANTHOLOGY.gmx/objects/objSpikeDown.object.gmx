@@ -36,6 +36,11 @@
         sprite_index = sprSnowstormDown
         break;
     case rCave2:
+    case rCave3:
+    case rCave4:
+    case rCave5:
+    case rCave6:
+    case rCave7:
         sprite_index = sprCaveSpikeDown
         break;
 }

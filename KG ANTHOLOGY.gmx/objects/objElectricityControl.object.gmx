@@ -64,7 +64,7 @@ sprIndex = 0
     }
 }
 
-elecTimer = clamp(elecTimer, 0, 499)
+elecTimer = clamp(elecTimer, 0, 449)
 
 alphaTimer++
 if (alphaTimer == 2) {
