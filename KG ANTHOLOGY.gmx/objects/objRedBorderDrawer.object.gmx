@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>killBorderTimer = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -27,19 +50,32 @@
             <kind>1</kind>
             <string>if (instance_exists(objPlayer)) {
     drawLeftSlider = objPlayer.x
-    drawLeftSlider = clamp(drawLeftSlider, 0, 100)
+    drawLeftSlider = clamp(drawLeftSlider, 0, 150)
     
     drawRightSlider = room_width-objPlayer.x
-    drawRightSlider = clamp(drawRightSlider, 0, 100)
+    drawRightSlider = clamp(drawRightSlider, 0, 150)
     
     drawTopSlider = objPlayer.y
-    drawTopSlider = clamp(drawTopSlider, 0, 100)
+    drawTopSlider = clamp(drawTopSlider, 0, 150)
     
     drawBottomSlider = room_height-objPlayer.y
-    drawBottomSlider = clamp(drawBottomSlider, 0, 100)
+    drawBottomSlider = clamp(drawBottomSlider, 0, 150) //all should be 100
 }
 
 else instance_destroy();
+
+if (keyboard_check_pressed(vk_tab) &amp;&amp; !instance_exists(objRestartBlocker)) {
+    if (global.drawKillBorders == false) {
+        global.drawKillBorders = true
+        }
+    else {
+        global.drawKillBorders = false
+        }
+    killBorderTimer = 75
+}
+
+if (killBorderTimer &gt; 0)
+    killBorderTimer -= 1
 </string>
           </argument>
         </arguments>
@@ -116,31 +152,42 @@ drawBottomSlider = 0;
 draw_text(16, 32, string(dontDrawRight)+"Right")
 draw_text(16, 48, string(dontDrawTop)+"Up")
 draw_text(16, 63, string(dontDrawBottom)+"Down")*/
-
-if (!dontDrawLeft) {
-    draw_set_alpha((100-drawLeftSlider)/200)
-    for (i = 0; i &lt; 608; i += 32)
-        draw_background(bRedEdgeGlowL, 0, i);
+if (instance_exists(objPlayer) &amp;&amp; global.drawKillBorders == true) {
+    if (!dontDrawLeft &amp;&amp; collision_line(objPlayer.x, objPlayer.y, 0, objPlayer.y, objBlock, false, false) == noone) {
+        draw_set_alpha((150-drawLeftSlider)/300)
+        for (i = 0; i &lt; 608; i += 32)
+            draw_background(bRedEdgeGlowL, 0, i);
+    }
+    
+    if (!dontDrawRight &amp;&amp; collision_line(objPlayer.x, objPlayer.y, room_width, objPlayer.y, objBlock, false, false) == noone) {
+        draw_set_alpha((150-drawRightSlider)/400)
+        for (i = 0; i &lt; 608; i += 32)
+            draw_background(bRedEdgeGlowR, 800-32, i);
+    }
+    
+    if (!dontDrawTop &amp;&amp; collision_line(objPlayer.x, objPlayer.y, objPlayer.x, 0, objBlock, false, false) == noone) {
+        draw_set_alpha((150-drawTopSlider)/400)
+        for (i = 0; i &lt; 800; i += 32)
+            draw_background(bRedEdgeGlowT, i, 0);
+    }
+    
+    if (!dontDrawBottom &amp;&amp; collision_line(objPlayer.x, objPlayer.y, objPlayer.x, room_height, objBlock, false, false) == noone) {
+        draw_set_alpha((150-drawBottomSlider)/400) //should be 200
+        for (i = 0; i &lt; 800; i += 32)
+            draw_background(bRedEdgeGlowB, i, 608-32);
+    }
 }
 
-if (!dontDrawRight) {
-    draw_set_alpha((100-drawRightSlider)/200)
-    for (i = 0; i &lt; 608; i += 32)
-        draw_background(bRedEdgeGlowR, 800-32, i);
+if (killBorderTimer &gt; 0) {
+    draw_set_halign(fa_left)
+    draw_set_font(fFrozenTitle)
+    draw_set_alpha(killBorderTimer/50)
+    if (global.drawKillBorders == false)
+        scrDrawTextOutline(16, 16, "Draw Kill Borders: Off", c_black, c_white)
+    else
+        scrDrawTextOutline(16, 16, "Draw Kill Borders: On", c_black, c_white)
+    draw_set_alpha(1)
 }
-
-if (!dontDrawTop) {
-    draw_set_alpha((100-drawTopSlider)/200)
-    for (i = 0; i &lt; 800; i += 32)
-        draw_background(bRedEdgeGlowT, i, 0);
-}
-
-if (!dontDrawBottom) {
-    draw_set_alpha((100-drawBottomSlider)/200)
-    for (i = 0; i &lt; 800; i += 32)
-        draw_background(bRedEdgeGlowB, i, 608-32);
-}
-
 
 draw_set_alpha(1)
 </string>

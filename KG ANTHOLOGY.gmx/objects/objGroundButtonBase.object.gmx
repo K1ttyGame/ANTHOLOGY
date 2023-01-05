@@ -57,6 +57,7 @@ elecTimer = 0 //set in creation code
             objElectricityControl.electricity = true
             objElectricityControl.elecTimer += elecTimer
         }
+        objPlayer.y += 3
         image_index++
         phase++
         audio_play_sound(sndSwitch, 10, false)

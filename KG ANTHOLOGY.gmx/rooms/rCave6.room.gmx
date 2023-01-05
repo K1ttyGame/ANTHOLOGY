@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -99,23 +99,21 @@
     <instance objName="objSpikeLeft" x="320" y="192" name="inst_48DF9922" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="320" y="160" name="inst_A854A641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="288" y="256" name="inst_FB9EA760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objGroundButtonBase" x="320" y="256" name="inst_DA49B7E4" locked="0" code="elecTimer = 200&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGroundButtonBase" x="320" y="256" name="inst_DA49B7E4" locked="0" code="elecTimer = 250&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricitySpring" x="384" y="192" name="inst_B27C2F7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objElectricitySpring" x="416" y="192" name="inst_2F493EED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricitySpring" x="448" y="192" name="inst_CA273D08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricitySpring" x="544" y="192" name="inst_36D8838C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objElectricitySpring" x="576" y="192" name="inst_011893B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricitySpring" x="608" y="192" name="inst_275D29E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElecWater" x="224" y="160" name="inst_C03F3545" locked="0" code="sprite_index = sprElecWaterTop&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="384" y="0" name="inst_987654F2" locked="0" code="" scaleX="9" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="416" y="64" name="inst_3AF72CB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="416" y="48" name="inst_3AF72CB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="384" y="64" name="inst_919B4C54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="448" y="64" name="inst_59FB9A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="512" y="64" name="inst_76AADEC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="480" y="64" name="inst_E38F5D2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="512" y="48" name="inst_76AADEC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="480" y="48" name="inst_E38F5D2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="544" y="64" name="inst_C3BE2AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="576" y="64" name="inst_67D51B92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="608" y="64" name="inst_9128B08B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="576" y="48" name="inst_67D51B92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="608" y="48" name="inst_9128B08B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="640" y="64" name="inst_48693BC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElecWater" x="672" y="96" name="inst_F9629528" locked="0" code="" scaleX="2" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="672" y="0" name="inst_059E2FC4" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
@@ -147,8 +145,6 @@
     <instance objName="objBlock" x="480" y="448" name="inst_DF8D9A8A" locked="0" code="" scaleX="2" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="544" y="448" name="inst_9464FB31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objElectricitySpring" x="512" y="416" name="inst_BC058A96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objElectricitySpring" x="480" y="416" name="inst_B9772BDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="480" y="320" name="inst_EC0EA4E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="512" y="320" name="inst_D062C12A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="480" y="288" name="inst_C3FE804A" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="448" y="288" name="inst_2C55ABCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -200,6 +196,10 @@
     <instance objName="objOutsideRoomChanger" x="352" y="576" name="inst_EF77BC6E" locked="0" code="roomTo = rCave7&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="96" name="inst_9F11F9A9" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="256" y="-32" name="inst_302F0D30" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeRight" x="224" y="304" name="inst_8670509E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="416" y="192" name="inst_6B9A283C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="576" y="192" name="inst_95C68C3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="480" y="416" name="inst_8BC1FB31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bCaveTileset2" x="0" y="160" w="128" h="128" xo="0" yo="0" id="10007162" name="inst_2DA4FDF6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -462,6 +462,10 @@
     <tile bgName="bFactoryTileset1" x="704" y="448" w="32" h="32" xo="32" yo="32" id="10007133" name="inst_22FEB85F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bFactoryTileset1" x="704" y="480" w="32" h="32" xo="32" yo="0" id="10007134" name="inst_51EA9536" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bFactoryTileset1" x="704" y="512" w="32" h="32" xo="32" yo="0" id="10007135" name="inst_245582B7" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="480" w="16" h="16" xo="0" yo="16" id="10008376" name="inst_9971D9EC" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="496" w="16" h="16" xo="0" yo="16" id="10008377" name="inst_3360E82D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="512" w="16" h="16" xo="0" yo="16" id="10008378" name="inst_884ABC6A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="528" w="16" h="16" xo="0" yo="16" id="10008379" name="inst_9067AC58" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="0" y="224" w="64" h="160" xo="0" yo="0" id="10007136" name="inst_C065AEB9" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="0" y="384" w="64" h="128" xo="0" yo="32" id="10007137" name="inst_8F7AE9A5" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="0" y="512" w="64" h="96" xo="0" yo="32" id="10007138" name="inst_9FD8818B" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -485,6 +489,32 @@
     <tile bgName="bCaveTileset1" x="544" y="512" w="128" h="96" xo="0" yo="0" id="10007159" name="inst_95F74242" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bCaveTileset1" x="672" y="512" w="64" h="96" xo="0" yo="0" id="10007160" name="inst_FB90ECBC" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bFactoryTileset1" x="640" y="320" w="32" h="32" xo="32" yo="0" id="10007161" name="inst_7F16CB50" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="192" y="224" w="16" h="16" xo="0" yo="16" id="10008346" name="inst_6CBEF9C9" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="192" y="240" w="16" h="16" xo="0" yo="16" id="10008347" name="inst_A839EE62" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="144" y="544" w="16" h="16" xo="16" yo="16" id="10008348" name="inst_50AE81D3" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="144" y="560" w="16" h="16" xo="16" yo="16" id="10008349" name="inst_ECF7AFED" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="288" w="16" h="16" xo="16" yo="16" id="10008350" name="inst_696568A6" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="304" w="16" h="16" xo="16" yo="16" id="10008351" name="inst_07CD0E3A" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="320" w="16" h="16" xo="16" yo="16" id="10008352" name="inst_06A8E1F6" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="336" w="16" h="16" xo="16" yo="16" id="10008353" name="inst_32D7FB07" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="352" w="16" h="16" xo="16" yo="16" id="10008354" name="inst_093BC449" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="368" w="16" h="16" xo="16" yo="16" id="10008355" name="inst_3EFDDC72" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="384" w="16" h="16" xo="16" yo="16" id="10008356" name="inst_86918DF6" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="432" y="400" w="16" h="16" xo="16" yo="16" id="10008357" name="inst_C8F9AC1A" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="288" w="16" h="16" xo="0" yo="16" id="10008358" name="inst_58E8A8E5" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="304" w="16" h="16" xo="0" yo="16" id="10008359" name="inst_44E096B6" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="320" w="16" h="16" xo="0" yo="16" id="10008360" name="inst_24560DD1" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="336" w="16" h="16" xo="0" yo="16" id="10008361" name="inst_BC70E0ED" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="352" w="16" h="16" xo="0" yo="16" id="10008362" name="inst_EE727A7D" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="368" w="16" h="16" xo="0" yo="16" id="10008363" name="inst_F61E7F38" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="384" w="16" h="16" xo="0" yo="16" id="10008364" name="inst_B22ACA8B" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="416" y="400" w="16" h="16" xo="0" yo="16" id="10008365" name="inst_E83A08BC" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="96" w="16" h="16" xo="0" yo="16" id="10008366" name="inst_C8378193" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="112" w="16" h="16" xo="0" yo="16" id="10008367" name="inst_359ECE32" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="128" w="16" h="16" xo="0" yo="16" id="10008368" name="inst_17ACC73A" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="144" w="16" h="16" xo="0" yo="16" id="10008369" name="inst_6941A093" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="160" w="16" h="16" xo="0" yo="16" id="10008370" name="inst_FFB79BA0" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bCaveWaterSides" x="672" y="176" w="16" h="16" xo="0" yo="16" id="10008371" name="inst_DF99E5F9" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

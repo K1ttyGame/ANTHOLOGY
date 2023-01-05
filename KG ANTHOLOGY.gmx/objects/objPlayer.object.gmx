@@ -49,6 +49,8 @@ if (global.autosave) //save the game if currently set to autosave
     scrSaveGame(true);
     global.autosave = false;
 }
+
+coyote = 5 //frames of coyote time
 </string>
           </argument>
         </arguments>
@@ -133,6 +135,15 @@ if (!frozen)    //don't move if frozen
     else if (L)
         h = -1;
 }
+
+//frozen code
+if (frozen) {
+    visible = false
+}
+else
+    visible = true
+
+
 
 var slipBlockTouching = instance_place(x,y+(1*global.grav),objSlipBlock);   //check if near a slip block
 
@@ -298,6 +309,8 @@ if (onVineL || onVineR)
 
 //player sprite changing
 switch (room) {
+    case rSnow0:
+    case rSnowTransition:
     case rSnow1:
     case rSnow2:
     case rSnow3:
@@ -324,6 +337,7 @@ switch (room) {
     case rCave5:
     case rCave6:
     case rCave7:
+    case rFrozenBoss:
     {
         if (sprite_index = sprPlayerIdle)
             sprite_index = sprFPlayerIdle
@@ -335,6 +349,20 @@ switch (room) {
             sprite_index = sprFPlayerJump
     }
         break;
+}
+
+if (global.noDeath) image_alpha = .7
+else image_alpha = 1
+
+if (global.infJump) image_blend = c_blue
+else image_blend = c_white
+
+//coyote time
+if !(instance_place(x, y+1, objPlatform)) {
+    if (coyote &gt; 0) coyote--
+}
+else {
+    coyote = 5
 }
 </string>
           </argument>

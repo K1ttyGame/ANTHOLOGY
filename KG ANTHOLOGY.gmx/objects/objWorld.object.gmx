@@ -100,7 +100,7 @@ if (global.gameStarted)
     //handle pausing
     if (global.pauseDelay &lt;= 0) //check if pause delay is active
     {
-        if (keyboard_check_pressed(global.pauseButton))
+        if (keyboard_check_pressed(global.pauseButton) &amp;&amp; !instance_exists(objRestartBlocker))
         {
             if (!global.gamePaused)  //game currently not paused, pause the game
             {
@@ -136,7 +136,7 @@ if (global.gameStarted)
         global.pauseDelay -= 1;
     }
     
-    if (!global.gamePaused) //check if the game is currently paused
+    if (!global.gamePaused) and ((instance_exists(objPlayer) &amp;&amp; objPlayer.frozen == false) || !instance_exists(objRestartBlocker)) //check if the game is currently paused
     {
         if (keyboard_check_pressed(global.restartButton))
         {
@@ -246,6 +246,26 @@ if (keyboard_check_pressed(vk_pagedown) &amp;&amp; !global.gamePaused &amp;&amp;
         with objPlayer instance_destroy()
     }
 }
+
+if (keyboard_check_pressed(vk_home) &amp;&amp; !global.gamePaused){ 
+    if (global.noDeath == true)
+        global.noDeath = false
+    else
+        global.noDeath = true
+}
+
+if (keyboard_check_pressed(vk_end) &amp;&amp; !global.gamePaused){ 
+    if (global.infJump == true)
+        global.infJump = false
+    else
+        global.infJump = true
+}
+
+if (keyboard_check_pressed(vk_insert) &amp;&amp; !global.gamePaused){ 
+    if (instance_exists(objPlayer))
+        scrSaveGame(true)
+    audio_play_sound(sndNumberBeep, 10, false)
+}
 </string>
           </argument>
         </arguments>
@@ -305,6 +325,26 @@ scrSetRoomCaption();    //make sure window caption stays updated
 
 if !instance_exists(objRedBorderDrawer)
     instance_create(0, 0, objRedBorderDrawer)
+
+    
+//ambient check
+switch (room) {
+    case rSnow0:
+    case rSnowTransition:
+    case rSnow1:
+    case rSnow2:
+    case rSnow3:
+    case rSnow4:
+    case rSnow5:
+    case rSnow6:
+    case rSnow7:
+    case rSnow8:
+        if !audio_is_playing(musWindAmbient1) audio_play_sound(musWindAmbient1, 10, true)
+        break;
+    default: //have it stop all ambient sounds here
+        audio_stop_sound(musWindAmbient1)
+        break;
+}
 </string>
           </argument>
         </arguments>

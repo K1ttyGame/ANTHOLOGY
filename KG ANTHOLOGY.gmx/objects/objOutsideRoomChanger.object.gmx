@@ -77,7 +77,6 @@ smoothTransition = false;   //sets whether the player wraps around the screen fo
         {
             other.y -= room_height;
         }
-        
         room_goto(roomTo);
     }
 }

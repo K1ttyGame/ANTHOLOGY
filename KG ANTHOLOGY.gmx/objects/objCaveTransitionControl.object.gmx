@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
-  <persistent>0</persistent>
+  <depth>-1000000</depth>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,11 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>bgPhase = false
-background_alpha[0] = 0
-background_alpha[1] = 0
+bgAlpha = 0
 
 displayTimer = 0
-phase = 0
+phase = -3
+
+wobble_speed = .25*pi/room_speed; //speed of the wobble
+wobble_distance = 16; //distance of the wobble
+aa=irandom_range(0,360);
+
+drawX = room_width/2
+drawTextAlpha = false
+timer = 0
 </string>
           </argument>
         </arguments>
@@ -53,25 +60,88 @@ phase = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (bgPhase == false) {
-    background_alpha[0] += .005
-    background_alpha[1] += .005
-    if (background_alpha[0] == .6)
-        bgPhase = true
+            <string>if (phase &gt;= 0) {
+    if (bgPhase == false) {
+        bgAlpha += .005
+        if (bgAlpha == .6)
+            bgPhase = true
+    }
+    
+    if (bgPhase == true) {
+        bgAlpha -= .005
+        if (bgAlpha == 0)
+            bgPhase = false
+    }
+    background_alpha[0] = bgAlpha
+    background_alpha[1] = bgAlpha
 }
 
-if (bgPhase == true) {
-    background_alpha[0] -= .005
-    background_alpha[1] -= .005
-    if (background_alpha[0] == 0)
-        bgPhase = false
+if (phase == -3) {
+    if (instance_exists(objPlayer) &amp;&amp; objPlayer.x &lt;= 256 &amp;&amp; objPlayer.y &gt;= room_height-16) {
+        objPlayer.frozen = true
+        phase++
+    }
+}
+
+if (phase == -2) {
+    timer++
+    if (timer == 100) {
+        timer = 0
+        phase++
+    }
+}
+
+if (phase == -1) {
+    if (timer%30 == 0) {
+        drawTextAlpha = true
+        audio_play_sound(sndNumberBeep, 10,  false)
+    }
+    if (timer%30 == 15) {
+        drawTextAlpha = false
+    }
+    if (timer == 90) {
+        phase++
+        timer = 0
+        room_goto_next()
+        audio_stop_sound(musWindAmbient1)
+        objPlayer.frozen = false
+        with objPlayer instance_destroy();
+    }
+    timer++
 }
 
 if (phase == 0) {
     displayTimer++
-    if (displayTimer == 1000)
+    if (displayTimer == 1000) {
         phase++
+        scrStopMusic(musFrozenTransitionLoop)
+        drawTextAlpha = true
+        audio_play_sound(sndNumberBeep, 10,  false)
+        }
 }
+
+if (phase == 1) {
+    if (timer%30 == 0) {
+        drawTextAlpha = false
+    }
+    if (timer%30 == 15) {
+        drawTextAlpha = true
+        audio_play_sound(sndNumberBeep, 10,  false)
+    }
+    if (timer == 105) {
+        global.autosave = true
+        room_goto_next()
+        instance_destroy()
+        audio_play_sound(sndGeneralCrash, 10, false)
+    }
+    timer++
+}
+
+aa+=wobble_speed;
+drawX = room_width/2 + wobble_distance*sin(aa);
+
+if (room != rSnow8 &amp;&amp; room != rSnowCaveTransition)
+    instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -94,17 +164,92 @@ if (phase == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = .1
-draw_set_alpha(background_alpha[0])
+            <string>if (phase &lt; 0) {
+    draw_set_font(fIkaruga)
+    draw_set_color(c_black)
+    draw_set_halign(fa_left)
+    draw_set_alpha(drawTextAlpha)
+    draw_text(592, 576, "0%")
+    draw_set_color(c_white)
+    draw_set_alpha(1)
+    }
 
-draw_set_font(fIkaruga)
-draw_set_color(c_red)
-draw_set_halign(fa_left)
-draw_text(592, 576, string(floor((displayTimer/1000)*100)) + "%")
-
-draw_set_halign(fa_left)
-draw_set_alpha(1)
-draw_set_color(c_white)
+if (phase == 0) {
+    image_speed = .1
+    draw_set_font(fIkaruga)
+    draw_set_color(c_red)
+    
+    draw_set_alpha(bgAlpha)
+    draw_set_halign(fa_left)
+    draw_text(592, 576, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 576, "down?")
+    
+    draw_set_alpha(bgAlpha/2)
+    draw_set_halign(fa_left)
+    draw_text(592, 552, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 552, "down?")
+    
+    draw_set_alpha(bgAlpha/3)
+    draw_set_halign(fa_left)
+    draw_text(592, 528, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 528, "down?")
+    
+    draw_set_alpha(bgAlpha/4)
+    draw_set_halign(fa_left)
+    draw_text(592, 504, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 504, "down?")
+    
+    draw_set_alpha(bgAlpha/8)
+    draw_set_halign(fa_left)
+    draw_text(592, 480, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 480, "down?")
+    
+    draw_set_alpha(bgAlpha*.1)
+    draw_set_halign(fa_left)
+    draw_text(592, 456, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 456, "down?")
+    
+    draw_set_alpha(bgAlpha*.05)
+    draw_set_halign(fa_left)
+    draw_text(592, 432, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 432, "down?")
+    
+    draw_set_alpha(bgAlpha*.01)
+    draw_set_halign(fa_left)
+    draw_text(592, 408, string(floor((displayTimer/1000)*100)) + "%")
+    draw_set_halign(fa_right)
+    draw_text(208, 408, "down?")
+    
+    draw_sprite_ext(sprFPlayerFall, image_index, drawX, room_height/2, 3, 3, 0, make_color_hsv(0, 255, 150), bgAlpha/2)
+    
+    draw_set_halign(fa_left)
+    draw_set_alpha(1)
+    draw_set_color(c_white)
+    }
+    
+if (phase == 1) {
+    draw_set_alpha(1)
+    draw_set_color(c_black)
+    draw_rectangle(0, 0, room_width, room_height, false)
+    
+    draw_set_alpha(drawTextAlpha)
+    draw_set_color(c_red)
+    draw_set_halign(fa_left)
+    draw_text(592, 576, "100%")
+    
+    draw_set_halign(fa_center)
+    draw_text(room_width/2, room_height/2, "Releasing#ancient#gods...")
+    
+    draw_set_alpha(1)
+    draw_set_color(c_white)
+}
 </string>
           </argument>
         </arguments>

@@ -32,6 +32,9 @@ timer = 0
 
 for (i = y; i &lt; y+sprite_height; i += 32)
     instance_create(x-16, i, objMMWarning)
+    
+
+if (y == 0) audio_play_sound(sndWarningSound, 10, false)
 </string>
           </argument>
         </arguments>

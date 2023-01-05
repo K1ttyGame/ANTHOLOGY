@@ -35,7 +35,7 @@
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bMMBossSky" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,7 +56,6 @@
     <instance objName="objPlayerStart" x="320" y="416" name="inst_F1EEB09A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBossFogControl" x="96" y="0" name="inst_D523FB86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFrozenBossMain" x="320" y="32" name="inst_97BC0E63" locked="0" code="x = room_width/2-sprite_width/2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMMMini1" x="64" y="224" name="inst_5622588C" locked="0" code="" scaleX="1.66666662693024" scaleY="1.66666662693024" colour="4294967295" rotation="0"/>
     <instance objName="objGravityDown" x="256" y="448" name="inst_91D636E6" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGravityDown" x="288" y="448" name="inst_4CEB9DF8" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGravityDown" x="320" y="448" name="inst_05547BB6" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -76,7 +75,7 @@
     <instance objName="objGravityDown" x="544" y="512" name="inst_7B5E7566" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
     <instance objName="objGravityDown" x="544" y="544" name="inst_AD764F97" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
     <instance objName="objGravityDown" x="544" y="576" name="inst_8192EDB7" locked="0" code="sprite_index = sprMMBlock&#xA;image_speed = .1&#xA;depth = -1500" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
-    <instance objName="objMMMini2" x="576" y="224" name="inst_F862B760" locked="0" code="" scaleX="1.66666662693024" scaleY="1.66666662693024" colour="4294967295" rotation="0"/>
+    <instance objName="objMMEye" x="392" y="192" name="inst_0716C96B" locked="0" code="" scaleX="2" scaleY="2.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="256" y="448" w="32" h="32" xo="64" yo="64" id="10007301" name="inst_8086ED91" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

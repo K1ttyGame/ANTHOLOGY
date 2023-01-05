@@ -22,10 +22,27 @@
         <sound>sound\sndSpringBounce</sound>
         <sound>sound\sndMMBossHit</sound>
         <sound>sound\sndWarningSound</sound>
+        <sound>sound\sndGeneralCrash</sound>
+        <sound>sound\sndLightningBolt</sound>
+        <sound>sound\sndEyeOpen</sound>
       </sounds>
     </sounds>
     <sounds name="music">
       <sound>sound\musOnDeath</sound>
+      <sounds name="New Music">
+        <sound>sound\musFrozenTitle</sound>
+        <sound>sound\musWindAmbient1</sound>
+        <sound>sound\musFrozenIceWorld</sound>
+        <sound>sound\musFrozenTransitionLoop</sound>
+        <sound>sound\musFrozenCavern</sound>
+        <sound>sound\musFrozenNoise</sound>
+        <sound>sound\musFrozenMMBoss</sound>
+        <sound>sound\musFrozenMMBossIntro</sound>
+        <sound>sound\musFrozenIntro</sound>
+        <sound>sound\musFrozenEndingCutscene</sound>
+        <sound>sound\musFrozenClear</sound>
+        <sound>sound\musFrozenPeople</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -113,6 +130,8 @@
     <sprites name="saves">
       <sprite>sprites\sprSaveMask</sprite>
       <sprite>sprites\sprSaveMedium</sprite>
+      <sprite>sprites\sprSaveFrozen1</sprite>
+      <sprite>sprites\sprSaveFrozen2</sprite>
       <sprite>sprites\sprSave</sprite>
       <sprite>sprites\sprSaveVHard</sprite>
       <sprite>sprites\sprSaveMediumFlip</sprite>
@@ -145,17 +164,37 @@
       <sprite>sprites\sprElecWaterElecBottom</sprite>
       <sprite>sprites\sprElecWaterElecRight</sprite>
       <sprite>sprites\sprElecWaterElecLeft</sprite>
+      <sprite>sprites\sprElecTarget</sprite>
+      <sprite>sprites\sprElecBolt</sprite>
+      <sprites name="Cutscene Images">
+        <sprite>sprites\sprIntroCutscene1</sprite>
+        <sprite>sprites\sprIntroCutscene2</sprite>
+        <sprite>sprites\sprIntroCutscene3</sprite>
+        <sprite>sprites\sprIntroCutscene4</sprite>
+        <sprite>sprites\sprIntroCutscene5</sprite>
+        <sprite>sprites\sprEndingAngel</sprite>
+        <sprite>sprites\sprEndingGradient</sprite>
+        <sprite>sprites\sprEndingCutscene</sprite>
+      </sprites>
       <sprite>sprites\sprElecWater</sprite>
       <sprites name="FrozenBoss">
         <sprite>sprites\sprMMArmLeft</sprite>
+        <sprite>sprites\sprMMEyeAppear</sprite>
+        <sprite>sprites\sprMMEye</sprite>
         <sprite>sprites\sprMMBody</sprite>
         <sprite>sprites\sprMMBlock</sprite>
         <sprite>sprites\sprMMSpearSpike</sprite>
         <sprite>sprites\sprMMLaser</sprite>
+        <sprite>sprites\sprMMVProjectile</sprite>
         <sprite>sprites\sprMMWarning</sprite>
         <sprite>sprites\sprMMProjectile</sprite>
         <sprite>sprites\sprMMChild1</sprite>
         <sprite>sprites\sprMMChild2</sprite>
+        <sprite>sprites\sprMMChild3</sprite>
+        <sprite>sprites\sprMMChild4</sprite>
+        <sprite>sprites\sprMMVortex</sprite>
+        <sprite>sprites\sprMMCutsceneChild</sprite>
+        <sprite>sprites\sprMMChild5</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -169,6 +208,9 @@
       <background>background\bCaveTileset2</background>
       <background>background\bFactoryTileset1</background>
       <background>background\bFactoryTileset2</background>
+      <background>background\bCaveWaterSides</background>
+      <background>background\bMMBossSky</background>
+      <background>background\bMM4</background>
       <background>background\bCaveJunk</background>
     </backgrounds>
     <backgrounds name="Red Borders">
@@ -185,6 +227,7 @@
       <background>background\bSnowstormWarningSign</background>
       <background>background\bSnowstormTransitionFG</background>
       <background>background\bSnowstormTransitionBG</background>
+      <background>background\bSnowstormStructure</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -214,7 +257,9 @@
       <script>scripts\scrBalanceSound.gml</script>
     </scripts>
     <scripts name="misc">
+      <script>scripts\scrMakeShapes.gml</script>
       <script>scripts\scrMakeCircle.gml</script>
+      <script>scripts\scrDrawTextOutline.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -222,6 +267,7 @@
     <font>fonts\fDefault24</font>
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
+    <font>fonts\fFrozenTitle</font>
     <font>fonts\fIkaruga</font>
   </fonts>
   <objects name="objects">
@@ -242,19 +288,27 @@
         <object>objects\objElectricityDisplay</object>
         <object>objects\objDoubleJumpControl</object>
         <object>objects\objElecWater</object>
+        <object>objects\objIntroCutscene</object>
+        <object>objects\objCaveTransitionControl</object>
+        <object>objects\objBossTransitionControl1</object>
+        <object>objects\objEndingCutscene</object>
         <objects name="Boss">
           <object>objects\objFrozenBossMain</object>
           <object>objects\objBossFogControl</object>
           <object>objects\objMMWarning</object>
           <object>objects\objMMMini1</object>
           <object>objects\objMMMini2</object>
+          <object>objects\objMMMini3</object>
+          <object>objects\objMMMini4</object>
+          <object>objects\objMMMini5</object>
+          <object>objects\objMMEye</object>
           <object>objects\objMMSpearSpike</object>
           <object>objects\objMMProjectile</object>
+          <object>objects\objMMProjectileSpiral</object>
           <object>objects\objMMShadow</object>
           <object>objects\objMMMiniDeath</object>
           <object>objects\objMMLaser</object>
         </objects>
-        <object>objects\objCaveTransitionControl</object>
       </objects>
     </objects>
     <objects name="world">
@@ -277,6 +331,7 @@
     </objects>
     <objects name="blocks">
       <object>objects\objBlock</object>
+      <object>objects\objRestartBlocker</object>
       <object>objects\objMiniBlock</object>
       <object>objects\objSlipBlock</object>
       <object>objects\objSlideBlock</object>
@@ -312,6 +367,7 @@
       <object>objects\objGravityUp</object>
       <object>objects\objGravityDown</object>
       <object>objects\objGameClear</object>
+      <object>objects\objBossShootSpike</object>
     </objects>
     <objects name="saves">
       <object>objects\objSaveMedium</object>
@@ -335,10 +391,13 @@
       <room>rooms\rMenu</room>
       <room>rooms\rOptions</room>
     </rooms>
-    <rooms name="sample">
+    <rooms name="Frozen Over">
       <room>rooms\rSampleRoom</room>
     </rooms>
     <room>rooms\rTemplate</room>
+    <room>rooms\rCutsceneIntro</room>
+    <room>rooms\rSnow0</room>
+    <room>rooms\rSnowTransition</room>
     <room>rooms\rSnow1</room>
     <room>rooms\rSnow2</room>
     <room>rooms\rSnow3</room>
@@ -355,7 +414,10 @@
     <room>rooms\rCave5</room>
     <room>rooms\rCave6</room>
     <room>rooms\rCave7</room>
+    <room>rooms\rCaveBossTransition</room>
     <room>rooms\rFrozenBoss</room>
+    <room>rooms\rCutsceneEnd</room>
+    <room>rooms\rClear</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

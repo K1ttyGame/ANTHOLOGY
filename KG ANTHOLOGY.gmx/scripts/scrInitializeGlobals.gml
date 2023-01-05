@@ -6,13 +6,13 @@
 global.noDeath = false;         //enables god mode
 global.infJump = false;         //enables infinite jump
 
-global.roomCaptionDef = "I Wanna Be The Studio Engine YoYoYo Edition Lite v1.52";  //sets default window caption (only works with the Professional version of Studio)
+global.roomCaptionDef = "Monmouth Has Frozen Over And So Have I";  //sets default window caption (only works with the Professional version of Studio)
 global.roomCaptionLast = global.roomCaptionDef;
 window_set_caption(global.roomCaptionDef);
 
 global.md5StrAdd = "qweiuyrhzxcbnvzghd";  //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-global.startRoom = rSnow1;    //sets which room to begin with
+global.startRoom = rCutsceneIntro;    //sets which room to begin with
 
 global.menuSound = sndJump;     //sets what sound to use for navigating the main menu
 global.deathMusicMode = 0;      //sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
@@ -67,6 +67,8 @@ global.currentGain = 0;     //keeps track of current track gain when a song is b
 
 global.menuSelectPrev[0] = 0;     //keeps track of the previously selected option when navigating away from the difficulty menu
 global.menuSelectPrev[1] = 0;     //keeps track of the previously selected option when navigating away from the options menu
+
+global.drawKillBorders = false
 
 display_set_gui_size(surface_get_width(application_surface),surface_get_height(application_surface));  //set the correct gui size for the Draw GUI event
 

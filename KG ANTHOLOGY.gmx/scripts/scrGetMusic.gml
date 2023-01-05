@@ -4,11 +4,38 @@ var roomSong;
 
 switch (room)                       //determines which song to play
 {
-    case rTitle:                    //add rooms here, if you have several rooms that play the same song they can be put together
+    case rTitle:
     case rMenu:
     case rOptions:
-        roomSong = -1;
-        break;                      //make sure to always put a break after setting the song
+        roomSong = musFrozenTitle
+        break;
+    case rSnow1:
+    case rSnow2:
+    case rSnow3:
+    case rSnow4:
+    case rSnow5:
+    case rSnow6:
+    case rSnow7:
+        roomSong = musFrozenIceWorld
+        break;
+    case rCave1:
+    case rCave2:
+    case rCave3:
+    case rCave4:
+    case rCave5:
+    case rCave6:
+    case rCave7:
+        roomSong = musFrozenCavern
+        break;
+    case rSnowCaveTransition:
+        roomSong = musFrozenTransitionLoop
+        break;    
+    case rFrozenBoss:
+        roomSong = musFrozenMMBoss;
+        break;
+    case rClear:
+        roomSong = musFrozenClear
+        break;
     default:                        //default option in case the room does not have a song set
         roomSong = -1;
         break;

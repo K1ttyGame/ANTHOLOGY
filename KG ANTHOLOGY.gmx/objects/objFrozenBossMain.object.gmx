@@ -28,6 +28,8 @@
             <string>wobble_speed = .25*pi/room_speed; //speed of the wobble
 wobble_distance = 16; //distance of the wobble
 aa=irandom_range(0,360);
+
+value = 110
 </string>
           </argument>
         </arguments>
@@ -75,7 +77,7 @@ y = ystart + wobble_distance*sin(aa);
           <argument>
             <kind>1</kind>
             <string>image_speed = .1
-var fadedBlack = make_color_hsv(0, 0, 110);
+var fadedBlack = make_color_hsv(0, 0, value);
 draw_sprite_ext(sprMMArmLeft, image_index, (x+sprite_width/2)-30, y+sprite_height/3, image_xscale, image_yscale, wobble_distance*sin(aa)/4, fadedBlack, 1)
 draw_sprite_ext(sprMMArmLeft, image_index, (x+sprite_width/2)+30, y+sprite_height/3, -image_xscale, image_yscale, -wobble_distance*sin(aa)/4, fadedBlack, 1)
 draw_sprite_ext(sprMMBody, image_index, x, y, 1, 1, 0, fadedBlack, 1)

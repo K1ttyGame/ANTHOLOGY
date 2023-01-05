@@ -31,6 +31,28 @@ grav = 1;       //sets which player gravity this save works with
 
 if (global.difficulty &gt; 1)  //destroy if on a higher difficulty than hard
     instance_destroy();
+    
+switch (room) {
+    case rSnow1:
+    case rSnow2:
+    case rSnow3:
+    case rSnow4:
+    case rSnow5:
+    case rSnow6:
+    case rSnow7:
+    case rSnow8:
+        sprite_index = sprSaveFrozen1
+        break;
+    case rCave1:
+    case rCave2:
+    case rCave3:
+    case rCave4:
+    case rCave5:
+    case rCave6:
+    case rCave7:
+        sprite_index = sprSaveFrozen2
+        break;
+}
 </string>
           </argument>
         </arguments>

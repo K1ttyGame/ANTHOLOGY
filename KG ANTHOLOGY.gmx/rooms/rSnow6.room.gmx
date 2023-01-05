@@ -475,6 +475,8 @@
     <tile bgName="bSnowstormTiles4" x="736" y="320" w="32" h="32" xo="0" yo="0" id="10005001" name="inst_154239FD" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles4" x="32" y="400" w="16" h="16" xo="112" yo="16" id="10005004" name="inst_C0A48574" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSnowstormTiles4" x="32" y="288" w="16" h="16" xo="112" yo="16" id="10005005" name="inst_B210C5BA" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSnowstormTiles4" x="192" y="544" w="32" h="32" xo="0" yo="0" id="10008754" name="inst_C7EC0BB6" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSnowstormTiles4" x="256" y="544" w="32" h="32" xo="0" yo="0" id="10008755" name="inst_6C56E161" depth="-102" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

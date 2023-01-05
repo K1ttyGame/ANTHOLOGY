@@ -28,8 +28,9 @@
             <string>image_speed = .1
 phase = -1
 timer = 0
-yVariation = -16*irandom_range(0,3)
+yVariation = -16*irandom_range(0,1)
 instance_create(x, 400, objMMWarning)
+audio_play_sound(sndWarningSound, 10, false)
 </string>
           </argument>
         </arguments>

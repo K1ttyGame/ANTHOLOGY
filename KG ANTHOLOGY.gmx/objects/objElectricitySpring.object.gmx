@@ -68,9 +68,9 @@ if (activated) {
         with (objPlayer){
             if (instance_place(x+1, y, objBlock)) x -= 3
             if (instance_place(x-1, y, objBlock)) x += 3
-            objPlayer.y = other.y-2
             objPlayer.djump = 1
             vspeed = -48
+            objPlayer.y = other.y-2
             }
         audio_play_sound(sndSpringBounce, 10, false)
         if (imgTimer == 0) imgTimer = 1
@@ -79,7 +79,7 @@ if (activated) {
 
 if (imgTimer &gt;= 1) {
     imgTimer++
-    if (imgTimer == 30)
+    if (imgTimer == 15)
         imgTimer = 0
 }
 

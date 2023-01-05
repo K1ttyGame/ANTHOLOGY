@@ -26,19 +26,25 @@
           <argument>
             <kind>1</kind>
             <string>//main variables
-hp = 30 //should be 25
+x = 608
+y = 254
+hp = 17 //should be 25
 iframes = 0
 maxHP = hp
-phase = 0;
+phase = -1;
 timer = 0;
 GB = 255
 drawX = x
 drawY = y
+drawAlpha = 0
 shaker = 0
 
 wobble_speed = .35*pi/room_speed; //speed of the wobble
 wobble_distance = 48; //distance of the wobble
 aa=irandom_range(0,360);
+
+image_xscale = 1.667
+image_yscale = 1.667
 </string>
           </argument>
         </arguments>
@@ -84,6 +90,12 @@ aa+=wobble_speed;
 y = ystart + wobble_distance*sin(aa);
 
 //phases
+if (phase == -1) { //animation phase
+    drawAlpha += .02
+    if (drawAlpha == 1) 
+        phase++
+}
+
 if (phase == 0) {
     if (timer%35 == 0 || timer == 0) {
         if (instance_exists(objPlayer))
@@ -169,7 +181,7 @@ if (phase == 3) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if iframes == 0 {
+            <string>if iframes == 0 &amp;&amp; phase &gt;= 0 {
     hp -= 1
     iframes = 30
     //create hit apples
@@ -212,7 +224,7 @@ with other instance_destroy()
             <kind>1</kind>
             <string>image_speed = .1
 var red = make_color_rgb(255, GB, GB);
-draw_sprite_ext(sprMMChild2, image_index, drawX, drawY, image_xscale, image_yscale, 0, red, 1)
+draw_sprite_ext(sprMMChild2, image_index, drawX, drawY, image_xscale, image_yscale, 0, red, drawAlpha)
 draw_set_alpha(1)
 draw_set_color(c_white)
 </string>

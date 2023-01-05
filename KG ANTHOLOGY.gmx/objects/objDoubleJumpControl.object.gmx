@@ -3,12 +3,12 @@
   <spriteName>sprKillerBlock</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000000000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="1">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,86 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>spinAngle = 0
+drawScale = 1
+lightningAngle = random(360)
+lightningAngle2 = random(36)
+lightningAlpha = 1
+lightingX = 0
+lightingY = 0
+
+wobble_speed = pi/room_speed; //speed of the wobble
+wobble_distance = .25; //distance of the wobble
+aa=irandom_range(0,360);
+
+flag = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spinAngle += 2
+
+aa+=wobble_speed;
+drawScale = 1 + wobble_distance*sin(aa);
+
+if (instance_exists(objPlayer)) {
+    lightingX = objPlayer.x
+    lightingY = objPlayer.y
+}
+
+if (flag) {
+    if (lightningAlpha &gt; 0)
+        lightningAlpha -= .02
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (instance_exists(objPlayer) &amp;&amp; instance_exists(objElectricityControl) &amp;&amp; objElectricityControl.electricity = false) {
+    draw_sprite_ext(sprElecTarget, 0, objPlayer.x, objPlayer.y, drawScale, drawScale, spinAngle, c_white, 1)
+}
+
+if (flag) {
+    draw_sprite_ext(sprElecBolt, 0, lightingX, lightingY, 3, 3, lightningAngle, c_white, lightningAlpha)
+    draw_sprite_ext(sprElecBolt, 0, lightingX, lightingY, 3, 3, lightningAngle2, c_white, lightningAlpha)
+}
+</string>
           </argument>
         </arguments>
       </action>
