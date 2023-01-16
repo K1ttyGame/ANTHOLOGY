@@ -88,10 +88,12 @@ if (phase == 1) {
 
 if (phase == 2) {
     timer++
-    view_wview = random_range(0, 1600)
-    view_hview = random_range(0, 1216)
-    view_xview = random_range(-800, 800)
-    view_yview = random_range(-608, 608)
+    if (timer &gt; 1) {
+        view_wview = random_range(0, 1600)
+        view_hview = random_range(0, 1216)
+        view_xview = random_range(-800, 800)
+        view_yview = random_range(-608, 608)
+        }
     if (timer = 8) {
         room_speed = 50
         audio_stop_sound(musFrozenNoise)
@@ -111,8 +113,9 @@ if (phase == 3) {
     if (timer &gt;= 345) {
         if (drawCoverAlpha &gt; 0) drawCoverAlpha -= .02
     }
-    if (timer == 1410) {
+    if (timer == 1410 || keyboard_check_pressed(ord('S'))) {
         instance_destroy();
+        audio_stop_sound(musFrozenMMBossIntro)
         room_goto_next();
         global.autosave = true
     }

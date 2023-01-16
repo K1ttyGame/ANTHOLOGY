@@ -55,8 +55,8 @@ parent = 0 //set in creation code
             <string>if (instance_exists(parent)) {
     x += random_range(-8, 8)
     y += random_range(-8, 8)
-    x = lerp (x, parent.x, .05)
-    y = lerp (y, parent.y, .05)
+    x = lerp (x, parent.drawX, .05)
+    y = lerp (y, parent.drawY, .05)
     if (image_alpha &lt; .3)
         image_alpha += .005
     }

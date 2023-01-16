@@ -28,7 +28,7 @@
             <string>//main variables
 x = 608
 y = 254
-hp = 17 //should be 25
+hp = 15 //should be 25
 iframes = 0
 maxHP = hp
 phase = -1;

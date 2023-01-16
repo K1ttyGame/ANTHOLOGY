@@ -111,8 +111,8 @@ if (phase == -1) {
 }
 
 if (phase == 0) {
-    displayTimer++
-    if (displayTimer == 1000) {
+    displayTimer += 1.5
+    if (displayTimer &gt;= 1000) {
         phase++
         scrStopMusic(musFrozenTransitionLoop)
         drawTextAlpha = true
@@ -142,6 +142,12 @@ drawX = room_width/2 + wobble_distance*sin(aa);
 
 if (room != rSnow8 &amp;&amp; room != rSnowCaveTransition)
     instance_destroy();
+    
+if ((phase &gt;= 0) &amp;&amp; keyboard_check_pressed(ord('S'))) {
+    global.autosave = true
+    room_goto_next()
+    instance_destroy()
+}
 </string>
           </argument>
         </arguments>

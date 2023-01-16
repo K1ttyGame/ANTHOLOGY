@@ -192,9 +192,9 @@
         <sprite>sprites\sprMMChild2</sprite>
         <sprite>sprites\sprMMChild3</sprite>
         <sprite>sprites\sprMMChild4</sprite>
+        <sprite>sprites\sprMMChild5</sprite>
         <sprite>sprites\sprMMVortex</sprite>
         <sprite>sprites\sprMMCutsceneChild</sprite>
-        <sprite>sprites\sprMMChild5</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -209,7 +209,6 @@
       <background>background\bFactoryTileset1</background>
       <background>background\bFactoryTileset2</background>
       <background>background\bCaveWaterSides</background>
-      <background>background\bMMBossSky</background>
       <background>background\bMM4</background>
       <background>background\bCaveJunk</background>
     </backgrounds>
@@ -307,6 +306,7 @@
           <object>objects\objMMProjectileSpiral</object>
           <object>objects\objMMShadow</object>
           <object>objects\objMMMiniDeath</object>
+          <object>objects\objMMMiniSummon</object>
           <object>objects\objMMLaser</object>
         </objects>
       </objects>

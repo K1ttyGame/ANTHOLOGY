@@ -56,6 +56,7 @@ if (!global.gameClear)
             <kind>1</kind>
             <string>image_speed = .1
 draw_set_halign(fa_left)
+draw_set_valign(fa_top)
 draw_set_font(fFrozenTitle)
 draw_set_color(make_color_hsv(0, 0, 100))
 draw_text(-16, 0, "GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB! GOOD JOB!")
@@ -66,7 +67,7 @@ draw_text(16, 80, "   - Programming")
 draw_text(16, 112, "   - Design")
 draw_text(16, 144, "   - Visuals")
 
-draw_text(16, 208, "Custom Spritework:#SlendersBlender")
+draw_text_ext(16, 208, "Custom Spritework:#SlendersBlender", 32, 500)
 draw_text(16, 276, "Programming Help: v")
 
 draw_text(16, 336, "Playtesters:")

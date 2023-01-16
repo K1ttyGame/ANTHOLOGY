@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//main variables
-hp = 7 //should be 25
+hp = 6 //should be 25
 iframes = 0
 maxHP = hp
 phase = -1;
@@ -102,6 +102,13 @@ if (phase == 0) { //wait for MM3 to attack
     if (timer == 225 || !instance_exists(objMMMini3)) {
         phase++
         timer = 0
+        audio_play_sound(sndWarningSound, 10, false)
+        with instance_create(x, y, objMMMiniSummon) {
+            summoner = other.id
+            sprite_index = other.sprite_index
+            image_xscale = other.image_xscale
+            image_yscale = other.image_yscale
+        }
     }
 }
 
@@ -112,7 +119,7 @@ if (phase == 1) { //do own attack
     timer++
     if (timer &gt;= 275) {
         if instance_exists(objMMProjectile)
-            with objMMProjectile vspeed -= .2
+            with objMMProjectile vspeed += .2
     }
     
     if (timer == 350) {
@@ -164,8 +171,8 @@ if (phase == 2) { //wait for MM5 to attack
             image_yscale = other.image_yscale
             sprite_index = other.sprite_index
         }
-        if (instance_exists(objMMMini3)) with objMMMini3 {hp += 2}
-        if (instance_exists(objMMMini5)) with objMMMini5 {hp += 2}
+        if (instance_exists(objMMMini3)) with objMMMini3 {hp ++}
+        if (instance_exists(objMMMini5)) with objMMMini5 {hp ++}
     }
     with other instance_destroy()
 }

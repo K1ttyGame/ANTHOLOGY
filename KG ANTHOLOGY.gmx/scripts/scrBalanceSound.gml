@@ -9,7 +9,8 @@ audio_sound_gain(sndWarningSound, .4, 0)
 
 //music balancing
 audio_sound_gain(musWindAmbient1, .5, 0)
-audio_sound_gain(musFrozenCavern, .65, 0)
-audio_sound_gain(musFrozenMMBoss, .8, 0)
-audio_sound_gain(musFrozenClear, .5, 0)
-audio_sound_gain(musFrozenEndingCutscene, .5, 0)
+audio_sound_gain(musFrozenCavern, .5, 0)
+audio_sound_gain(musFrozenMMBossIntro, .8, 0)
+audio_sound_gain(musFrozenMMBoss, .7, 0)
+audio_sound_gain(musFrozenClear, .75, 0)
+audio_sound_gain(musFrozenEndingCutscene, .75, 0)

@@ -260,7 +260,7 @@ if (!frozen)    //check if frozen before doing anything
         scrPlayerShoot();
     if (keyboard_check_pressed(global.jumpButton))
         scrPlayerJump();
-    if (keyboard_check_released(global.jumpButton))
+    if (keyboard_check_released(global.jumpButton)) //remove check for spring if breaking
         scrPlayerVJump();
     if (keyboard_check_pressed(global.suicideButton))
         scrKillPlayer();

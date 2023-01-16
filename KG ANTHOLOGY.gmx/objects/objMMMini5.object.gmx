@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//main variables
-hp = 7 //should be 25
+hp = 6 //should be 25
 iframes = 0
 maxHP = hp
 phase = -1;
@@ -113,6 +113,13 @@ if (phase == 1) { //wait for MM4 attack
     if (timer == 350 || !instance_exists(objMMMini4)) {
         timer = 0
         phase++
+        audio_play_sound(sndWarningSound, 10, false)
+        with instance_create(x, y, objMMMiniSummon) {
+            summoner = other.id
+            sprite_index = other.sprite_index
+            image_xscale = other.image_xscale
+            image_yscale = other.image_yscale
+        }
     }
 }
 
@@ -126,7 +133,7 @@ if (phase == 2) {
             depth = -50000
         }
     }
-    if (timer%20 == 0 &amp;&amp; timer &lt;= 200) {
+    if (timer%30 == 0 &amp;&amp; timer &lt;= 200) {
         instance_create(room_width/2, room_height/2, objMMProjectileSpiral)
         if (instance_exists(objSpikeUp)) {
             with objSpikeUp {
@@ -188,8 +195,8 @@ if (phase == 2) {
             image_yscale = other.image_yscale
             sprite_index = other.sprite_index
         }
-        if (instance_exists(objMMMini4)) with objMMMini4 {hp += 2}
-        if (instance_exists(objMMMini3)) with objMMMini3 {hp += 2}
+        if (instance_exists(objMMMini4)) with objMMMini4 {hp ++}
+        if (instance_exists(objMMMini3)) with objMMMini3 {hp ++}
     }
     with other instance_destroy()
 }

@@ -70,7 +70,7 @@ if (activated) {
             if (instance_place(x-1, y, objBlock)) x += 3
             objPlayer.djump = 1
             vspeed = -48
-            objPlayer.y = other.y-2
+            objPlayer.y = other.y-2 //used to be 2
             }
         audio_play_sound(sndSpringBounce, 10, false)
         if (imgTimer == 0) imgTimer = 1
