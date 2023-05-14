@@ -17,14 +17,29 @@
         <sound>sound\sndPlatformBreak</sound>
         <sound>sound\sndPlatformCrash</sound>
         <sound>sound\sndNumberBeep2</sound>
+        <sound>sound\sndPuzzleGetItem</sound>
         <sound>sound\sndSwitch</sound>
+        <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndNumberBeep</sound>
+        <sound>sound\sndTakePhoto</sound>
+        <sound>sound\sndBasketballScore</sound>
         <sound>sound\sndSpringBounce</sound>
         <sound>sound\sndMMBossHit</sound>
+        <sound>sound\sndPlasmaShoot</sound>
+        <sound>sound\sndRobotBossDestroy</sound>
         <sound>sound\sndWarningSound</sound>
+        <sound>sound\sndLockedDoor</sound>
         <sound>sound\sndGeneralCrash</sound>
         <sound>sound\sndLightningBolt</sound>
         <sound>sound\sndEyeOpen</sound>
+        <sound>sound\sndChoose</sound>
+        <sound>sound\sndClawClick</sound>
+        <sound>sound\sndPaintShootBoss</sound>
+        <sound>sound\sndClearSound</sound>
+        <sound>sound\sndSpaceSuitAir</sound>
+        <sound>sound\sndMissileExplode</sound>
+        <sound>sound\sndPuzzleSolved</sound>
+        <sound>sound\sndRopeStrain</sound>
       </sounds>
     </sounds>
     <sounds name="music">
@@ -42,6 +57,10 @@
         <sound>sound\musFrozenEndingCutscene</sound>
         <sound>sound\musFrozenClear</sound>
         <sound>sound\musFrozenPeople</sound>
+        <sounds name="Fall / Space">
+          <sound>sound\musRobotBossLoop2</sound>
+          <sound>sound\musRobotBossLoop1</sound>
+        </sounds>
       </sounds>
     </sounds>
   </sounds>
@@ -75,6 +94,12 @@
           <sprite>sprites\sprFPlayerFall</sprite>
           <sprite>sprites\sprFPlayerJump</sprite>
         </sprites>
+        <sprites name="Fall / Space">
+          <sprite>sprites\sprSpaceSuit</sprite>
+          <sprite>sprites\sprPlayerZipline</sprite>
+          <sprite>sprites\sprPaintGunBullet</sprite>
+          <sprite>sprites\sprPaintGunArm</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="blocks">
@@ -100,6 +125,50 @@
       <sprite>sprites\sprMiniRight</sprite>
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
+      <sprites name="Mansion">
+        <sprite>sprites\sprMansionBathroomSUp</sprite>
+        <sprite>sprites\sprMansionKitchenSDown</sprite>
+      </sprites>
+      <sprites name="Space">
+        <sprite>sprites\sprSpaceshipSpikeUp</sprite>
+        <sprite>sprites\sprSpaceshipSpikeRight</sprite>
+        <sprite>sprites\sprSpaceshipSpikeDown</sprite>
+        <sprite>sprites\sprSpaceshipSpikeLeft</sprite>
+      </sprites>
+      <sprites name="Garden">
+        <sprite>sprites\sprMansionSpikeUp</sprite>
+        <sprite>sprites\sprMansionSpikeRight</sprite>
+        <sprite>sprites\sprMansionSpikeLeft</sprite>
+        <sprite>sprites\sprMansionSpikeDown</sprite>
+        <sprite>sprites\sprGardenSpikeUp</sprite>
+        <sprite>sprites\sprGardenSpikeRight</sprite>
+        <sprite>sprites\sprGardenSpikeLeft</sprite>
+        <sprite>sprites\sprGardenSpikeDown</sprite>
+      </sprites>
+      <sprites name="Beach">
+        <sprite>sprites\sprBeachSpikeUp</sprite>
+        <sprite>sprites\sprBeachSpikeRight</sprite>
+        <sprite>sprites\sprBeachSpikeLeft</sprite>
+        <sprite>sprites\sprBeachSpikeDown</sprite>
+      </sprites>
+      <sprites name="Storm">
+        <sprite>sprites\sprStormUp</sprite>
+        <sprite>sprites\sprStormRight</sprite>
+        <sprite>sprites\sprStormLeft</sprite>
+        <sprite>sprites\sprStormDown</sprite>
+        <sprite>sprites\sprStormStoneUp</sprite>
+        <sprite>sprites\sprStormStoneRight</sprite>
+        <sprite>sprites\sprStormStoneLeft</sprite>
+        <sprite>sprites\sprStormStoneDown</sprite>
+      </sprites>
+      <sprites name="Pirate">
+        <sprite>sprites\sprPirateUp</sprite>
+        <sprite>sprites\sprPirateRight</sprite>
+        <sprite>sprites\sprPirateLeft</sprite>
+        <sprite>sprites\sprPirateDown</sprite>
+        <sprite>sprites\sprPirateGhostSpike</sprite>
+        <sprite>sprites\sprPirateGhostSpikeRight</sprite>
+      </sprites>
       <sprites name="Cave">
         <sprite>sprites\sprCaveSpikeUp</sprite>
         <sprite>sprites\sprCaveSpikeRight</sprite>
@@ -133,6 +202,9 @@
       <sprite>sprites\sprSaveFrozen1</sprite>
       <sprite>sprites\sprSaveFrozen2</sprite>
       <sprite>sprites\sprSave</sprite>
+      <sprite>sprites\sprSaveBeach</sprite>
+      <sprite>sprites\sprSaveStorm</sprite>
+      <sprite>sprites\sprSavePirate</sprite>
       <sprite>sprites\sprSaveVHard</sprite>
       <sprite>sprites\sprSaveMediumFlip</sprite>
       <sprite>sprites\sprSaveFlip</sprite>
@@ -145,62 +217,244 @@
       <sprite>sprites\sprSpotlight</sprite>
     </sprites>
     <sprites name="New">
-      <sprite>sprites\sprCaveElecDisplayTV</sprite>
-      <sprite>sprites\sprCaveElecDisplayJump</sprite>
-      <sprite>sprites\sprCaveElecDisplaySpring</sprite>
-      <sprite>sprites\sprElectricityIcon</sprite>
-      <sprite>sprites\sprButtonBase</sprite>
-      <sprite>sprites\sprButtonBaseRight</sprite>
-      <sprite>sprites\sprButtonBaseLeft</sprite>
-      <sprite>sprites\sprButtonBaseTop</sprite>
-      <sprite>sprites\sprCaveElecDisplay</sprite>
-      <sprite>sprites\sprCaveElecDisplayWater</sprite>
-      <sprite>sprites\sprCaveSpringGlow</sprite>
-      <sprite>sprites\sprCaveSpring</sprite>
-      <sprite>sprites\sprFallingPlatform</sprite>
-      <sprite>sprites\sprElecWaterBottom</sprite>
-      <sprite>sprites\sprElecWaterTop</sprite>
-      <sprite>sprites\sprElecWaterElecTop</sprite>
-      <sprite>sprites\sprElecWaterElecBottom</sprite>
-      <sprite>sprites\sprElecWaterElecRight</sprite>
-      <sprite>sprites\sprElecWaterElecLeft</sprite>
-      <sprite>sprites\sprElecTarget</sprite>
-      <sprite>sprites\sprElecBolt</sprite>
-      <sprites name="Cutscene Images">
-        <sprite>sprites\sprIntroCutscene1</sprite>
-        <sprite>sprites\sprIntroCutscene2</sprite>
-        <sprite>sprites\sprIntroCutscene3</sprite>
-        <sprite>sprites\sprIntroCutscene4</sprite>
-        <sprite>sprites\sprIntroCutscene5</sprite>
-        <sprite>sprites\sprEndingAngel</sprite>
-        <sprite>sprites\sprEndingGradient</sprite>
-        <sprite>sprites\sprEndingCutscene</sprite>
+      <sprites name="Frozen Over">
+        <sprite>sprites\sprCaveElecDisplayTV</sprite>
+        <sprite>sprites\sprCaveElecDisplay</sprite>
+        <sprite>sprites\sprButtonBaseLeft</sprite>
+        <sprite>sprites\sprButtonBaseRight</sprite>
+        <sprite>sprites\sprFallingPlatform</sprite>
+        <sprite>sprites\sprButtonBase</sprite>
+        <sprite>sprites\sprElecWaterBottom</sprite>
+        <sprite>sprites\sprElecWaterElecBottom</sprite>
+        <sprite>sprites\sprCaveSpring</sprite>
+        <sprite>sprites\sprCaveElecDisplayWater</sprite>
+        <sprite>sprites\sprElecWaterElecRight</sprite>
+        <sprite>sprites\sprCaveElecDisplaySpring</sprite>
+        <sprite>sprites\sprElecWaterTop</sprite>
+        <sprite>sprites\sprElecBolt</sprite>
+        <sprite>sprites\sprElecWaterElecLeft</sprite>
+        <sprite>sprites\sprCaveSpringGlow</sprite>
+        <sprite>sprites\sprElectricityIcon</sprite>
+        <sprite>sprites\sprCaveElecDisplayJump</sprite>
+        <sprite>sprites\sprElecTarget</sprite>
+        <sprite>sprites\sprElecWaterElecTop</sprite>
+        <sprite>sprites\sprButtonBaseTop</sprite>
+        <sprite>sprites\sprElecWater</sprite>
+        <sprites name="Cutscene Images">
+          <sprite>sprites\sprIntroCutscene1</sprite>
+          <sprite>sprites\sprIntroCutscene2</sprite>
+          <sprite>sprites\sprIntroCutscene3</sprite>
+          <sprite>sprites\sprIntroCutscene4</sprite>
+          <sprite>sprites\sprIntroCutscene5</sprite>
+          <sprite>sprites\sprEndingAngel</sprite>
+          <sprite>sprites\sprEndingGradient</sprite>
+          <sprite>sprites\sprEndingCutscene</sprite>
+        </sprites>
+        <sprites name="FrozenBoss">
+          <sprite>sprites\sprMMArmLeft</sprite>
+          <sprite>sprites\sprMMEyeAppear</sprite>
+          <sprite>sprites\sprMMEye</sprite>
+          <sprite>sprites\sprMMBody</sprite>
+          <sprite>sprites\sprMMBlock</sprite>
+          <sprite>sprites\sprMMSpearSpike</sprite>
+          <sprite>sprites\sprMMLaser</sprite>
+          <sprite>sprites\sprMMVProjectile</sprite>
+          <sprite>sprites\sprMMWarning</sprite>
+          <sprite>sprites\sprMMProjectile</sprite>
+          <sprite>sprites\sprMMChild1</sprite>
+          <sprite>sprites\sprMMChild2</sprite>
+          <sprite>sprites\sprMMChild3</sprite>
+          <sprite>sprites\sprMMChild4</sprite>
+          <sprite>sprites\sprMMChild5</sprite>
+          <sprite>sprites\sprMMVortex</sprite>
+          <sprite>sprites\sprMMCutsceneChild</sprite>
+        </sprites>
       </sprites>
-      <sprite>sprites\sprElecWater</sprite>
-      <sprites name="FrozenBoss">
-        <sprite>sprites\sprMMArmLeft</sprite>
-        <sprite>sprites\sprMMEyeAppear</sprite>
-        <sprite>sprites\sprMMEye</sprite>
-        <sprite>sprites\sprMMBody</sprite>
-        <sprite>sprites\sprMMBlock</sprite>
-        <sprite>sprites\sprMMSpearSpike</sprite>
-        <sprite>sprites\sprMMLaser</sprite>
-        <sprite>sprites\sprMMVProjectile</sprite>
-        <sprite>sprites\sprMMWarning</sprite>
-        <sprite>sprites\sprMMProjectile</sprite>
-        <sprite>sprites\sprMMChild1</sprite>
-        <sprite>sprites\sprMMChild2</sprite>
-        <sprite>sprites\sprMMChild3</sprite>
-        <sprite>sprites\sprMMChild4</sprite>
-        <sprite>sprites\sprMMChild5</sprite>
-        <sprite>sprites\sprMMVortex</sprite>
-        <sprite>sprites\sprMMCutsceneChild</sprite>
+      <sprites name="Beachventure">
+        <sprites name="Storm">
+          <sprite>sprites\sprClaw</sprite>
+          <sprite>sprites\sprClawPoint</sprite>
+          <sprite>sprites\sprRainParticle</sprite>
+          <sprite>sprites\sprPillarStone</sprite>
+          <sprite>sprites\sprPillarStoneEdgeU</sprite>
+          <sprite>sprites\sprPillarStoneEdgeR</sprite>
+          <sprite>sprites\sprPillarStoneEdgeL</sprite>
+          <sprite>sprites\sprPillarStoneEdgeD</sprite>
+          <sprite>sprites\sprPillarStoneBG</sprite>
+          <sprite>sprites\sprPillarStoneEdgeBG_U</sprite>
+          <sprite>sprites\sprPillarStoneEdgeBG_R</sprite>
+          <sprite>sprites\sprPillarStoneEdgeBG_L</sprite>
+          <sprite>sprites\sprPillarStoneEdgeBG_D</sprite>
+          <sprite>sprites\sprClawMask</sprite>
+        </sprites>
+        <sprite>sprites\sprGhostShipApple</sprite>
+        <sprite>sprites\sprBasketballNet2</sprite>
+        <sprite>sprites\sprBasketballNet</sprite>
+        <sprite>sprites\sprBasketBall</sprite>
+        <sprite>sprites\sprBasketballBorder</sprite>
+        <sprite>sprites\sprBeachDrink</sprite>
+        <sprite>sprites\sprConfetti</sprite>
+        <sprite>sprites\sprHammock</sprite>
+        <sprite>sprites\sprWhite</sprite>
+        <sprite>sprites\sprBeachBall</sprite>
       </sprites>
+      <sprites name="Fall / Space">
+        <sprite>sprites\sprSpaceArrow</sprite>
+        <sprite>sprites\sprAlienGlyphs</sprite>
+        <sprite>sprites\sprSpaceshipLaser</sprite>
+        <sprite>sprites\sprSpaceArrowUp</sprite>
+        <sprite>sprites\sprFallZiplinePole</sprite>
+        <sprite>sprites\sprSpaceSuitPart</sprite>
+        <sprite>sprites\sprFallLeaf</sprite>
+        <sprite>sprites\sprExtendBlockLength</sprite>
+        <sprite>sprites\sprExtendBlockEdge</sprite>
+        <sprite>sprites\sprSpaceMoveBlock</sprite>
+        <sprite>sprites\sprFallZiplineBolt</sprite>
+        <sprite>sprites\sprSpaceSpike</sprite>
+        <sprite>sprites\sprPaintBox</sprite>
+        <sprite>sprites\sprFallZipline</sprite>
+        <sprites name="Robot Parts">
+          <sprite>sprites\sprPlasmaBall</sprite>
+          <sprite>sprites\sprPlasmaBallOverlay</sprite>
+          <sprite>sprites\sprMissile</sprite>
+          <sprite>sprites\sprRobotBin</sprite>
+          <sprite>sprites\sprRobotCircle</sprite>
+          <sprite>sprites\sprRobotSalvo</sprite>
+          <sprite>sprites\sprRobotBlocker</sprite>
+          <sprite>sprites\sprRobotGun</sprite>
+          <sprite>sprites\sprRobotSalvo2</sprite>
+          <sprite>sprites\sprRobotHomingLine</sprite>
+          <sprite>sprites\sprRobotBase</sprite>
+          <sprite>sprites\sptRobotCircle2</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Puzzle">
+        <sprites name="Items">
+          <sprite>sprites\sprNotebook</sprite>
+          <sprite>sprites\sprNotebookOpen</sprite>
+          <sprite>sprites\sprCatKey</sprite>
+          <sprite>sprites\sprCatKeychain</sprite>
+          <sprite>sprites\sprCatKeyWKeychain</sprite>
+          <sprite>sprites\sprFireAxe</sprite>
+          <sprite>sprites\sprFireAxeHandle</sprite>
+          <sprite>sprites\sprFireAxeHead</sprite>
+          <sprite>sprites\sprLighter</sprite>
+          <sprite>sprites\sprScrapPaper1</sprite>
+          <sprite>sprites\sprScrapPaper2</sprite>
+          <sprite>sprites\sprScrapPaper3</sprite>
+          <sprite>sprites\sprScrapPaper4</sprite>
+          <sprite>sprites\sprBookshelfBook</sprite>
+          <sprite>sprites\sprFridgeDoorHandle</sprite>
+          <sprite>sprites\sprCamera</sprite>
+          <sprite>sprites\sprPolaroid</sprite>
+        </sprites>
+        <sprites name="World">
+          <sprite>sprites\sprTopBar</sprite>
+          <sprite>sprites\sprLightsOffLight</sprite>
+          <sprite>sprites\sprAnimalNumberFrame</sprite>
+          <sprite>sprites\sprMansionDoor1</sprite>
+          <sprite>sprites\sprNumPadNumbers</sprite>
+          <sprite>sprites\sprAnimalPuzzleFrame</sprite>
+          <sprite>sprites\sprWoodFire</sprite>
+          <sprite>sprites\sprGlassTexture</sprite>
+          <sprite>sprites\sprNumPad</sprite>
+          <sprite>sprites\sprWoodTexture</sprite>
+          <sprite>sprites\sprCatSetOpening</sprite>
+          <sprite>sprites\sprBanana</sprite>
+          <sprite>sprites\sprBookOnBookshelf</sprite>
+          <sprite>sprites\sprMansionPoster1</sprite>
+          <sprite>sprites\sprMansionPoster2</sprite>
+          <sprite>sprites\sprSink</sprite>
+          <sprite>sprites\sprToilet</sprite>
+          <sprite>sprites\sprTub</sprite>
+          <sprite>sprites\sprFridge</sprite>
+          <sprite>sprites\sprCardValues</sprite>
+          <sprite>sprites\sprCardSuits</sprite>
+          <sprite>sprites\sprCardArrows</sprite>
+        </sprites>
+      </sprites>
+      <sprite>sprites\sprExplosion</sprite>
+      <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bGlow</background>
     <background>background\bAllTiles</background>
+    <backgrounds name="Mansion">
+      <background>background\bBookshelf</background>
+      <background>background\bBookshelfEmpty</background>
+      <background>background\bMansionBathroomWindow</background>
+      <background>background\bMansionBathroomTiles</background>
+      <background>background\bMansionStatue</background>
+      <background>background\bFridgeOpen</background>
+      <background>background\bMansionKitchenBG</background>
+      <background>background\bMansionFridge</background>
+      <background>background\bMansionBedroom</background>
+      <background>background\bMansionKitchenTiles</background>
+    </backgrounds>
+    <backgrounds name="Space Station">
+      <background>background\bSpaceStationTexture</background>
+      <background>background\bSpaceStationTiles</background>
+      <background>background\bSpaceStationBlackTiles</background>
+      <background>background\bSpaceStationBG</background>
+    </backgrounds>
+    <backgrounds name="Fall">
+      <background>background\bTreeline</background>
+      <background>background\bGrassyKnoll</background>
+      <background>background\bTreeCanopy</background>
+      <background>background\bFallGrassTexture</background>
+      <background>background\bFallGrassTiles</background>
+      <background>background\bFallTree</background>
+      <background>background\bFallSky</background>
+    </backgrounds>
+    <backgrounds name="Garden">
+      <background>background\bGardenShadow</background>
+      <background>background\bMansionTiles</background>
+      <background>background\bMansionBGTIles</background>
+      <background>background\bMansionBGLighter</background>
+      <background>background\bMansionBG</background>
+      <background>background\bGardenLeaves</background>
+      <background>background\bGardenFence</background>
+      <background>background\bGardenLeavesBG</background>
+    </backgrounds>
+    <backgrounds name="Space">
+      <background>background\bSpaceStar</background>
+      <background>background\bSpaceBlack</background>
+      <background>background\bBlackOverlay</background>
+    </backgrounds>
+    <backgrounds name="Beach">
+      <background>background\bBeachIsland</background>
+      <background>background\bBeachWave</background>
+      <background>background\bBeachBlacktop</background>
+      <background>background\bBeachClouds</background>
+      <background>background\bBeachTiles</background>
+      <background>background\bBeachTilesBG</background>
+      <background>background\bBeachHut</background>
+      <background>background\bBeachTilesEdgeBG</background>
+      <background>background\bBeachSky</background>
+      <background>background\bPalmTree</background>
+      <background>background\bHotel</background>
+      <background>background\bBeachBoat</background>
+    </backgrounds>
+    <backgrounds name="Pirate">
+      <background>background\bShipWoodTile</background>
+      <background>background\bShipWoodTexture</background>
+      <background>background\bShipWoodTileBG</background>
+      <background>background\bShipWoodTileBG2</background>
+      <background>background\bShipBG</background>
+      <background>background\bPiratePrisonTile</background>
+      <background>background\bGreenGlow</background>
+    </backgrounds>
+    <backgrounds name="Storm">
+      <background>background\bStormSky</background>
+      <background>background\bStormSea2</background>
+      <background>background\bStormSea3</background>
+      <background>background\bStormSea1</background>
+      <background>background\bStormSea4</background>
+      <background>background\bStormBGTIles</background>
+      <background>background\bStormBBGTiles</background>
+      <background>background\bStormTiles</background>
+    </backgrounds>
     <backgrounds name="Cave">
       <background>background\bCaveTileset1</background>
       <background>background\tempcavestag</background>
@@ -229,7 +483,12 @@
       <background>background\bSnowstormStructure</background>
     </backgrounds>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pSpikeBobDown</path>
+    <path>paths\pSpikeBobLeft</path>
+    <path>paths\pSpikeBobRight</path>
+    <path>paths\pSpikeBobUp</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="player">
       <script>scripts\scrPlayerJump.gml</script>
@@ -259,18 +518,42 @@
       <script>scripts\scrMakeShapes.gml</script>
       <script>scripts\scrMakeCircle.gml</script>
       <script>scripts\scrDrawTextOutline.gml</script>
+      <script>scripts\scrDrawTextDropShadow.gml</script>
+      <script>scripts\scrDrawPie.gml</script>
+    </scripts>
+    <scripts name="better block">
+      <script>scripts\scrIsBetterBlock.gml</script>
+      <script>scripts\scrIsBetterPlatform.gml</script>
+      <script>scripts\scrMoveContactObject.gml</script>
+      <script>scripts\scrIsBlock.gml</script>
+    </scripts>
+    <scripts name="puzzle">
+      <script>scripts\scrDrawInventory.gml</script>
+      <script>scripts\scrInteract.gml</script>
+      <script>scripts\scrInteractDraw.gml</script>
+      <script>scripts\scrCombine.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shdRemoveBlack.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fDefault30</font>
     <font>fonts\fDefault24</font>
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
+    <font>fonts\fDialogue</font>
     <font>fonts\fFrozenTitle</font>
+    <font>fonts\fPirate</font>
     <font>fonts\fIkaruga</font>
   </fonts>
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
+    <objects name="Devices">
+      <object>objects\objExplosion</object>
+      <object>objects\objCameraShutterFX</object>
+      <object>objects\objDialogueLBP</object>
+    </objects>
     <objects name="Gimmicks">
       <objects name="Frozen Over">
         <object>objects\objWindControl</object>
@@ -310,6 +593,82 @@
           <object>objects\objMMLaser</object>
         </objects>
       </objects>
+      <objects name="Beachventure">
+        <object>objects\objFallingPillar</object>
+        <object>objects\objFallingBackground</object>
+        <object>objects\objPillarSpikeUp</object>
+        <object>objects\objPillarSpikeRight</object>
+        <object>objects\objPillarSpikeLeft</object>
+        <object>objects\objPillarSpikeDown</object>
+        <object>objects\objClaw</object>
+        <object>objects\objBeachVisualControl</object>
+        <object>objects\objStormVisualControl</object>
+        <object>objects\objPirateCameraTrigger</object>
+        <object>objects\objPirateGhostSpike</object>
+        <object>objects\objPirateAvoidanceTrigger</object>
+        <object>objects\objBasketballBlock</object>
+        <object>objects\objBasketBall</object>
+        <object>objects\objBasketballNet</object>
+        <object>objects\objBlockParticlesSurface</object>
+        <object>objects\objBeachSand</object>
+        <object>objects\objBeachHammock</object>
+        <object>objects\objBeachDrink</object>
+        <object>objects\objPirateApple</object>
+        <object>objects\objBeachIntroCutscene</object>
+      </objects>
+      <objects name="Fall / Space">
+        <object>objects\objSpaceStarGlow</object>
+        <object>objects\objSpaceSuitPart</object>
+        <object>objects\objSpaceKey</object>
+        <object>objects\objZiplinePoint</object>
+        <object>objects\objFallZipline</object>
+        <object>objects\objFallingLeafSpawner</object>
+        <object>objects\objFallingLeaf</object>
+        <object>objects\objPaintGunParticle</object>
+        <object>objects\objFallVisualControl</object>
+        <object>objects\objMovingShootBlock</object>
+        <object>objects\objSpaceshipBeam</object>
+        <object>objects\objTelescopingBlockSpawn</object>
+        <object>objects\objStarParticle</object>
+        <object>objects\objPaintSplatterControl</object>
+        <object>objects\objPaintSplatter</object>
+        <objects name="Robot">
+          <object>objects\objPlasmaBall</object>
+          <object>objects\objPlasmaPhase2Bounce</object>
+          <object>objects\objPlasmaPhaseHoming</object>
+          <object>objects\objRobotMissile</object>
+          <object>objects\objRobotPhase1Gun</object>
+          <object>objects\objRobotPhase2Bounce</object>
+          <object>objects\objRobotPhase2Gun</object>
+          <object>objects\objRobotPhase2Collider</object>
+          <object>objects\objRobotPhase3Salvo</object>
+          <object>objects\objRobotPhase3Blocker</object>
+          <object>objects\objRobotPhase3Homer</object>
+          <object>objects\objRobotPhase4Salvo2</object>
+          <object>objects\objRobotPhase4Gun</object>
+          <object>objects\objRobotPartDestroy</object>
+          <object>objects\objRobotStaticSpotlight</object>
+          <object>objects\objRobotPartTemplate</object>
+          <object>objects\objRobotBossControl</object>
+        </objects>
+      </objects>
+      <objects name="Puzzle">
+        <object>objects\objPuzzleLightToggle</object>
+        <object>objects\objPuzzleItem</object>
+        <object>objects\objPortraitDoor</object>
+        <object>objects\objGardenItemDoor</object>
+        <object>objects\objLightswitchDoor</object>
+        <object>objects\objPuzzleInteract</object>
+        <object>objects\objSpaceSpike</object>
+        <object>objects\objLibraryDoor</object>
+        <object>objects\objBedroomDoor</object>
+        <object>objects\objPuzzleBanana</object>
+        <object>objects\objPuzzleFridge</object>
+        <object>objects\objPuzzleSink</object>
+        <object>objects\objPuzzleToilet</object>
+        <object>objects\objPuzzleTub</object>
+        <object>objects\objPuzzleCards</object>
+      </objects>
     </objects>
     <objects name="world">
       <object>objects\objWorld</object>
@@ -329,20 +688,21 @@
       <object>objects\objBlood</object>
       <object>objects\objGameOver</object>
     </objects>
-    <objects name="blocks">
+    <objects name="blocks and platforms">
       <object>objects\objBlock</object>
-      <object>objects\objRestartBlocker</object>
+      <object>objects\objBetterBlock</object>
+      <object>objects\objPlatform</object>
+      <object>objects\objMovingPlatform</object>
+      <object>objects\objMovingPlatform_new</object>
+      <object>objects\objBetterMovingPlatform</object>
+      <object>objects\objBetterBlockCtrl</object>
       <object>objects\objMiniBlock</object>
       <object>objects\objSlipBlock</object>
       <object>objects\objSlideBlock</object>
       <object>objects\objSlideBlockL</object>
       <object>objects\objSlideBlockR</object>
       <object>objects\objSaveBlocker</object>
-    </objects>
-    <objects name="platforms">
-      <object>objects\objPlatform</object>
-      <object>objects\objMovingPlatform_new</object>
-      <object>objects\objMovingPlatform</object>
+      <object>objects\objRestartBlocker</object>
     </objects>
     <objects name="killers">
       <object>objects\objPlayerKiller</object>
@@ -382,6 +742,13 @@
       <object>objects\objOutsideRoomChanger</object>
       <object>objects\objSpecialSnowstormORC</object>
       <object>objects\objWarp</object>
+      <object>objects\objPirateVisualControl</object>
+      <objects name="Moving Spikes">
+        <object>objects\objMovingSpikeLeft</object>
+        <object>objects\objMovingSpikeUp</object>
+        <object>objects\objMovingSpikeRight</object>
+        <object>objects\objMovingSpikeDown</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -389,35 +756,98 @@
       <room>rooms\rInit</room>
       <room>rooms\rTitle</room>
       <room>rooms\rMenu</room>
+      <room>rooms\rSampleRoom</room>
       <room>rooms\rOptions</room>
     </rooms>
-    <rooms name="Frozen Over">
-      <room>rooms\rSampleRoom</room>
+    <rooms name="Beachventure">
+      <room>rooms\rBeachDemo</room>
+      <room>rooms\rBeachIntro</room>
+      <room>rooms\rBeachHotel</room>
+      <room>rooms\rBeachHammock</room>
+      <room>rooms\rBeachHammock2</room>
+      <room>rooms\rBeachBasketball</room>
+      <room>rooms\rBeachDrink1</room>
+      <room>rooms\rBeachDrink2</room>
+      <room>rooms\rBeachCombo</room>
+      <room>rooms\rStormDemo</room>
+      <room>rooms\rStorm2</room>
+      <room>rooms\rStorm3</room>
+      <room>rooms\rStorm4</room>
+      <room>rooms\rStorm5</room>
+      <room>rooms\rStorm6</room>
+      <room>rooms\rPirate1</room>
+      <room>rooms\rPirate2</room>
+      <room>rooms\rPirate3</room>
+      <room>rooms\rPirate4</room>
+      <room>rooms\rPirate5</room>
     </rooms>
-    <room>rooms\rTemplate</room>
-    <room>rooms\rCutsceneIntro</room>
-    <room>rooms\rSnow0</room>
-    <room>rooms\rSnowTransition</room>
-    <room>rooms\rSnow1</room>
-    <room>rooms\rSnow2</room>
-    <room>rooms\rSnow3</room>
-    <room>rooms\rSnow4</room>
-    <room>rooms\rSnow5</room>
-    <room>rooms\rSnow6</room>
-    <room>rooms\rSnow7</room>
-    <room>rooms\rSnow8</room>
-    <room>rooms\rSnowCaveTransition</room>
-    <room>rooms\rCave1</room>
-    <room>rooms\rCave2</room>
-    <room>rooms\rCave3</room>
-    <room>rooms\rCave4</room>
-    <room>rooms\rCave5</room>
-    <room>rooms\rCave6</room>
-    <room>rooms\rCave7</room>
-    <room>rooms\rCaveBossTransition</room>
-    <room>rooms\rFrozenBoss</room>
-    <room>rooms\rCutsceneEnd</room>
-    <room>rooms\rClear</room>
+    <rooms name="Frozen Over">
+      <room>rooms\rCutsceneIntro</room>
+      <room>rooms\rSnow0</room>
+      <room>rooms\rSnowTransition</room>
+      <room>rooms\rSnow1</room>
+      <room>rooms\rSnow2</room>
+      <room>rooms\rSnow3</room>
+      <room>rooms\rSnow4</room>
+      <room>rooms\rSnow5</room>
+      <room>rooms\rSnow6</room>
+      <room>rooms\rSnow7</room>
+      <room>rooms\rSnow8</room>
+      <room>rooms\rSnowCaveTransition</room>
+      <room>rooms\rCave1</room>
+      <room>rooms\rCave2</room>
+      <room>rooms\rCave3</room>
+      <room>rooms\rCave4</room>
+      <room>rooms\rCave5</room>
+      <room>rooms\rCave6</room>
+      <room>rooms\rCave7</room>
+      <room>rooms\rCaveBossTransition</room>
+      <room>rooms\rFrozenBoss</room>
+      <room>rooms\rCutsceneEnd</room>
+      <room>rooms\rClear</room>
+    </rooms>
+    <rooms name="Fall / Space">
+      <room>rooms\rFallTemplate</room>
+      <room>rooms\rFall1</room>
+      <room>rooms\rFall2</room>
+      <room>rooms\rFall3</room>
+      <room>rooms\rFall4</room>
+      <room>rooms\rFall5</room>
+      <room>rooms\rFall6</room>
+      <room>rooms\rSpaceship1</room>
+      <room>rooms\rSpaceship2</room>
+      <room>rooms\rSpaceship3</room>
+      <room>rooms\rSpaceship4</room>
+      <room>rooms\rSpaceship5</room>
+      <room>rooms\rSpaceship6</room>
+      <room>rooms\rSpaceshipBoss</room>
+      <room>rooms\rSpaceshipTemplate</room>
+      <room>rooms\rSpaceTest</room>
+      <room>rooms\rSpaceA</room>
+      <room>rooms\rSpaceB</room>
+      <room>rooms\rSpaceC</room>
+      <room>rooms\rSpaceD</room>
+      <room>rooms\rSpaceE</room>
+      <room>rooms\rSpaceF</room>
+      <room>rooms\rSpaceEmpty</room>
+    </rooms>
+    <rooms name="Puzzle">
+      <room>rooms\rGardenFarLeft</room>
+      <room>rooms\rGardenLeft</room>
+      <room>rooms\rGardenMiddle</room>
+      <room>rooms\rGardenRight</room>
+      <room>rooms\rGardenFarRight</room>
+      <room>rooms\rTemplate</room>
+      <room>rooms\rMansionLeftUp</room>
+      <room>rooms\rMansionLeft</room>
+      <room>rooms\rMansionCenter</room>
+      <room>rooms\rMansionRight</room>
+      <room>rooms\rMansionRightUp</room>
+      <room>rooms\rMansionAttic</room>
+    </rooms>
+    <rooms name="Panasonic Prequel">
+      <room>rooms\rField1</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

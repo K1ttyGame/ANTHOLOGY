@@ -86,9 +86,9 @@ if (phase == 3) {
             drawYSide -= .4
     }
     if (timer &gt;= 900 &amp;&amp; timer &lt;= 1200) {
-        if (drawXSide &gt; 0)
+        if (drawXSide &gt; -1)
             drawXSide --
-        if (drawYSide &gt; 0)
+        if (drawYSide &gt; -1)
             drawYSide --
     }
     if (timer &gt;= 1300 &amp;&amp; timer &lt;= 2000) {
@@ -161,10 +161,10 @@ if (phase == 3) {
 
 if (timer &lt; 1300 || timer &gt; 2000) {
     draw_set_color(c_black)
-    draw_rectangle(0, 0, drawXSide, view_yview+room_height, false)
-    draw_rectangle(room_width-drawXSide, 0, room_width, view_yview+room_height, false)
-    draw_rectangle(drawXSide, 0, 800-drawXSide, view_yview+drawYSide, false)
-    draw_rectangle(drawXSide, 608-drawYSide, 800-drawXSide, view_yview+room_height, false)
+    draw_rectangle(-1, -1, drawXSide, view_yview+room_height+1, false)
+    draw_rectangle(room_width-drawXSide, -1, room_width+1, view_yview+room_height+1, false)
+    draw_rectangle(drawXSide, -1, 800-drawXSide, view_yview+drawYSide, false)
+    draw_rectangle(drawXSide, 608-drawYSide, 800-drawXSide, view_yview+room_height+1, false)
     draw_set_color(c_white)
 }
 

@@ -51,6 +51,47 @@ if (global.autosave) //save the game if currently set to autosave
 }
 
 coyote = 5 //frames of coyote time
+
+clawed = false //determines if can move
+
+drink = false //determine if 2x speed, beachventure
+drinkTimer = 0
+
+space = false
+spaceAirFlag = false
+
+puzzle = false
+puzzleGUI = false
+puzzleIndex = 0
+interact = false
+combine = false
+combineIndex = 0
+currentItem = 0
+
+zipline = false
+ziplineCooldown = 0
+momentum = false
+canUseMomentum = false //set in switch statement
+
+paint = false
+paintAngle = false
+
+//[Better Block]
+//used to check if riding a platform will put the player into/through a block
+platCheck = 0;
+platCounter = 0;
+//the Better Platform/Block which the player is on, if there is one
+riding = noone;
+//records player movement
+PhSpd = 0;
+PvSpd = 0;
+//amount pushed by Better Blocks (used to carry the player)
+hPush = 0;
+//Version 1.1: used to store the relationship between the player's origin and their bbox
+leftToOrigin = (sprite_get_xoffset(mask_index) - sprite_get_bbox_left(mask_index))*image_xscale;
+rightToOrigin = (sprite_get_bbox_right(mask_index) - sprite_get_xoffset(mask_index) + 1)*image_xscale;
+topToOrigin = (sprite_get_yoffset(mask_index) - sprite_get_bbox_top(mask_index))*image_yscale;
+bottomToOrigin = (sprite_get_bbox_bottom(mask_index) - sprite_get_yoffset(mask_index) + 1)*image_yscale;
 </string>
           </argument>
         </arguments>
@@ -76,6 +117,8 @@ coyote = 5 //frames of coyote time
             <string>//when the player is destroyed, also destroy the bow
 with (objBow)
     instance_destroy();
+    
+audio_stop_sound(sndSpaceSuitAir)
 </string>
           </argument>
         </arguments>
@@ -104,6 +147,37 @@ with (objBow)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///BetterBlock
+
+//Set up Player variables for objBetterBlock and objBetterMovingPlatform
+PhSpd = (x - xprevious);
+PvSpd = (y - yprevious);
+
+//Version 1.1: used to store the relationship between the player's origin and their bbox
+leftToOrigin = (sprite_get_xoffset(mask_index) - sprite_get_bbox_left(mask_index))*image_xscale;
+rightToOrigin = (sprite_get_bbox_right(mask_index) - sprite_get_xoffset(mask_index) + 1)*image_xscale;
+topToOrigin = (sprite_get_yoffset(mask_index) - sprite_get_bbox_top(mask_index))*image_yscale;
+bottomToOrigin = (sprite_get_bbox_bottom(mask_index) - sprite_get_yoffset(mask_index) + 1)*image_yscale;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -122,7 +196,9 @@ with (objBow)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//check button presses
+            <string>if (clawed == false &amp;&amp; space == false &amp;&amp; zipline == false) {
+
+//check button presses
 var L = keyboard_check(global.leftButton);
 var R = keyboard_check(global.rightButton);
 
@@ -148,7 +224,7 @@ else
 var slipBlockTouching = instance_place(x,y+(1*global.grav),objSlipBlock);   //check if near a slip block
 
 //vine checks
-var notOnBlock = (place_free(x,y+(global.grav)));
+var notOnBlock = (place_free(x,y+(global.grav)) &amp;&amp; !instance_exists(riding));
 var onVineL = (place_meeting(x-1,y,objWalljumpL) &amp;&amp; notOnBlock);
 var onVineR = (place_meeting(x+1,y,objWalljumpR) &amp;&amp; notOnBlock);
 
@@ -183,6 +259,14 @@ if (h != 0)  //player is moving
             image_speed = 0.5;
         }
         
+        else if (drink) {
+            hspeed = 2 * maxSpeed * h;
+        }
+        
+        else if (momentum &amp;&amp; canUseMomentum) {
+            //do nothing
+        }
+        
         else {
             if (slipBlockTouching == noone) //not touching a slip block, move immediately at full speed
                 hspeed = maxSpeed * h;
@@ -200,6 +284,10 @@ if (h != 0)  //player is moving
         }
     }
 }
+
+else if (momentum &amp;&amp; canUseMomentum) {
+            //do nothing
+    }
 else    //player is not moving
 {
     if (slipBlockTouching == noone) //not touching a slip block, stop immediately
@@ -256,14 +344,25 @@ if (abs(vspeed) &gt; maxVspeed) {vspeed = sign(vspeed)*maxVspeed;} //check if mo
 
 if (!frozen)    //check if frozen before doing anything
 {
-    if (keyboard_check_pressed(global.shootButton))
-        scrPlayerShoot();
+    if (keyboard_check_pressed(global.shootButton)) {
+        if (paint == true) {
+            if (instance_number(objPaintGunParticle) &lt; 5) {
+                with (instance_create(x, y, objPaintGunParticle)) {
+                    speed = 10
+                    gravity = .2
+                    direction = other.paintAngle
+                }
+            }
+        }
+        else
+            scrPlayerShoot();
+    }
     if (keyboard_check_pressed(global.jumpButton))
         scrPlayerJump();
     if (keyboard_check_released(global.jumpButton)) //remove check for spring if breaking
         scrPlayerVJump();
-    if (keyboard_check_pressed(global.suicideButton))
-        scrKillPlayer();
+    //if (keyboard_check_pressed(global.suicideButton))
+    //    scrKillPlayer();
 }
 
 
@@ -306,6 +405,22 @@ if (onVineL || onVineR)
     }
 }
 
+//coyote time
+if !(instance_place(x, y+1, objPlatform)) {
+    if (coyote &gt; 0) coyote--
+}
+else {
+    coyote = 5
+}
+
+}
+
+//drink
+if (drink) {
+    drinkTimer--
+    if (drinkTimer == 0)
+        drink = false
+}
 
 //player sprite changing
 switch (room) {
@@ -349,6 +464,53 @@ switch (room) {
             sprite_index = sprFPlayerJump
     }
         break;
+    case rSpaceTest:
+    case rSpaceA:
+    case rSpaceB:
+    case rSpaceC:
+    case rSpaceD:
+    case rSpaceE:
+    case rSpaceF:
+    case rSpaceEmpty:
+        space = true
+        sprite_index = sprSpaceSuit
+        break;
+    case rGardenFarLeft:
+    case rGardenLeft:
+    case rGardenMiddle:
+    case rGardenRight:
+    case rGardenFarRight:
+    case rMansionLeft:
+    case rMansionLeftUp:
+    case rMansionCenter:
+    case rMansionRight:
+    case rMansionRightUp:
+    case rMansionAttic:
+        puzzle = true
+        break;
+    case rFall1:
+    case rFall2:
+    case rFall3:
+    case rFall4:
+    case rFall5:
+    case rFall6:
+        canUseMomentum = true
+        break;
+    case rSpaceship1:
+    case rSpaceship2:
+    case rSpaceship3:
+    case rSpaceship4:
+    case rSpaceship5:
+    case rSpaceship6:
+    case rSpaceshipBoss:
+        paint = true
+        break;
+    default:
+        puzzle = false
+        space = false
+        canUseMomentum = false
+        paint = false
+        break;
 }
 
 if (global.noDeath) image_alpha = .7
@@ -357,12 +519,123 @@ else image_alpha = 1
 if (global.infJump) image_blend = c_blue
 else image_blend = c_white
 
-//coyote time
-if !(instance_place(x, y+1, objPlatform)) {
-    if (coyote &gt; 0) coyote--
+//space
+if (space == true) {
+    gravity = 0
+    if (keyboard_check(global.leftButton)) {
+        hspeed -= .0035
+        with instance_create(x, y, objSpaceSuitPart) hspeed = .75
+        }
+    if (keyboard_check(global.rightButton)) {
+        hspeed += .0035
+        with instance_create(x, y, objSpaceSuitPart) hspeed = -.75
+        }
+    if (keyboard_check(global.upButton)) {
+        vspeed -= .0035
+        with instance_create(x, y, objSpaceSuitPart) vspeed = .75
+        }
+    if (keyboard_check(global.downButton)) {
+        vspeed += .0035
+        with instance_create(x, y, objSpaceSuitPart) vspeed = -.75
+        }
+        
+    if (keyboard_check(global.leftButton) || keyboard_check(global.rightButton) || keyboard_check(global.upButton) || keyboard_check(global.downButton)) {
+            if !audio_is_playing(sndSpaceSuitAir) {audio_play_sound(sndSpaceSuitAir, 10, true)}
+        }
+    else {
+        audio_stop_sound(sndSpaceSuitAir)
+        }
+        
+    if (hspeed != 0)
+        image_xscale = sign(hspeed)
 }
-else {
-    coyote = 5
+
+//puzzle
+if (puzzle) {
+    if (keyboard_check_pressed(vk_control)) {
+        puzzleGUI = !puzzleGUI
+        if (puzzleGUI == false) {
+            combine = false
+            interact = false
+        }
+    }
+        
+    if (puzzleGUI) {
+        objPlayer.frozen = true
+        objPlayer.visible = true
+        
+        if (keyboard_check_pressed(ord('I')) &amp;&amp; combine == false &amp;&amp; ds_list_size(global.inventory) != 0) {
+            interact = !interact
+        }
+        
+        if (keyboard_check_pressed(ord('U')) &amp;&amp; interact == false &amp;&amp; ds_list_size(global.inventory) != 0) {
+            combine = !combine
+            if (combine == false) combineIndex = 0
+        }
+        
+        
+        if (interact) {
+            scrInteract(global.inventory[|puzzleIndex])
+        }
+        
+        else if (combine) {
+            if (keyboard_check_pressed(global.rightButton)) {
+                combineIndex++
+                }
+                
+            if (keyboard_check_pressed(global.leftButton)) {
+                combineIndex--
+                }
+            
+            if (combineIndex &gt;= ds_list_size(global.inventory))
+                combineIndex = 0
+            if (combineIndex &lt; 0)
+                combineIndex = ds_list_size(global.inventory)-1
+                
+            if (keyboard_check_pressed(ord('Y')))
+                scrCombine(global.inventory[|puzzleIndex], global.inventory[|combineIndex])
+        }
+        
+        else if (combine == false &amp;&amp; interact == false) {
+            if (keyboard_check_pressed(global.rightButton))
+                puzzleIndex++
+            if (keyboard_check_pressed(global.leftButton))
+                puzzleIndex--
+        }
+        
+        if (puzzleIndex &gt;= ds_list_size(global.inventory))
+            puzzleIndex = 0
+        if (puzzleIndex &lt; 0)
+            puzzleIndex = ds_list_size(global.inventory)-1
+    }
+    else {
+        objPlayer.frozen = false
+        objPlayer.visible = true
+    }
+}
+
+//zipline
+if (zipline &amp;&amp; ziplineCooldown == 0) {
+    if instance_exists(objZiplinePoint) {
+        x = objZiplinePoint.x
+        y = objZiplinePoint.y
+        gravity = 0
+        frozen = true
+        sprite_index = sprPlayerZipline
+        image_speed = 0
+    }
+}
+
+else image_speed = 0.2;
+
+if (ziplineCooldown &gt; 0) ziplineCooldown -= 1
+
+//paint gun
+if (paint) {
+    if (keyboard_check(global.upButton)) paintAngle += 4
+    if (keyboard_check(global.downButton)) paintAngle -= 4
+    if (paintAngle &lt; 0) paintAngle += 360
+    else if (paintAngle &gt; 360) paintAngle -= 360
 }
 </string>
           </argument>
@@ -409,7 +682,9 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.grav == 1)   //normal
+            <string>if (scrIsBetterPlatform(other) || scrIsBetterBlock(other)) exit;
+
+if (global.grav == 1)   //normal
 {
     if (y-vspeed/2 &lt;= other.y)
     {
@@ -442,6 +717,35 @@ else    //flipped
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="objBetterBlock">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Push out to avoid colliding with objects embedded in Better Blocks
+PhSpd = (x - xprevious);
+PvSpd = (y - yprevious);
+with (other){
+    event_user(0);
+    event_user(1);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="objBlock">
       <action>
         <libid>1</libid>
@@ -459,7 +763,9 @@ else    //flipped
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!place_free(x+hspeed,y))
+            <string>if (scrIsBetterPlatform(other) || scrIsBetterBlock(other)) exit;
+
+if (!place_free(x+hspeed,y))
 {
     if (global.grav == 1)   //normal
     {
@@ -493,6 +799,74 @@ if (!place_free(x+hspeed,y+vspeed)) {hspeed = 0;}
 
 if (!place_free(x, y))
     scrKillPlayer();
+    
+momentum = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>drink = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw drink meter
+if (drink) {
+    scrDrawPie(x+2, y-46, drinkTimer, 150, c_black, 16, .4)
+    scrDrawPie(x, y-48, drinkTimer, 150, c_orange, 16, 1)
+}
+
+//draw puzzle UI
+if (puzzleGUI) {
+    draw_set_color(c_black)
+    draw_set_alpha(.8)
+    //draw_rectangle(view_xview-1, view_yview-1, view_xview+view_wview+1, view_yview+view_hview+1, false)
+    draw_rectangle(-1, -1, 801, 609, false) //delete if broken
+    draw_set_color(c_white)
+    draw_set_alpha(1)
+    
+    scrDrawInventory()
+    
+    if (interact) {
+        scrInteractDraw(global.inventory[|puzzleIndex])
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -523,7 +897,35 @@ var drawY = y;
 if (global.grav == -1)      //need to draw the player a pixel off in the y-axis when flipped for some reason
     drawY += 1;
 
+if (space == true) {
+    var i
+    if (hspeed &gt; 0) {
+        for (i = 0; i &lt; floor(12*abs(hspeed)); i++)
+            draw_sprite(sprSpaceArrow, 0, x+(i*5)-1, y-10)
+    }
+    if (hspeed &lt; 0) {
+        for (i = 0; i &lt; floor(12*abs(hspeed)); i++)
+            draw_sprite_ext(sprSpaceArrow, 0, x-(i*5)-1, y-10, -1, 1, 0, c_white, 1)
+    }
+    if (vspeed &lt; 0) {
+        for (i = 0; i &lt; floor(12*abs(vspeed)); i++)
+            draw_sprite(sprSpaceArrowUp, 0, x-4, y-(i*6))
+    }
+    if (vspeed &gt; 0) {
+        for (i = 0; i &lt; floor(12*abs(vspeed)); i++)
+            draw_sprite_ext(sprSpaceArrowUp, 0, x-4, y+(i*6), 1, -1, 0, c_white, 1)
+    }
+}
+
+if (paint) {
+    draw_sprite_ext(sprPaintGunArm, 0, drawX, drawY, 1, 1, paintAngle, c_white, 1) 
+}
+    
 draw_sprite_ext(sprite_index,image_index,drawX,drawY,image_xscale*xScale,image_yscale*global.grav,image_angle,image_blend,image_alpha);
+
+//var o
+//for (o = 0; o &lt; ds_list_size(global.inventory); o += 1)
+//    draw_text(32+(32*o), 32, string(global.inventory[| o]))
 </string>
           </argument>
         </arguments>

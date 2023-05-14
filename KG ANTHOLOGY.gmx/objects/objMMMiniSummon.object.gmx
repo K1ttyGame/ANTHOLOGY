@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-5000</depth>
+  <depth>-7500</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = .1
+image_blend = c_blue
 summoner = 0
-image_xscale = 1.667
+image_xscale = 2.333
 image_yscale = image_xscale
 </string>
           </argument>

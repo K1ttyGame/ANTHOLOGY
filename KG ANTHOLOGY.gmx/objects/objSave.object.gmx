@@ -52,6 +52,29 @@ switch (room) {
     case rCave7:
         sprite_index = sprSaveFrozen2
         break;
+    case rBeachHotel:
+    case rBeachHammock:
+    case rBeachHammock2:
+    case rBeachBasketball:
+    case rBeachDrink1:
+    case rBeachDrink2:
+    case rBeachCombo:
+        sprite_index = sprSaveBeach
+        break;
+    case rStorm2:
+    case rStorm3:
+    case rStorm4:
+    case rStorm5:
+    case rStorm6:
+        sprite_index = sprSaveStorm
+        break;
+    case rPirate1:
+    case rPirate2:
+    case rPirate3:
+    case rPirate4:
+    case rPirate5:
+        sprite_index = sprSavePirate
+        break;
 }
 </string>
           </argument>
@@ -125,6 +148,9 @@ switch (room) {
 {
     event_user(0);
 }
+
+if (objPlayer.space == true)
+    event_user(0);
 </string>
           </argument>
         </arguments>

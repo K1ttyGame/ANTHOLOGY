@@ -3,7 +3,7 @@
   <spriteName>sprCherry</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000000</depth>
   <persistent>0</persistent>
   <parentName>objPlayerKiller</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 1/15;
+
+switch (room) {
+    case rPirate2:
+        sprite_index = sprGhostShipApple
+        break;
+}
 </string>
           </argument>
         </arguments>

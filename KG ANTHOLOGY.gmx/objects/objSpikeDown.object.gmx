@@ -43,7 +43,53 @@
     case rCave7:
         sprite_index = sprCaveSpikeDown
         break;
+    case rPirate2:
+    case rPirate3:
+    case rPirate4:
+    case rPirate5:
+        sprite_index = sprPirateDown
+        break;
+    case rStorm2:
+    case rStorm3:
+    case rStorm4:
+    case rStorm5:
+    case rStorm6:
+        sprite_index = sprStormDown
+        break;
+    case rBeachHotel:
+    case rBeachHammock:
+    case rBeachHammock2:
+    case rBeachBasketball:
+    case rBeachDrink1:
+    case rBeachDrink2:
+    case rBeachCombo:
+        sprite_index = sprBeachSpikeDown
+        image_index = irandom_range(0,2)
+        break;
+    case rGardenFarRight:
+    case rGardenRight:
+    case rGardenMiddle:
+    case rGardenLeft:
+    case rGardenFarLeft:
+    case rMansionLeftUp:
+    case rMansionLeft:
+    case rMansionCenter:
+    case rMansionRight:
+    case rMansionRightUp:
+    case rMansionAttic:
+        sprite_index = sprMansionSpikeDown
+        break;
+    case rSpaceship1:
+    case rSpaceship2:
+    case rSpaceship3:
+    case rSpaceship4:
+    case rSpaceship5:
+    case rSpaceship6:
+        sprite_index = sprSpaceshipSpikeDown;
+        break;
 }
+
+image_speed = 0
 </string>
           </argument>
         </arguments>

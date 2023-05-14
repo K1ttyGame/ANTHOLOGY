@@ -12,7 +12,7 @@ window_set_caption(global.roomCaptionDef);
 
 global.md5StrAdd = "qweiuyrhzxcbnvzghd";  //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-global.startRoom = rCutsceneIntro;    //sets which room to begin with
+global.startRoom = rMansionCenter;    //sets which room to begin with
 
 global.menuSound = sndJump;     //sets what sound to use for navigating the main menu
 global.deathMusicMode = 0;      //sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
@@ -35,6 +35,12 @@ global.savePlayerX = 0;
 global.savePlayerY = 0;
 global.grav = 1;
 global.saveGrav = 1;
+
+//new
+global.inventory = ds_list_create()
+for (var i = 0; i < 17; i++) { //set 3 to total items in game
+    global.gotItem[i] = 0
+} 
 
 for (var i = global.secretItemTotal-1; i >= 0; i--)
 {

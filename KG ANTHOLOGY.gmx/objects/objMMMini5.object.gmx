@@ -114,11 +114,9 @@ if (phase == 1) { //wait for MM4 attack
         timer = 0
         phase++
         audio_play_sound(sndWarningSound, 10, false)
-        with instance_create(x, y, objMMMiniSummon) {
+        with instance_create(x - 32, y - 32, objMMMiniSummon) {
             summoner = other.id
             sprite_index = other.sprite_index
-            image_xscale = other.image_xscale
-            image_yscale = other.image_yscale
         }
     }
 }

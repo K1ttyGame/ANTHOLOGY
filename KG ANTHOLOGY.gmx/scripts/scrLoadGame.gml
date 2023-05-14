@@ -30,6 +30,7 @@ if (loadFile)
         global.savePlayerY = ds_map_find_value(saveMap,"savePlayerY");
         global.saveGrav = ds_map_find_value(saveMap,"saveGrav");
         global.drawKillBorders = ds_map_find_value(saveMap, "drawKillBorder")
+        ds_list_read(global.inventory, ds_map_find_value(saveMap, "inventory"))
         
         if (is_string(global.saveRoom))   //check if the saved room loaded properly
         {
@@ -49,6 +50,10 @@ if (loadFile)
         for (var i = 0; i < global.bossItemTotal; i++)
         {
             global.saveBossItem[i] = ds_map_find_value(saveMap,"saveBossItem["+string(i)+"]");
+        }
+        
+        for (var i = 0; i < array_length_1d(global.gotItem); i++) {
+           global.gotItem[i] = ds_map_find_value(saveMap, "gotItem["+string(i)+"]")
         }
         
         global.saveGameClear = ds_map_find_value(saveMap,"saveGameClear");

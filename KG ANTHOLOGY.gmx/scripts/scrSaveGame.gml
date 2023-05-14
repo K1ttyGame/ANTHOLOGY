@@ -63,6 +63,8 @@ ds_map_add(saveMap,"savePlayerY",global.savePlayerY);
 ds_map_add(saveMap,"saveGrav",global.saveGrav);
 ds_map_add(saveMap,"drawKillBorder", global.drawKillBorders);
 
+ds_map_add(saveMap, "inventory", ds_list_write(global.inventory));
+
 for (var i = 0; i < global.secretItemTotal; i++)
 {
     ds_map_add(saveMap,"saveSecretItem["+string(i)+"]",global.saveSecretItem[i]);
@@ -71,6 +73,10 @@ for (var i = 0; i < global.secretItemTotal; i++)
 for (var i = 0; i < global.bossItemTotal; i++)
 {
     ds_map_add(saveMap,"saveBossItem["+string(i)+"]",global.saveBossItem[i]);
+}
+
+for (var i = 0; i < array_length_1d(global.gotItem); i++) {
+    ds_map_add(saveMap,"gotItem["+string(i)+"]",global.gotItem[i])
 }
 
 ds_map_add(saveMap,"saveGameClear",global.saveGameClear);
