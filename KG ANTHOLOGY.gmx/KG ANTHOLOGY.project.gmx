@@ -373,6 +373,9 @@
           <sprite>sprites\sprCardArrows</sprite>
         </sprites>
       </sprites>
+      <sprites name="PB">
+        <sprite>sprites\sprSwingingAxe</sprite>
+      </sprites>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
@@ -380,6 +383,10 @@
   <backgrounds name="background">
     <background>background\bGlow</background>
     <background>background\bAllTiles</background>
+    <backgrounds name="Dungeon">
+      <background>background\bDungeonBG</background>
+      <background>background\bDungeonTexture</background>
+    </backgrounds>
     <backgrounds name="Mansion">
       <background>background\bBookshelf</background>
       <background>background\bBookshelfEmpty</background>
@@ -669,6 +676,10 @@
         <object>objects\objPuzzleTub</object>
         <object>objects\objPuzzleCards</object>
       </objects>
+      <objects name="PB">
+        <object>objects\objSwingingAxe</object>
+        <object>objects\objSpikeExtender</object>
+      </objects>
     </objects>
     <objects name="world">
       <object>objects\objWorld</object>
@@ -752,6 +763,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room87</room>
     <rooms name="init">
       <room>rooms\rInit</room>
       <room>rooms\rTitle</room>
@@ -847,6 +859,9 @@
     </rooms>
     <rooms name="Panasonic Prequel">
       <room>rooms\rField1</room>
+      <room>rooms\rDungeon1</room>
+      <room>rooms\rDungeon2</room>
+      <room>rooms\rDungeon3</room>
     </rooms>
   </rooms>
   <help>

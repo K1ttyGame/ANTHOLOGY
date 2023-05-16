@@ -56,6 +56,9 @@ switch (room) {
         case rSpaceship1:
             mode = 3
             break;
+        case rDungeon1:
+            mode = 4
+            break;
 }
 </string>
           </argument>
@@ -83,35 +86,33 @@ switch (room) {
     sandSurf = surface_create(room_width, room_height)
 
 if (mode == 2) { //draw outline
-    draw_set_color(c_black)
+    if (mode == 2) draw_set_color(c_black)
     with (objBlock) {
         if (object_index != objFallingLeaf &amp;&amp; object_index != objTelescopingBlockSpawn &amp;&amp; object_index != objMovingShootBlock) draw_rectangle(x-1, y-1, x+sprite_width, y+sprite_height, false)
     }
-    if (mode == 2) {
-        with (objSpikeUp) {
-            draw_sprite(sprite_index, 0, x-1, y)
-            draw_sprite(sprite_index, 0, x+1, y)
-            draw_sprite(sprite_index, 0, x, y+1)
-            draw_sprite(sprite_index, 0, x, y-1)
-        }
-        with (objSpikeRight) {
-            draw_sprite(sprite_index, 0, x-1, y)
-            draw_sprite(sprite_index, 0, x+1, y)
-            draw_sprite(sprite_index, 0, x, y+1)
-            draw_sprite(sprite_index, 0, x, y-1)
-        }
-        with (objSpikeDown) {
-            draw_sprite(sprite_index, 0, x-1, y)
-            draw_sprite(sprite_index, 0, x+1, y)
-            draw_sprite(sprite_index, 0, x, y+1)
-            draw_sprite(sprite_index, 0, x, y-1)
-        }
-        with (objSpikeLeft) {
-            draw_sprite(sprite_index, 0, x-1, y)
-            draw_sprite(sprite_index, 0, x+1, y)
-            draw_sprite(sprite_index, 0, x, y+1)
-            draw_sprite(sprite_index, 0, x, y-1)
-        }
+    with (objSpikeUp) {
+        draw_sprite(sprite_index, 0, x-1, y)
+        draw_sprite(sprite_index, 0, x+1, y)
+        draw_sprite(sprite_index, 0, x, y+1)
+        draw_sprite(sprite_index, 0, x, y-1)
+    }
+    with (objSpikeRight) {
+        draw_sprite(sprite_index, 0, x-1, y)
+        draw_sprite(sprite_index, 0, x+1, y)
+        draw_sprite(sprite_index, 0, x, y+1)
+        draw_sprite(sprite_index, 0, x, y-1)
+    }
+    with (objSpikeDown) {
+        draw_sprite(sprite_index, 0, x-1, y)
+        draw_sprite(sprite_index, 0, x+1, y)
+        draw_sprite(sprite_index, 0, x, y+1)
+        draw_sprite(sprite_index, 0, x, y-1)
+    }
+    with (objSpikeLeft) {
+        draw_sprite(sprite_index, 0, x-1, y)
+        draw_sprite(sprite_index, 0, x+1, y)
+        draw_sprite(sprite_index, 0, x, y+1)
+        draw_sprite(sprite_index, 0, x, y-1)
     }
 }
     
@@ -132,6 +133,7 @@ if (surface_exists(sandSurf)) {
         //draw_background_tiled_ext(bGlow, 0, 0, 2, 2, c_white, .5)
         //draw_background_tiled_ext(bGlow, 200, 200, 2, 2, c_white, .5)
     }
+    if (mode == 4) draw_background_tiled(bDungeonTexture, 0, 0)
     
     draw_set_color_write_enable(false,false,false,true);
     draw_set_alpha(1);
