@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -105,6 +105,9 @@
     <instance objName="objSpikeDown" x="608" y="448" name="inst_026C197E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="640" y="448" name="inst_AE1A9EED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="672" y="448" name="inst_0B54111E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="448" name="inst_7128DF63" locked="0" code="roomTo = rDungeon4&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="192" y="-32" name="inst_3C775FF1" locked="0" code="roomTo = rDungeon6&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="544" y="-32" name="inst_061BD81D" locked="0" code="roomTo = rDungeon6&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="480" y="544" w="32" h="32" xo="0" yo="0" id="10030053" name="inst_C4B796B7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

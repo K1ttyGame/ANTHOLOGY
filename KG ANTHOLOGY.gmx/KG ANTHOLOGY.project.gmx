@@ -18,6 +18,7 @@
         <sound>sound\sndPlatformCrash</sound>
         <sound>sound\sndNumberBeep2</sound>
         <sound>sound\sndPuzzleGetItem</sound>
+        <sound>sound\sndArrowShoot</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndNumberBeep</sound>
@@ -374,6 +375,9 @@
         </sprites>
       </sprites>
       <sprites name="PB">
+        <sprite>sprites\sprArrow</sprite>
+        <sprite>sprites\sprArrowShooterL</sprite>
+        <sprite>sprites\sprArrowShooterR</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprite>sprites\sprExplosion</sprite>
@@ -385,6 +389,7 @@
     <background>background\bAllTiles</background>
     <backgrounds name="Dungeon">
       <background>background\bDungeonBG</background>
+      <background>background\bDungeonTiles</background>
       <background>background\bDungeonTexture</background>
     </backgrounds>
     <backgrounds name="Mansion">
@@ -678,6 +683,9 @@
       </objects>
       <objects name="PB">
         <object>objects\objSwingingAxe</object>
+        <object>objects\objArrow</object>
+        <object>objects\objArrowShooterL</object>
+        <object>objects\objArrowShooterR</object>
         <object>objects\objSpikeExtender</object>
       </objects>
     </objects>
@@ -763,7 +771,6 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room87</room>
     <rooms name="init">
       <room>rooms\rInit</room>
       <room>rooms\rTitle</room>
@@ -862,6 +869,12 @@
       <room>rooms\rDungeon1</room>
       <room>rooms\rDungeon2</room>
       <room>rooms\rDungeon3</room>
+      <room>rooms\rDungeon4</room>
+      <room>rooms\rDungeon5</room>
+      <room>rooms\rDungeon6</room>
+    </rooms>
+    <rooms name="Hub">
+      <room>rooms\rAchievementCheck</room>
     </rooms>
   </rooms>
   <help>
