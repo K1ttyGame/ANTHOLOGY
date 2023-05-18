@@ -380,6 +380,9 @@
         <sprite>sprites\sprArrowShooterR</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
+      <sprites name="Hub / Menus">
+        <sprite>sprites\sprAchievements</sprite>
+      </sprites>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
@@ -557,10 +560,14 @@
     <font>fonts\fDialogue</font>
     <font>fonts\fFrozenTitle</font>
     <font>fonts\fPirate</font>
+    <font>fonts\fAchievementTitle</font>
     <font>fonts\fIkaruga</font>
   </fonts>
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
+    <objects name="Hub / Menus">
+      <object>objects\objAchievementBox</object>
+    </objects>
     <objects name="Devices">
       <object>objects\objExplosion</object>
       <object>objects\objCameraShutterFX</object>
