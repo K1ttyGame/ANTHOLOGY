@@ -377,6 +377,7 @@
       <sprites name="PB">
         <sprite>sprites\sprArrow</sprite>
         <sprite>sprites\sprArrowShooterL</sprite>
+        <sprite>sprites\bDungeonSpikeBlock</sprite>
         <sprite>sprites\sprArrowShooterR</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
@@ -393,7 +394,9 @@
     <backgrounds name="Dungeon">
       <background>background\bDungeonBG</background>
       <background>background\bDungeonTiles</background>
-      <background>background\bDungeonTexture</background>
+      <background>background\bDungeonBGTiles</background>
+      <background>background\bDungeonExtras</background>
+      <background>background\bDungeonFireFG</background>
     </backgrounds>
     <backgrounds name="Mansion">
       <background>background\bBookshelf</background>
@@ -693,6 +696,7 @@
         <object>objects\objArrow</object>
         <object>objects\objArrowShooterL</object>
         <object>objects\objArrowShooterR</object>
+        <object>objects\objDungeonVisualControl</object>
         <object>objects\objSpikeExtender</object>
       </objects>
     </objects>
@@ -879,6 +883,9 @@
       <room>rooms\rDungeon4</room>
       <room>rooms\rDungeon5</room>
       <room>rooms\rDungeon6</room>
+      <room>rooms\rDungeon7</room>
+      <room>rooms\rDungeon8</room>
+      <room>rooms\rDungeon9</room>
     </rooms>
     <rooms name="Hub">
       <room>rooms\rAchievementCheck</room>

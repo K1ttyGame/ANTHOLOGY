@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>472</width>
-  <height>472</height>
-  <data>images\bDungeonBG.png</data>
+  <width>1</width>
+  <height>366</height>
+  <data>images\bDungeonFireFG.png</data>
 </background>

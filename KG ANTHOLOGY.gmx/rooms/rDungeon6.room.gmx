@@ -125,6 +125,7 @@
     <instance objName="objOutsideRoomChanger" x="-32" y="96" name="inst_49D8D135" locked="0" code="roomTo = rDungeon5&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="192" y="576" name="inst_1BF7677A" locked="0" code="roomTo = rDungeon3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="544" y="576" name="inst_58E461CC" locked="0" code="roomTo = rDungeon3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="64" name="inst_58EDC69C" locked="0" code="roomTo = rDungeon7&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="0" y="192" w="32" h="32" xo="0" yo="0" id="10030428" name="inst_AC20EF29" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

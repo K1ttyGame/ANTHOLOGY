@@ -63,7 +63,7 @@ if (simulate) {
 if arrowTimer == 60 + delay {
     with instance_create (x+16, y+16, objArrow) {hspeed = -3; image_xscale = -sign(hspeed)}
     arrowTimer = 0
-    audio_play_sound (sndArrowShoot, 10, false)
+    //audio_play_sound (sndArrowShoot, 10, false)
 }
 </string>
           </argument>
