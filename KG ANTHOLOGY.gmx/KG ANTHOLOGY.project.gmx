@@ -126,6 +126,12 @@
       <sprite>sprites\sprMiniRight</sprite>
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
+      <sprites name="Dungeon">
+        <sprite>sprites\sprDungeonSpikeUp</sprite>
+        <sprite>sprites\sprDungeonSpikeRight</sprite>
+        <sprite>sprites\sprDungeonSpikeLeft</sprite>
+        <sprite>sprites\sprDungeonSpikeDown</sprite>
+      </sprites>
       <sprites name="Mansion">
         <sprite>sprites\sprMansionBathroomSUp</sprite>
         <sprite>sprites\sprMansionKitchenSDown</sprite>
@@ -382,7 +388,18 @@
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprites name="Hub / Menus">
+        <sprite>sprites\sprGlobe</sprite>
         <sprite>sprites\sprAchievements</sprite>
+        <sprites name="Achievement Guys">
+          <sprite>sprites\sprAGuy1</sprite>
+          <sprite>sprites\sprAGuy2</sprite>
+          <sprite>sprites\sprAGuy3</sprite>
+          <sprite>sprites\sprAGuy4</sprite>
+          <sprite>sprites\sprAGuy5</sprite>
+          <sprite>sprites\sprAGuy6</sprite>
+          <sprite>sprites\sprAGuy7</sprite>
+          <sprite>sprites\sprAGuy8</sprite>
+        </sprites>
       </sprites>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
@@ -391,6 +408,10 @@
   <backgrounds name="background">
     <background>background\bGlow</background>
     <background>background\bAllTiles</background>
+    <backgrounds name="Hub / Menus">
+      <background>background\bAchieveGrid</background>
+      <background>background\bSpaceBG</background>
+    </backgrounds>
     <backgrounds name="Dungeon">
       <background>background\bDungeonBG</background>
       <background>background\bDungeonTiles</background>
@@ -569,6 +590,8 @@
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
     <objects name="Hub / Menus">
+      <object>objects\objAchievementGuy</object>
+      <object>objects\objAchievementRoomVisuals</object>
       <object>objects\objAchievementBox</object>
     </objects>
     <objects name="Devices">

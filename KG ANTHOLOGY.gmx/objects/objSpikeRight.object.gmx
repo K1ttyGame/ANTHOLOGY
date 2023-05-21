@@ -87,6 +87,17 @@
     case rSpaceship6:
         sprite_index = sprSpaceshipSpikeRight;
         break;
+    case rDungeon1:
+    case rDungeon2:
+    case rDungeon3:
+    case rDungeon4:
+    case rDungeon5:
+    case rDungeon6:
+    case rDungeon7:
+    case rDungeon8:
+    case rDungeon9:
+        sprite_index = sprDungeonSpikeRight;
+        break;
 }
 
 image_speed = 0

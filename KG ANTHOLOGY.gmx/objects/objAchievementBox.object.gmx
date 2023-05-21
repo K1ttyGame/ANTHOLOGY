@@ -37,8 +37,10 @@ else {drawY = 448; pos = 0} //should be at 480
 drawAlpha = 0
 
 found = false
+hidden = false
+flag = false
 j = 0
-if (found == false) {
+/*if (hidden == true) {
     titleLength = string_length(aTitle)
     aTitle = ""
     for (j = 0; j &lt; titleLength; j++)
@@ -126,11 +128,12 @@ if (mouse_x &gt;= x &amp;&amp; mouse_x &lt;= x+96 &amp;&amp; mouse_y &gt;= y &am
     draw_set_color(c_white)
     draw_set_font(fDefault18)
     draw_set_halign(fa_center)
-    draw_text(room_width/2, drawY-8, aTitle)
+    if (!hidden) draw_text(room_width/2, drawY-8, aTitle)
+    else draw_text(room_width/2, drawY-8, "?????")
     
     draw_set_font(fDefault12)
-    if (found) draw_text_ext(room_width/2, drawY+32, aDetails, 24, room_width/2)
-    else draw_text_ext(room_width/2, drawY+32, aTitle + "#" + aTitle + "#" + aTitle, 24, room_width/2)
+    if (!hidden) draw_text_ext(room_width/2, drawY+32, aDetails, 24, room_width/2)
+    else draw_text_ext(room_width/2, drawY+32, "?????????????????", 24, room_width/2)
     
 }
 

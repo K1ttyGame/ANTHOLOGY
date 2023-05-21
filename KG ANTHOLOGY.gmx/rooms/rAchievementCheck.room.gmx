@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -31,8 +31,8 @@
     <yoffset>11010215</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
+    <background visible="-1" foreground="0" name="bSpaceBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bAchieveGrid" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -53,13 +53,13 @@
   <instances>
     <instance objName="objAchievementBox" x="32" y="64" name="inst_91E47E9D" locked="0" code="aTitle = &quot;Wish Granted&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Monmouth Has Frozen Over...&quot; and see the ending.'&#xA;found = true" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="192" y="64" name="inst_B9ADD702" locked="0" code="aTitle = &quot;Back From Vacation&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Cape May!&quot; and see the ending.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="32" y="192" name="inst_498614E3" locked="0" code="aTitle = &quot;Forever In My Memory&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Monmouth Has Frozen Over...&quot; with less than [X] deaths.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="32" y="192" name="inst_498614E3" locked="0" code="aTitle = &quot;Forever In My Memory&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Monmouth Has Frozen Over...&quot; with less than [X] deaths.'&#xA;found = true" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="32" y="320" name="inst_4996CF28" locked="0" code="aTitle = &quot;Really, Really Hungry&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Monmouth Has Frozen Over...&quot; under [time limit].'&#xA;found = true" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="32" y="448" name="inst_185BE682" locked="0" code="aTitle = &quot;Don't Think I Needed That&quot; //set in creation code&#xA;aDetails = 'Complete the tutorial level in the hub.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="192" y="448" name="inst_59A3CA6B" locked="0" code="aTitle = &quot;The Thinker&quot; //set in creation code&#xA;aDetails = 'Spend 5 consecutive minutes in the museum.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="352" y="448" name="inst_B9CC293F" locked="0" code="aTitle = &quot;my favorite screen :)&quot; //set in creation code&#xA;aDetails = 'Discover and conquer the hidden maze.'&#xA;found = true" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="512" y="448" name="inst_007AB281" locked="0" code="aTitle = &quot;Playtester Supreme&quot; //set in creation code&#xA;aDetails = 'Send some feedback.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementBox" x="672" y="448" name="inst_779FF2A0" locked="0" code="aTitle = &quot;We Thank You&quot; //set in creation code&#xA;aDetails = 'Collect all of the other achievements and view the credits.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="32" y="448" name="inst_185BE682" locked="0" code="aTitle = &quot;Don't Think I Needed That&quot; //set in creation code&#xA;aDetails = 'Complete the tutorial level in the hub.'&#xA;hidden = true" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="192" y="448" name="inst_59A3CA6B" locked="0" code="aTitle = &quot;The Thinker&quot; //set in creation code&#xA;aDetails = 'Spend 10 consecutive minutes in the museum.'&#xA;hidden = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="352" y="448" name="inst_B9CC293F" locked="0" code="aTitle = &quot;An Unexpected Sequel&quot; //set in creation code&#xA;aDetails = 'Discover and conquer Logical Conclusion 2.'&#xA;hidden = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="512" y="448" name="inst_007AB281" locked="0" code="aTitle = &quot;Playtester Supreme&quot; //set in creation code&#xA;aDetails = 'Send some feedback.'&#xA;found = true&#xA;hidden = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementBox" x="672" y="448" name="inst_779FF2A0" locked="0" code="aTitle = &quot;We Thank You&quot; //set in creation code&#xA;aDetails = 'Collect all of the other achievements and view the credits.'&#xA;found = true&#xA;hidden = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="192" y="192" name="inst_26DAE44A" locked="0" code="aTitle = &quot;Forgot the Sunscreen&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Cape May!&quot; with less than [X] deaths.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="192" y="320" name="inst_35178075" locked="0" code="aTitle = &quot;No Paid Time Off&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Cape May!&quot; under [time limit].'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="352" y="64" name="inst_A909F41E" locked="0" code="aTitle = &quot;Alien No More&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Until the Cows Come Home&quot; and see the ending.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -71,6 +71,15 @@
     <instance objName="objAchievementBox" x="672" y="64" name="inst_810187C8" locked="0" code="aTitle = &quot;Wait, that's it?&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Panasonic Outtake-ray&quot; and see the ending.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="672" y="192" name="inst_90BA9C9F" locked="0" code="aTitle = &quot;Impossible Mode&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Panasonic Outtake-ray&quot; with less than [X] deaths.'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objAchievementBox" x="672" y="320" name="inst_F0C5B20B" locked="0" code="aTitle = &quot;24:24&quot; //set in creation code&#xA;aDetails = 'Complete &quot;Panasonic Outtake-ray&quot; under [time limit].'&#xA;found = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementRoomVisuals" x="0" y="0" name="inst_7636E722" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="111" y="28" name="inst_C872E08E" locked="0" code="sprite_index = sprAGuy1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="381" y="159" name="inst_14244322" locked="0" code="sprite_index = sprAGuy2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="614" y="16" name="inst_86331B09" locked="0" code="sprite_index = sprAGuy3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="173" y="314" name="inst_292970D3" locked="0" code="sprite_index = sprAGuy4&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="284" y="416" name="inst_0DA27597" locked="0" code="sprite_index = sprAGuy5&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="425" y="291" name="inst_A9B3DC5E" locked="0" code="sprite_index = sprAGuy6&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="639" y="181" name="inst_0BFED163" locked="0" code="sprite_index = sprAGuy7&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGuy" x="644" y="403" name="inst_BDAB8BA3" locked="0" code="sprite_index = sprAGuy8&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
