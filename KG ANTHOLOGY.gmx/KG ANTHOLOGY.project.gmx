@@ -18,6 +18,7 @@
         <sound>sound\sndPlatformCrash</sound>
         <sound>sound\sndNumberBeep2</sound>
         <sound>sound\sndPuzzleGetItem</sound>
+        <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndArrowShoot</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
@@ -388,7 +389,6 @@
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprites name="Hub / Menus">
-        <sprite>sprites\sprGlobe</sprite>
         <sprite>sprites\sprAchievements</sprite>
         <sprites name="Achievement Guys">
           <sprite>sprites\sprAGuy1</sprite>
@@ -401,15 +401,27 @@
           <sprite>sprites\sprAGuy8</sprite>
         </sprites>
       </sprites>
+      <sprites name="Characters">
+        <sprite>sprites\sprSnarkySignpost</sprite>
+      </sprites>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bGlow</background>
+    <background>background\bUndergroundBG</background>
     <background>background\bAllTiles</background>
     <backgrounds name="Hub / Menus">
+      <background>background\bAchieveChecker</background>
+      <background>background\bAchieveGrad</background>
       <background>background\bAchieveGrid</background>
+      <background>background\bSpaceStationTileset</background>
+      <background>background\bSpaceStationBGTiles</background>
+      <background>background\bSpaceGrassTileset</background>
+      <background>background\bSpaceGrassBGTiles</background>
+      <background>background\bSpaceGrassExtras</background>
+      <background>background\bHubSignpost</background>
       <background>background\bSpaceBG</background>
     </backgrounds>
     <backgrounds name="Dungeon">
@@ -591,11 +603,13 @@
     <object>objects\objBETTERBossTemplate</object>
     <objects name="Hub / Menus">
       <object>objects\objAchievementGuy</object>
-      <object>objects\objAchievementRoomVisuals</object>
       <object>objects\objAchievementBox</object>
+      <object>objects\objHubVisualControl</object>
+      <object>objects\objTutorialVisuals</object>
     </objects>
     <objects name="Devices">
       <object>objects\objExplosion</object>
+      <object>objects\objDoor</object>
       <object>objects\objCameraShutterFX</object>
       <object>objects\objDialogueLBP</object>
     </objects>
@@ -911,6 +925,8 @@
       <room>rooms\rDungeon9</room>
     </rooms>
     <rooms name="Hub">
+      <room>rooms\rTutorial</room>
+      <room>rooms\rHub1</room>
       <room>rooms\rAchievementCheck</room>
     </rooms>
   </rooms>

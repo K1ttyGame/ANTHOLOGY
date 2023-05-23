@@ -30,6 +30,11 @@ dialogue[1] = ""
 dialogue[2] = ""
 dialogue[3] = ""
 dialogue[4] = ""
+dialogue[5] = ""
+dialogue[6] = ""
+dialogue[7] = ""
+dialogue[8] = ""
+dialogue[9] = ""
 dialogueMax = 0 //set in creation code
 dialogueIndex = 0
 
@@ -47,6 +52,7 @@ wobble_distance = 6; //distance of the wobble
 aa=irandom_range(0,360);
 bubbleChange = 0
 
+hintTimer = 300
 </string>
           </argument>
         </arguments>
@@ -79,15 +85,17 @@ if (phase == 0) {
         activate = true
         phase++
         objPlayer.drink = false
+        dialogueIndex = 0
+        hintTimer = 300
         }
     }
     else
         drawArrowScale = lerp(drawArrowScale, 0, .5)
     drawBar = lerp(drawBar, -2, .2)
-    view_wview = lerp(view_wview, 800, .15)
-    view_hview = lerp(view_hview, 608, .15)
-    view_xview = lerp(view_xview, 0, .15)
-    view_yview = lerp(view_yview, 0, .15)
+    view_wview = lerp(view_wview, 800, .1)
+    view_hview = lerp(view_hview, 608, .1)
+    view_xview = lerp(view_xview, 0, .1)
+    view_yview = lerp(view_yview, 0, .1)
     if (drawBubble &gt; -1000) {
         acc++
         drawBubble -= acc
@@ -105,15 +113,19 @@ if (phase == 1) {
     drawBubble = lerp(drawBubble, 150, .1)
     drawArrowScale = 0
     if (keyboard_check_pressed(global.shootButton)) {
-        if (dialogueIndex &lt; dialogueMax)
+        if (dialogueIndex &lt; dialogueMax) {
             dialogueIndex++
+            hintTimer = 300
+        }
     }
     
-    if (instance_exists(objPlayer) &amp;&amp; (objPlayer.x &lt; exitBorder || objPlayer.x &gt; exitBorder+128)) {
+    if (instance_exists(objPlayer) &amp;&amp; (objPlayer.x &lt; exitBorder || objPlayer.x &gt; exitBorder+128 || objPlayer.y &lt; y-128 || objPlayer.y &gt; y+128)) {
         phase = 0
-        dialogueIndex = 0
         with objDialogueLBP {activate = true}
         }
+        
+    //hint timer
+    if (hintTimer &gt; 0) hintTimer--
     
 }
 
@@ -125,6 +137,8 @@ bubbleChange = wobble_distance*sin(aa);
 
 view_xview = clamp(view_xview, 0, 400)
 view_yview = clamp(view_yview, 0, 304)
+
+
 </string>
           </argument>
         </arguments>
@@ -171,9 +185,19 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_top)
 draw_set_color(c_black)
 draw_text(-150+400, drawBubble+(bubbleChange), line)
+
 draw_set_color(c_white)
 
+if (hintTimer &lt; 100) draw_set_alpha(1-(hintTimer/100))
+else draw_set_alpha(0)
 
+if (dialogueIndex != dialogueMax &amp;&amp; phase == 1)
+    draw_text(400, drawBar-64, "[Shoot To Advance Text]")
+
+else
+    draw_text(400, drawBar-64, "[Walk Away To Exit]")
+    
+draw_set_alpha(1)
 </string>
           </argument>
         </arguments>
