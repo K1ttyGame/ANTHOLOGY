@@ -98,6 +98,12 @@
     case rDungeon9:
         sprite_index = sprDungeonSpikeLeft;
         break;
+    case rLC2:
+        image_blend = c_black
+        break;
+    default:
+        image_blend = c_white
+        break;
 }
 
 image_speed = 0

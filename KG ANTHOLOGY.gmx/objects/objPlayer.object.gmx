@@ -434,6 +434,7 @@ switch (room) {
     case rSnow6:
     case rSnow7:
     case rSnow8:
+    case rSnowTransition2:
     {
         if (sprite_index = sprPlayerIdle)
             sprite_index = sprFPlayerIdleMask

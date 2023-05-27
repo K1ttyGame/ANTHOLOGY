@@ -3,7 +3,7 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
+  <vsnap>4</vsnap>
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
@@ -190,10 +190,10 @@
     <instance objName="objSpikeRight" x="512" y="304" name="inst_5D3C3FE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="416" y="352" name="inst_7A0A230E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="448" y="480" name="inst_1107FBC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBossTransitionControl1" x="576" y="608" name="inst_E38E0FF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="128" y="48" name="inst_F20F34B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="160" y="48" name="inst_83F15215" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="96" name="inst_043BC4E2" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRoomChanger" x="704" y="440" name="inst_5D6D61BB" locked="0" code="roomTo = rCaveLegCutscene&#xA;" scaleX="3" scaleY="0.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bFactoryTileset2" x="320" y="96" w="32" h="32" xo="32" yo="0" id="10007573" name="inst_41262E72" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

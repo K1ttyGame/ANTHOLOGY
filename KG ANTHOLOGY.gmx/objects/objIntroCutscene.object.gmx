@@ -85,7 +85,7 @@ if (phase == 0) {
         timer = 0
         phase++
         audio_stop_sound(musFrozenPeople)
-        audio_play_sound(musFrozenIntro, 10, true)
+        audio_play_sound(musFrozenIntroAlt, 10, true)
     }
 }
 
@@ -102,7 +102,7 @@ if (phase == 2) {
     if (drawAlpha &lt; 0) {
         room_goto(rSnow0)
         global.autosave = true
-        audio_stop_sound(musFrozenIntro)
+        audio_stop_sound(musFrozenIntroAlt)
         instance_destroy()
         }
 }

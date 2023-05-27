@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phase = 0
+            <string>phase = 1
 timer = 0
 
 drawMoverX = room_width+64
@@ -63,7 +63,22 @@ message[5] = "don't w4ke#4p yet#4444444"
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (phase == 0) {
+            <string>//skip code
+if (keyboard_check_pressed(ord('S'))) {
+    room_goto(rFrozenBoss)
+    room_speed = 50
+    audio_stop_sound(musFrozenNoise)
+    audio_stop_sound(musFrozenMMBossIntro)
+    audio_stop_sound(musFrozenIntro)
+    view_wview = 0
+    view_hview = 0
+    view_xview = 0
+    view_yview = 0
+    global.autosave = true
+}
+
+
+if (phase == 0) {
     if (instance_exists(objPlayer)) {
         if (objPlayer.x &gt;= 736 &amp;&amp; objPlayer.y &gt;= 320 &amp;&amp; objPlayer.y &lt;= 448) {
             phase++
@@ -74,16 +89,11 @@ message[5] = "don't w4ke#4p yet#4444444"
 }
 
 if (phase == 1) {
-    if (instance_exists(objPlayer)) {
-        drawMoverX -= 16
-        if (drawMoverX &lt;= objPlayer.x) {
-            audio_stop_all()
-            phase++
-            room_speed = 1
-            audio_play_sound(sndMMBossHit, 10, false)
-            audio_play_sound(musFrozenNoise, 10, true)
-        }
-    }
+    audio_stop_all()
+    phase++
+    room_speed = 1
+    audio_play_sound(sndMMBossHit, 10, false)
+    audio_play_sound(musFrozenNoise, 10, true)
 }
 
 if (phase == 2) {
@@ -94,12 +104,12 @@ if (phase == 2) {
         view_xview = random_range(-800, 800)
         view_yview = random_range(-608, 608)
         }
-    if (timer = 8) {
+    if (timer &gt;= 7) {
         room_speed = 50
         audio_stop_sound(musFrozenNoise)
         phase++
         timer = 0
-        instance_destroy(objPlayer)
+        //instance_destroy(objPlayer)
         room_goto_next()
         audio_play_sound(musFrozenMMBossIntro, 10, false)
     }
@@ -121,7 +131,7 @@ if (phase == 3) {
     }
 }
 
-if (room != rCave7 &amp;&amp; room != rCaveBossTransition)
+if (room != rCaveBossTransition &amp;&amp; room != rCaveLegCutscene)
     instance_destroy();
 </string>
           </argument>
@@ -146,7 +156,7 @@ if (room != rCave7 &amp;&amp; room != rCaveBossTransition)
           <argument>
             <kind>1</kind>
             <string>image_speed = .1
-draw_sprite(sprMMChild1, 0, drawMoverX, 352)
+//draw_sprite(sprMMChild1, 0, drawMoverX, 352)
 
 if (phase &gt;= 3) {
     draw_set_color(c_black)

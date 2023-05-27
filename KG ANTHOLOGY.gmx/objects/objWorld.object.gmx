@@ -342,10 +342,30 @@ switch (room) {
     case rSnow6:
     case rSnow7:
     case rSnow8:
+    case rSnowTransition2:
         if !audio_is_playing(musWindAmbient1) audio_play_sound(musWindAmbient1, 10, true)
+        break;
+    case rBeachIntro:
+    case rBeachHotel:
+    case rBeachHammock:
+    case rBeachHammock2:
+    case rBeachBasketball:
+    case rBeachDrink1:
+    case rBeachDrink2:
+    case rBeachCombo:
+        if !audio_is_playing(musBeachAmbient) audio_play_sound(musBeachAmbient, 10, true)
+        break;
+    case rStorm2:
+    case rStorm3:
+    case rStorm4:
+    case rStorm5:
+    case rStorm6:
+        if !audio_is_playing(musStormAmbient) audio_play_sound(musStormAmbient, 10, true)
         break;
     default: //have it stop all ambient sounds here
         audio_stop_sound(musWindAmbient1)
+        audio_stop_sound(musBeachAmbient)
+        audio_stop_sound(musStormAmbient)
         break;
 }
 </string>

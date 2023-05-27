@@ -18,3 +18,7 @@ audio_sound_gain(musFrozenMMBossIntro, .8, 0)
 audio_sound_gain(musFrozenMMBoss, .6, 0)
 audio_sound_gain(musFrozenClear, .75, 0)
 audio_sound_gain(musFrozenEndingCutscene, .75, 0)
+
+audio_sound_gain(musBeach, .7, 0)
+audio_sound_gain(musPirateShip, .5, 0)
+audio_sound_gain(musRainstorm, .75, 0)

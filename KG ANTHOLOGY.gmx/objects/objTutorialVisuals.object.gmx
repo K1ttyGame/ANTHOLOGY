@@ -57,7 +57,8 @@ extendDistance = wobble_distance*sin(aa)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>background_x[0] = lerp(background_x[0], objSmoothCamera.x/2, .2) 
+            <string>//background_x[0] = lerp(background_x[0], objSmoothCamera.x/2, .2) 
+background_x[0] = objSmoothCamera.x/2
 background_x[0] = clamp(background_x[0], 200, room_width/2-200)
 
 aa+=wobble_speed;

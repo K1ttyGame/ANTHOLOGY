@@ -22,6 +22,7 @@
         <sound>sound\sndArrowShoot</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
+        <sound>sound\sndLegBreak</sound>
         <sound>sound\sndNumberBeep</sound>
         <sound>sound\sndTakePhoto</sound>
         <sound>sound\sndBasketballScore</sound>
@@ -35,10 +36,12 @@
         <sound>sound\sndLightningBolt</sound>
         <sound>sound\sndEyeOpen</sound>
         <sound>sound\sndChoose</sound>
+        <sound>sound\sndSpeechBubbleOpen</sound>
         <sound>sound\sndClawClick</sound>
         <sound>sound\sndPaintShootBoss</sound>
         <sound>sound\sndClearSound</sound>
         <sound>sound\sndSpaceSuitAir</sound>
+        <sound>sound\sndSpeechBubbleClosed</sound>
         <sound>sound\sndMissileExplode</sound>
         <sound>sound\sndPuzzleSolved</sound>
         <sound>sound\sndRopeStrain</sound>
@@ -48,6 +51,7 @@
       <sound>sound\musOnDeath</sound>
       <sounds name="New Music">
         <sound>sound\musFrozenTitle</sound>
+        <sound>sound\musFrozenIntroAlt</sound>
         <sound>sound\musWindAmbient1</sound>
         <sound>sound\musFrozenIceWorld</sound>
         <sound>sound\musFrozenTransitionLoop</sound>
@@ -59,6 +63,11 @@
         <sound>sound\musFrozenEndingCutscene</sound>
         <sound>sound\musFrozenClear</sound>
         <sound>sound\musFrozenPeople</sound>
+        <sound>sound\musBeachAmbient</sound>
+        <sound>sound\musRainstorm</sound>
+        <sound>sound\musPirateShip</sound>
+        <sound>sound\musStormAmbient</sound>
+        <sound>sound\musBeach</sound>
         <sounds name="Fall / Space">
           <sound>sound\musRobotBossLoop2</sound>
           <sound>sound\musRobotBossLoop1</sound>
@@ -127,6 +136,17 @@
       <sprite>sprites\sprMiniRight</sprite>
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
+      <sprites name="Extra 1">
+        <sprite>sprites\sprBlueSpikeUp</sprite>
+        <sprite>sprites\sprBlueSpikeRight</sprite>
+        <sprite>sprites\sprBlueSpikeLeft</sprite>
+        <sprite>sprites\sprBlueSpikeDown</sprite>
+        <sprite>sprites\sprCyanSpikeUp</sprite>
+        <sprite>sprites\sprCyanSpikeRight</sprite>
+        <sprite>sprites\sprCyanSpikeLeft</sprite>
+        <sprite>sprites\sprCyanSpikeDown</sprite>
+        <sprite>sprites\sprLCCycle</sprite>
+      </sprites>
       <sprites name="Dungeon">
         <sprite>sprites\sprDungeonSpikeUp</sprite>
         <sprite>sprites\sprDungeonSpikeRight</sprite>
@@ -254,6 +274,7 @@
           <sprite>sprites\sprIntroCutscene3</sprite>
           <sprite>sprites\sprIntroCutscene4</sprite>
           <sprite>sprites\sprIntroCutscene5</sprite>
+          <sprite>sprites\sprIntroCutscene6</sprite>
           <sprite>sprites\sprEndingAngel</sprite>
           <sprite>sprites\sprEndingGradient</sprite>
           <sprite>sprites\sprEndingCutscene</sprite>
@@ -389,7 +410,12 @@
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprites name="Hub / Menus">
-        <sprite>sprites\sprAchievements</sprite>
+        <sprites name="Achievements">
+          <sprite>sprites\sprAchievement1</sprite>
+          <sprite>sprites\sprAchievement2</sprite>
+          <sprite>sprites\sprAchievement3</sprite>
+          <sprite>sprites\sprAchievementUnknown</sprite>
+        </sprites>
         <sprites name="Achievement Guys">
           <sprite>sprites\sprAGuy1</sprite>
           <sprite>sprites\sprAGuy2</sprite>
@@ -399,6 +425,9 @@
           <sprite>sprites\sprAGuy6</sprite>
           <sprite>sprites\sprAGuy7</sprite>
           <sprite>sprites\sprAGuy8</sprite>
+        </sprites>
+        <sprites name="Hub">
+          <sprite>sprites\sprMMTitleCard</sprite>
         </sprites>
       </sprites>
       <sprites name="Characters">
@@ -531,6 +560,7 @@
       <background>background\bSnowstormWarningSign</background>
       <background>background\bSnowstormTransitionFG</background>
       <background>background\bSnowstormTransitionBG</background>
+      <background>background\bSnowstormStatue</background>
       <background>background\bSnowstormStructure</background>
     </backgrounds>
   </backgrounds>
@@ -601,10 +631,21 @@
   </fonts>
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
+    <objects name="Extra 1">
+      <object>objects\objBlueSpikeUp</object>
+      <object>objects\objBlueSpikeRight</object>
+      <object>objects\objBlueSpikeLeft</object>
+      <object>objects\objBlueSpikeDown</object>
+      <object>objects\objCyanSpikeUp</object>
+      <object>objects\objCyanSpikeRight</object>
+      <object>objects\objCyanSpikeLeft</object>
+      <object>objects\objCyanSpikeDown</object>
+    </objects>
     <objects name="Hub / Menus">
       <object>objects\objAchievementGuy</object>
       <object>objects\objAchievementBox</object>
       <object>objects\objHubVisualControl</object>
+      <object>objects\objHubFloatingSign</object>
       <object>objects\objTutorialVisuals</object>
     </objects>
     <objects name="Devices">
@@ -615,6 +656,7 @@
     </objects>
     <objects name="Gimmicks">
       <objects name="Frozen Over">
+        <object>objects\objMMTitleCard</object>
         <object>objects\objWindControl</object>
         <object>objects\objFallingPlatform</object>
         <object>objects\objSpotlightControl</object>
@@ -631,6 +673,7 @@
         <object>objects\objElecWater</object>
         <object>objects\objIntroCutscene</object>
         <object>objects\objCaveTransitionControl</object>
+        <object>objects\objLegBrokeCutscene</object>
         <object>objects\objBossTransitionControl1</object>
         <object>objects\objEndingCutscene</object>
         <objects name="Boss">
@@ -849,6 +892,7 @@
       <room>rooms\rPirate5</room>
     </rooms>
     <rooms name="Frozen Over">
+      <room>rooms\rMMCard</room>
       <room>rooms\rCutsceneIntro</room>
       <room>rooms\rSnow0</room>
       <room>rooms\rSnowTransition</room>
@@ -856,6 +900,7 @@
       <room>rooms\rSnow2</room>
       <room>rooms\rSnow3</room>
       <room>rooms\rSnow4</room>
+      <room>rooms\rSnowTransition2</room>
       <room>rooms\rSnow5</room>
       <room>rooms\rSnow6</room>
       <room>rooms\rSnow7</room>
@@ -868,6 +913,7 @@
       <room>rooms\rCave5</room>
       <room>rooms\rCave6</room>
       <room>rooms\rCave7</room>
+      <room>rooms\rCaveLegCutscene</room>
       <room>rooms\rCaveBossTransition</room>
       <room>rooms\rFrozenBoss</room>
       <room>rooms\rCutsceneEnd</room>
@@ -928,6 +974,11 @@
       <room>rooms\rTutorial</room>
       <room>rooms\rHub1</room>
       <room>rooms\rAchievementCheck</room>
+    </rooms>
+    <rooms name="Extra 1">
+      <room>rooms\rPreLC2</room>
+      <room>rooms\rLC2</room>
+      <room>rooms\rPostLC2</room>
     </rooms>
   </rooms>
   <help>

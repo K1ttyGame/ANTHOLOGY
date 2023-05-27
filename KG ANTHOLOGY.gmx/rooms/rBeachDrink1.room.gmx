@@ -72,11 +72,11 @@
     <instance objName="objSpikeDown" x="448" y="352" name="inst_10DD6EC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="480" y="352" name="inst_6D0C5FC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="512" y="352" name="inst_02E5CE41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeUp" x="480" y="480" name="inst_91DA84A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeUp" x="512" y="480" name="inst_0EE738A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="480" y="448" name="inst_91DA84A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="512" y="448" name="inst_0EE738A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="544" y="512" name="inst_14BDBA2D" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="672" y="416" name="inst_B6ADEDC6" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeUp" x="608" y="448" name="inst_59D1DC0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="608" y="416" name="inst_59D1DC0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="640" y="448" name="inst_7F42D610" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="576" y="352" name="inst_A7FE02FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="608" y="352" name="inst_A11EF3BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -110,6 +110,14 @@
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_8EF0AB86" locked="0" code="roomTo = rBeachBasketball&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_AFF498BB" locked="0" code="roomTo = rBeachDrink2&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="768" y="96" name="inst_C8EF6203" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="480" y="480" name="inst_E5CE425F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="608" y="448" name="inst_B9E7CFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="352" y="192" name="inst_13F70616" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="320" y="192" name="inst_C3FA5D6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeLeft" x="192" y="160" name="inst_2124524D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeDown" x="384" y="64" name="inst_1CD92C97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="384" y="32" name="inst_EFC35D80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="384" y="0" name="inst_ACF0FB46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bBeachTilesBG" x="192" y="448" w="96" h="96" xo="0" yo="0" id="10013883" name="inst_DB0127E5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
