@@ -130,7 +130,6 @@
     <instance objName="objSpikeDown" x="576" y="96" name="inst_2CA931FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="496" y="240" name="inst_D275F7E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="464" y="144" name="inst_1D558FEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeLeft" x="144" y="208" name="inst_5F3BA1EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPirateCameraTrigger" x="256" y="288" name="inst_30B106E9" locked="0" code="" scaleX="0.5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objPirateCameraTrigger" x="496" y="288" name="inst_2948B79F" locked="0" code="" scaleX="0.5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objPirateCameraTrigger" x="288" y="304" name="inst_5306179B" locked="0" code="mode = 1&#xA;camX = 232&#xA;camY = 256&#xA;" scaleX="0.5" scaleY="6.70967721939087" colour="4294967295" rotation="0"/>
@@ -147,6 +146,7 @@
     <instance objName="objOutsideRoomChanger" x="336" y="-32" name="inst_D6DAF596" locked="0" code="roomTo = rPirate5&#xA;smoothTransition = true&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpotlightControl" x="48" y="-48" name="inst_E30ADEE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBeachSand" x="144" y="0" name="inst_5A70EBFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="144" y="208" name="inst_D8C42A97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bShipWoodTileBG2" x="128" y="320" w="64" h="32" xo="0" yo="0" id="10009686" name="inst_976E41A9" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

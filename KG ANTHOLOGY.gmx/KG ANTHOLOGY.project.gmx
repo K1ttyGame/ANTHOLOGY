@@ -20,6 +20,7 @@
         <sound>sound\sndPuzzleGetItem</sound>
         <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndArrowShoot</sound>
+        <sound>sound\sndShellBounce</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndLegBreak</sound>
@@ -111,6 +112,22 @@
           <sprite>sprites\sprPaintGunBullet</sprite>
           <sprite>sprites\sprPaintGunArm</sprite>
         </sprites>
+        <sprites name="Beach">
+          <sprite>sprites\sprBPlayerIdle</sprite>
+          <sprite>sprites\sprBPlayerJump</sprite>
+          <sprite>sprites\sprBPlayerFall</sprite>
+          <sprite>sprites\sprBPlayerRunning</sprite>
+          <sprite>sprites\sprBellhopIdle</sprite>
+          <sprite>sprites\sprVacationer1</sprite>
+          <sprite>sprites\sprVacationer1Happy</sprite>
+          <sprite>sprites\sprVacationer2</sprite>
+          <sprite>sprites\sprVacationer2Happy</sprite>
+          <sprite>sprites\sprVacationer3</sprite>
+          <sprite>sprites\sprVacationer3Happy</sprite>
+          <sprite>sprites\sprVacationer4</sprite>
+          <sprite>sprites\sprVacationer4Happy</sprite>
+          <sprite>sprites\sprVacationer5</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="blocks">
@@ -136,6 +153,12 @@
       <sprite>sprites\sprMiniRight</sprite>
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
+      <sprites name="Y2K">
+        <sprite>sprites\sprY2KSpikeUp</sprite>
+        <sprite>sprites\sprY2KSpikeRight</sprite>
+        <sprite>sprites\sprY2KSpikeLeft</sprite>
+        <sprite>sprites\sprY2KSpikeDown</sprite>
+      </sprites>
       <sprites name="Extra 1">
         <sprite>sprites\sprBlueSpikeUp</sprite>
         <sprite>sprites\sprBlueSpikeRight</sprite>
@@ -407,6 +430,10 @@
         <sprite>sprites\sprArrowShooterL</sprite>
         <sprite>sprites\bDungeonSpikeBlock</sprite>
         <sprite>sprites\sprArrowShooterR</sprite>
+        <sprite>sprites\sprKoopaShell</sprite>
+        <sprite>sprites\sprGrassEdgeTexture</sprite>
+        <sprite>sprites\sprSpinningGlobe</sprite>
+        <sprite>sprites\sprShellBlock</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprites name="Hub / Menus">
@@ -441,6 +468,11 @@
     <background>background\bGlow</background>
     <background>background\bUndergroundBG</background>
     <background>background\bAllTiles</background>
+    <backgrounds name="Y2K">
+      <background>background\bGrassTexture10</background>
+      <background>background\bGrassTextureBG</background>
+      <background>background\bY2KSky</background>
+    </backgrounds>
     <backgrounds name="Hub / Menus">
       <background>background\bAchieveChecker</background>
       <background>background\bAchieveGrad</background>
@@ -631,6 +663,12 @@
   </fonts>
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
+    <objects name="Devices">
+      <object>objects\objExplosion</object>
+      <object>objects\objDoor</object>
+      <object>objects\objCameraShutterFX</object>
+      <object>objects\objDialogueLBP</object>
+    </objects>
     <objects name="Extra 1">
       <object>objects\objBlueSpikeUp</object>
       <object>objects\objBlueSpikeRight</object>
@@ -647,12 +685,6 @@
       <object>objects\objHubVisualControl</object>
       <object>objects\objHubFloatingSign</object>
       <object>objects\objTutorialVisuals</object>
-    </objects>
-    <objects name="Devices">
-      <object>objects\objExplosion</object>
-      <object>objects\objDoor</object>
-      <object>objects\objCameraShutterFX</object>
-      <object>objects\objDialogueLBP</object>
     </objects>
     <objects name="Gimmicks">
       <objects name="Frozen Over">
@@ -716,6 +748,7 @@
         <object>objects\objBeachHammock</object>
         <object>objects\objBeachDrink</object>
         <object>objects\objPirateApple</object>
+        <object>objects\objBeachBasketballPlayer</object>
         <object>objects\objBeachIntroCutscene</object>
       </objects>
       <objects name="Fall / Space">
@@ -777,6 +810,11 @@
         <object>objects\objArrowShooterL</object>
         <object>objects\objArrowShooterR</object>
         <object>objects\objDungeonVisualControl</object>
+        <object>objects\objY2KBG</object>
+        <object>objects\objShellBlock</object>
+        <object>objects\objY2KBGTextureDrawer</object>
+        <object>objects\objY2KTextureDrawer</object>
+        <object>objects\objShell</object>
         <object>objects\objSpikeExtender</object>
       </objects>
     </objects>
@@ -960,6 +998,7 @@
     </rooms>
     <rooms name="Panasonic Prequel">
       <room>rooms\rField1</room>
+      <room>rooms\rField2</room>
       <room>rooms\rDungeon1</room>
       <room>rooms\rDungeon2</room>
       <room>rooms\rDungeon3</room>

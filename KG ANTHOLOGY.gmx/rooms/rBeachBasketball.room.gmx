@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -53,7 +53,7 @@
   <instances>
     <instance objName="objWorld" x="0" y="0" name="inst_249D46FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="32" y="480" name="inst_F1EEB09A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSave" x="256" y="416" name="inst_585C582C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSave" x="64" y="480" name="inst_585C582C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBeachVisualControl" x="96" y="32" name="inst_F45DABCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBasketBall" x="320" y="384" name="inst_E8BDFCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBasketballNet" x="480" y="224" name="inst_A94BF0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -64,8 +64,13 @@
     <instance objName="objBlock" x="0" y="512" name="inst_8D397EC2" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_0A579E3D" locked="0" code="roomTo = rBeachHammock2&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_B8731722" locked="0" code="roomTo = rBeachDrink1&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="16" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="288" y="416" name="inst_3493772B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="224" y="416" name="inst_83EF2856" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="0" y="480" name="inst_83EF2856" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueLBP" x="96" y="416" name="inst_B9215D69" locked="0" code="dialogue[0] = &quot;Wanna play some basketball?&quot;&#xA;dialogue[1] = &quot;Touch the ball to pick it up.&quot;&#xA;dialogue[2] = &quot;Press the shoot key to throw the ball#in the direction you're facing.&quot;&#xA;dialogue[3] = &quot;You can hold up or down to throw#the ball higher or lower respectively.&quot;&#xA;dialogue[4] = &quot;Let's play football.&quot;&#xA;&#xA;dialogueMax = 4" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachBasketballPlayer" x="112" y="416" name="inst_3F7A4F17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachBasketballPlayer" x="144" y="416" name="inst_262BEDF4" locked="0" code="sprite_index = sprVacationer2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachBasketballPlayer" x="688" y="416" name="inst_B5A7E419" locked="0" code="sprite_index = sprVacationer3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachBasketballPlayer" x="656" y="416" name="inst_0560630E" locked="0" code="sprite_index = sprVacationer4&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShellBlock" x="96" y="448" name="inst_47189AAB" locked="0" code="" scaleX="19" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bBeachTilesBG" x="128" y="384" w="96" h="96" xo="0" yo="0" id="10013850" name="inst_07B4D1C8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

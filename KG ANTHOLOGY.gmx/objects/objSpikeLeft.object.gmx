@@ -98,6 +98,7 @@
     case rDungeon9:
         sprite_index = sprDungeonSpikeLeft;
         break;
+    case rPreLC2:
     case rLC2:
         image_blend = c_black
         break;

@@ -131,7 +131,6 @@
     <instance objName="objSpikeLeft" x="640" y="400" name="inst_82D12C98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="432" name="inst_C537BD96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="512" y="432" name="inst_BC00C150" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="544" y="272" name="inst_37901AAE" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="512" y="208" name="inst_7C8AD45B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="608" y="192" name="inst_2EF5D9CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="704" y="272" name="inst_622D6815" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -165,6 +164,7 @@
     <instance objName="objOutsideRoomChanger" x="224" y="-32" name="inst_CCA9326B" locked="0" code="roomTo = rPirate2&#xA;smoothTransition = true&#xA;" scaleX="3.5" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpotlightControl" x="48" y="-48" name="inst_D24D93D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBeachSand" x="128" y="0" name="inst_5F77E23D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="544" y="272" name="inst_FE78DC8C" locked="0" code="" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bShipWoodTileBG2" x="32" y="160" w="64" h="32" xo="0" yo="0" id="10009446" name="inst_B781C549" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

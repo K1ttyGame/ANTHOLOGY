@@ -67,6 +67,7 @@
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_0BB0AC41" locked="0" code="roomTo = rBeachHammock&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueLBP" x="384" y="480" name="inst_23EA7312" locked="0" code="dialogue[0] = &quot;Welcome to our beloved island!&quot;&#xA;dialogue[1] = &quot;Please entrust your luggage with us.&quot;&#xA;dialogue[2] = &quot;We have lots to enjoy here!&quot;&#xA;dialogue[3] = &quot;Comfy hammocks to rest at...&quot;&#xA;dialogue[4] = &quot;A basketball court filled with people...&quot;&#xA;dialogue[5] = &quot;And a wonderful drink bar for the adults,#complete with a large variety of drinks!&quot;&#xA;dialogue[6] = &quot;It's all ahead!#Go enjoy yourself!&quot;&#xA;&#xA;dialogueMax = 6&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRestartBlocker" x="64" y="-32" name="inst_4AC68A57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="384" y="480" name="inst_4B3C8FB4" locked="0" code="sprite_index = sprBellhopIdle&#xA;image_speed = 0.2&#xA;visible = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bBeachTilesBG" x="160" y="480" w="32" h="32" xo="64" yo="32" id="10014480" name="inst_0CAAA26F" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

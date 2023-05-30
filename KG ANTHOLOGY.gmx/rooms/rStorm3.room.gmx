@@ -130,8 +130,8 @@
     <instance objName="objFallingPillar" x="544" y="352" name="inst_A36560AE" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFallingPillar" x="608" y="288" name="inst_4C6F607B" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objFallingPillar" x="480" y="448" name="inst_ED072130" locked="0" code="" scaleX="6" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objPillarSpikeUp" x="640" y="416" name="inst_968F546B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPillarSpikeUp" x="576" y="416" name="inst_C997DB7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPillarSpikeUp" x="640" y="432" name="inst_968F546B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPillarSpikeUp" x="576" y="432" name="inst_C997DB7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="544" name="inst_ABD75D38" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="416" y="224" name="inst_A35EF447" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="416" y="64" name="inst_3676C37A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

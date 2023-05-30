@@ -93,10 +93,10 @@ if (phase == 0) {
     else
         drawArrowScale = lerp(drawArrowScale, 0, .5)
     drawBar = lerp(drawBar, -2, .2)
-    view_wview = lerp(view_wview, 800, .05)
-    view_hview = lerp(view_hview, 608, .05)
-    view_xview = lerp(view_xview, 0, .05)
-    view_yview = lerp(view_yview, 0, .05)
+    view_wview = lerp(view_wview, 800, .075)
+    view_hview = lerp(view_hview, 608, .075)
+    view_xview = lerp(view_xview, 0, .075)
+    view_yview = lerp(view_yview, 0, .075)
     if (drawBubble &gt; -1000) {
         acc++
         drawBubble -= acc
@@ -106,10 +106,10 @@ if (phase == 0) {
 }
 
 if (phase == 1) {
-    view_wview = lerp(view_wview, 400, .05)
-    view_hview = lerp(view_hview, 304, .05)
-    view_xview = lerp(view_xview, x-184, .05)
-    view_yview = lerp(view_yview, y-200, .05)
+    view_wview = lerp(view_wview, 400, .1)
+    view_hview = lerp(view_hview, 304, .1)
+    view_xview = lerp(view_xview, x-184, .1)
+    view_yview = lerp(view_yview, y-200, .1)
     drawBar = lerp(drawBar, 96, .15)
     drawBubble = lerp(drawBubble, 150, .1)
     drawArrowScale = 0
@@ -120,7 +120,7 @@ if (phase == 1) {
         }
     }
     
-    if (instance_exists(objPlayer) &amp;&amp; (objPlayer.x &lt; exitBorder || objPlayer.x &gt; exitBorder+128 || objPlayer.y &lt; y-128 || objPlayer.y &gt; y+128)) {
+    if (instance_exists(objPlayer) &amp;&amp; (objPlayer.x &lt; exitBorder || objPlayer.x &gt; exitBorder+128 || objPlayer.y &lt; y-64 || objPlayer.y &gt; y+64)) {
         phase = 0
         with objDialogueLBP {activate = true}
         audio_play_sound(sndSpeechBubbleClosed, 10, false)

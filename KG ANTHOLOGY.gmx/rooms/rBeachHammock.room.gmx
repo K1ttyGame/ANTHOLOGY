@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -95,7 +95,7 @@
     <instance objName="objBlock" x="384" y="384" name="inst_6C70F7C5" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="384" y="192" name="inst_00BBF180" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="448" y="224" name="inst_65FAD882" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBeachHammock" x="480" y="224" name="inst_04507953" locked="0" code="depth = 150&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachHammock" x="480" y="224" name="inst_04507953" locked="0" code="depth = 150" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="48" name="inst_4793EBA7" locked="0" code="" scaleX="1" scaleY="11.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="416" y="512" name="inst_D4E52690" locked="0" code="" scaleX="12" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="416" y="384" name="inst_181BC635" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
@@ -113,9 +113,10 @@
     <instance objName="objSaveBlocker" x="96" y="224" name="inst_1DD21CB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="224" y="160" name="inst_A2921704" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="288" y="320" name="inst_90DD9E89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBeachHammock" x="576" y="352" name="inst_B74EA2D7" locked="0" code="depth = 150&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBeachHammock" x="576" y="352" name="inst_B74EA2D7" locked="0" code="depth = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="448" y="384" name="inst_1E21E017" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="480" y="464" name="inst_9A205CD5" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_C126AB18" locked="0" code="roomTo = rBeachHotel&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="8" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bPalmTree" x="84" y="316" w="160" h="224" xo="0" yo="0" id="10013755" name="inst_2CD08B00" depth="125" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -142,6 +143,10 @@
     <tile bgName="bBeachTilesEdgeBG" x="448" y="256" w="96" h="32" xo="0" yo="0" id="10013829" name="inst_835AA114" depth="50" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bBeachTilesEdgeBG" x="544" y="288" w="96" h="32" xo="0" yo="0" id="10013830" name="inst_5414537A" depth="50" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bBeachTilesEdgeBG" x="640" y="288" w="96" h="32" xo="0" yo="0" id="10013831" name="inst_8DE3B59E" depth="50" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bPalmTree" x="504" y="272" w="160" h="224" xo="0" yo="0" id="10038534" name="inst_E79AF5D6" depth="25" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bPalmTree" x="648" y="248" w="160" h="224" xo="0" yo="0" id="10038535" name="inst_682E318D" depth="25" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bPalmTree" x="504" y="688" w="160" h="224" xo="0" yo="0" id="10038536" name="inst_86A27CF7" depth="25" locked="0" colour="4294967295" scaleX="1" scaleY="-1"/>
+    <tile bgName="bPalmTree" x="648" y="664" w="160" h="224" xo="0" yo="0" id="10038537" name="inst_E05579F0" depth="25" locked="0" colour="4294967295" scaleX="1" scaleY="-1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

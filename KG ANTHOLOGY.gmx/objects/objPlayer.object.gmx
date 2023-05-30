@@ -424,6 +424,36 @@ if (drink) {
 
 //player sprite changing
 switch (room) {
+    case rBeachHotel:
+    case rBeachIntro:
+    case rBeachHammock:
+    case rBeachHammock2:
+    case rBeachBasketball:
+    case rBeachDrink1:
+    case rBeachDrink2:
+    case rBeachCombo:
+    case rStorm2:
+    case rStorm3:
+    case rStorm4:
+    case rStorm5:
+    case rStorm6:
+    case rPirate1:
+    case rPirate2:
+    case rPirate3:
+    case rPirate4:
+    case rPirate5:
+    {
+        if (sprite_index = sprPlayerIdle)
+            sprite_index = sprBPlayerIdle
+        if (sprite_index = sprPlayerRunning)
+            sprite_index = sprBPlayerRunning
+        if (sprite_index = sprPlayerFall)
+            sprite_index = sprBPlayerFall
+        if (sprite_index = sprPlayerJump)
+            sprite_index = sprBPlayerJump
+    }
+        break;
+
     case rSnow0:
     case rSnowTransition:
     case rSnow1:
