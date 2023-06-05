@@ -432,11 +432,13 @@ switch (room) {
     case rBeachDrink1:
     case rBeachDrink2:
     case rBeachCombo:
+    case rBeachCutscene:
     case rStorm2:
     case rStorm3:
     case rStorm4:
     case rStorm5:
     case rStorm6:
+    case rStormCutscene:
     case rPirate1:
     case rPirate2:
     case rPirate3:
@@ -525,6 +527,11 @@ switch (room) {
     case rFall4:
     case rFall5:
     case rFall6:
+    case rField3:
+    case rField4:
+    case rField5:
+    case rField7:
+    case rField9:
         canUseMomentum = true
         break;
     case rSpaceship1:

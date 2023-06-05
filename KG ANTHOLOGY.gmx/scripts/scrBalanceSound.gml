@@ -10,6 +10,7 @@ audio_sound_gain(sndPlasmaShoot, .5, 0)
 audio_sound_gain(sndMissileExplode, .4, 0)
 audio_sound_gain(sndRobotBossDestroy, .6, 0)
 audio_sound_gain(sndTakePhoto, .7, 0)
+audio_sound_gain(sndBubbleBounce, .7, 0)
 
 //music balancing
 audio_sound_gain(musWindAmbient1, .5, 0)
@@ -18,6 +19,7 @@ audio_sound_gain(musFrozenMMBossIntro, .8, 0)
 audio_sound_gain(musFrozenMMBoss, .6, 0)
 audio_sound_gain(musFrozenClear, .75, 0)
 audio_sound_gain(musFrozenEndingCutscene, .75, 0)
+audio_sound_gain(musFileSelect, .7, 0)
 
 audio_sound_gain(musBeach, .7, 0)
 audio_sound_gain(musPirateShip, .5, 0)

@@ -79,6 +79,8 @@ y = ystart + wobble_distance*sin(aa);
     drinkTimer = 150
 }
 instance_destroy()
+
+audio_play_sound(sndGulp, 10, false)
 </string>
           </argument>
         </arguments>

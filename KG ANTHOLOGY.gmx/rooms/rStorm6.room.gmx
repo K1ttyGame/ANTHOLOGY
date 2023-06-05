@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -58,10 +58,10 @@
     <instance objName="objBlock" x="0" y="160" name="inst_BB1BB39F" locked="0" code="" scaleX="2" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="512" name="inst_38D8D8B2" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="64" y="128" name="inst_306765B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objFallingPillar" x="160" y="512" name="inst_6A161371" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objFallingPillar" x="160" y="528" name="inst_6A161371" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objFallingPillar" x="320" y="-64" name="inst_E856E5E4" locked="0" code="" scaleX="1" scaleY="21" colour="4294967295" rotation="0"/>
-    <instance objName="objPillarSpikeDown" x="160" y="400" name="inst_CE5C80B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPillarSpikeUp" x="160" y="480" name="inst_CACD35E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPillarSpikeDown" x="160" y="416" name="inst_CE5C80B4" locked="0" code="depth = -1000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPillarSpikeUp" x="160" y="496" name="inst_CACD35E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFallingPillar" x="224" y="544" name="inst_80A496D6" locked="0" code="" scaleX="2" scaleY="2.06451606750488" colour="4294967295" rotation="0"/>
     <instance objName="objClaw" x="256" y="464" name="inst_6A4388D8" locked="0" code="depth = 1000" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPillarSpikeDown" x="256" y="384" name="inst_096280E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -232,7 +232,9 @@
     <instance objName="objPillarSpikeUp" x="464" y="-1328" name="inst_B3CFF72F" locked="0" code="tag = 1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPillarSpikeUp" x="432" y="-1328" name="inst_697DC6D3" locked="0" code="tag = 1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_C6B31E39" locked="0" code="roomTo = rStorm5&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objFallingPillar" x="160" y="-64" name="inst_EF0218BC" locked="0" code="" scaleX="1" scaleY="14.5" colour="4294967295" rotation="0"/>
+    <instance objName="objFallingPillar" x="160" y="-64" name="inst_F2DBCD65" locked="0" code="" scaleX="1" scaleY="13.4193544387817" colour="4294967295" rotation="0"/>
+    <instance objName="objFallingPillar" x="160" y="352" name="inst_AC89E50D" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_77FFF47B" locked="0" code="roomTo = rStormCutscene&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="16" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bStormBBGTiles" x="64" y="352" w="32" h="32" xo="64" yo="32" id="10013245" name="inst_268D3337" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

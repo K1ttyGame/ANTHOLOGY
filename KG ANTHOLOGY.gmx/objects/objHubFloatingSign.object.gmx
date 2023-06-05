@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>wobble_speed = .25*pi/room_speed; //speed of the wobble
-wobble_distance = 16; //distance of the wobble
+wobble_distance = 8; //distance of the wobble
 aa=irandom_range(0,360);
 </string>
           </argument>

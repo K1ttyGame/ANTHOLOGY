@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -174,7 +174,9 @@
     <instance objName="objSpikeDown" x="624" y="304" name="inst_A01F84FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="688" y="352" name="inst_FC63030E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="656" y="352" name="inst_3A2B114A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_7AAAFAE5" locked="0" code="roomTo = rStorm3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17.5" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_7AAAFAE5" locked="0" code="roomTo = rStorm3&#xA;smoothTransition = true" scaleX="2" scaleY="17.5" colour="4294967295" rotation="0"/>
+    <instance objName="objTutorialAppear" x="592" y="64" name="inst_C3A3C329" locked="0" code="myString = &quot;Press Down to drop from the hook.&quot;&#xA;" scaleX="1" scaleY="6.5" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_3ECE8847" locked="0" code="roomTo = rStorm1&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="17" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bStormBBGTiles" x="480" y="512" w="32" h="32" xo="0" yo="0" id="10010570" name="inst_4918A770" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

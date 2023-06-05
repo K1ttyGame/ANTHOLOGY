@@ -53,6 +53,12 @@ instance_create(0, 0, objY2KBGTextureDrawer)
             <string>instance_destroy();
 part_particles_clear(y2kSys);
 part_emitter_destroy(y2kSys, pemi);
+
+if (instance_exists(objPBFlyingPlatform)) {
+    instance_destroy();
+    part_particles_clear(sysWindPlat);
+    with (objPBFlyingPlatform) part_emitter_destroy(other.sysWindPlat, pemi);
+}
 </string>
           </argument>
         </arguments>
@@ -81,7 +87,7 @@ part_system_depth(y2kSys, -300);
 y2lPart = part_type_create();
 part_type_shape(y2lPart, pt_shape_circle);
 part_type_color1(y2lPart, c_white);
-part_type_alpha3(y2lPart, 0, 0.4, 0);
+part_type_alpha3(y2lPart, 0, 0.5, 0);
 part_type_life(y2lPart, 180, 180);
 part_type_size(y2lPart, 0, 3, 0.01, 0);
 part_type_speed(y2lPart, 0, 0, 0, 0);
@@ -91,10 +97,37 @@ part_type_blend(y2lPart, false);
 
 pemi = part_emitter_create(y2kSys);
 part_emitter_region(y2kSys, pemi, 0, 800, 0, 608, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(y2kSys, pemi, y2lPart, -125);
+part_emitter_stream(y2kSys, pemi, y2lPart, -100);
 
 repeat (room_speed*3)
     part_system_update(y2kSys)
+    
+    
+if (instance_exists(objPBFlyingPlatform)) {
+    sysWindPlat = part_system_create();
+    part_system_depth(sysWindPlat, -100);
+    
+    windPlatPart = part_type_create();
+    part_type_shape(windPlatPart, pt_shape_line);
+    part_type_color1(windPlatPart, 16777215);
+    part_type_alpha3(windPlatPart, 0, 0.4, 0);
+    part_type_life(windPlatPart, 30, 30);
+    part_type_size(windPlatPart, 0.38, 0.83, 0, 0);
+    part_type_speed(windPlatPart, 1, 4, .25, 0);
+    part_type_direction(windPlatPart, 90, 90, 0, 0);
+    part_type_orientation(windPlatPart, 90, 90, 0, 0, false);
+    part_type_gravity(windPlatPart, 0, 90);
+    part_type_blend(windPlatPart, false);
+    
+    with (objPBFlyingPlatform) {
+        pemi = part_emitter_create(other.sysWindPlat);
+        part_emitter_region(other.sysWindPlat, pemi, x, x+sprite_width, y+192, 608, ps_shape_rectangle, ps_distr_linear);
+        part_emitter_stream(other.sysWindPlat, pemi, other.windPlatPart, 1);
+    }
+    
+    repeat (room_speed*3)
+        part_system_update(sysWindPlat)
+}
 </string>
           </argument>
         </arguments>
@@ -160,7 +193,7 @@ if (surface_exists(sandSurf)) {
     draw_set_color_write_enable(false,false,false,true);
     draw_set_alpha(1);
     with(objBlock) {
-        if (object_index != objPlatform &amp;&amp; object_index != objFallingLeaf &amp;&amp; object_index != objTelescopingBlockSpawn &amp;&amp; object_index != objMovingShootBlock) {
+        if (object_index != objPlatform &amp;&amp; object_index != objPBFlyingPlatform) {
                 draw_set_color(c_white)
                 draw_rectangle(x, y, x+sprite_width-1, y+sprite_height-1, false)
                 var i;

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -106,8 +106,6 @@
     <instance objName="objSpikeUp" x="640" y="112" name="inst_7F2B3AF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objShell" x="496" y="112" name="inst_F60BFF8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="704" y="352" name="inst_C5C9CDEF" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="704" y="528" name="inst_DA94903E" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeUp" x="704" y="496" name="inst_F46F542B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="704" y="400" name="inst_25DD916F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="480" name="inst_0C1CC72D" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="400" name="inst_AB726DA2" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
@@ -126,6 +124,12 @@
     <instance objName="objSaveBlocker" x="800" y="224" name="inst_4E789DD5" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="256" y="-128" name="inst_822A364B" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_29114B2B" locked="0" code="roomTo = rField1&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="256" y="608" name="inst_0107233C" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = -3&#xA;image_yscale = -image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="400" name="inst_CF7A4AE7" locked="0" code="roomTo = rField3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="objCherry" x="384" y="544" name="inst_CE1A9F60" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objCherry" x="416" y="544" name="inst_949C3937" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objCherry" x="448" y="544" name="inst_959A5084" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objCherry" x="480" y="544" name="inst_B5CFA84E" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -31,9 +31,9 @@
     <yoffset>11010215</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bShipBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bStormSky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bBeachClouds" x="0" y="0" htiled="-1" vtiled="-1" hspeed="2" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="-1" name="bBeachClouds" x="0" y="300" htiled="-1" vtiled="-1" hspeed="2" vspeed="1" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -189,6 +189,22 @@
     <tile bgName="bShipWoodTileBG2" x="512" y="256" w="64" h="32" xo="64" yo="64" id="10009465" name="inst_AB5AF349" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG2" x="576" y="256" w="64" h="32" xo="64" yo="64" id="10009466" name="inst_85E89CAA" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG2" x="640" y="256" w="64" h="32" xo="64" yo="64" id="10009467" name="inst_D313C0DA" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="128" y="64" w="64" h="32" xo="64" yo="0" id="10038862" name="inst_8159D693" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="192" y="64" w="64" h="32" xo="64" yo="0" id="10038863" name="inst_E3D11B54" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="256" y="64" w="64" h="32" xo="64" yo="0" id="10038864" name="inst_8470D751" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="320" y="64" w="64" h="32" xo="64" yo="0" id="10038865" name="inst_088B7667" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="32" y="192" w="64" h="32" xo="64" yo="0" id="10038866" name="inst_2B966C72" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="96" y="192" w="64" h="32" xo="64" yo="0" id="10038867" name="inst_62D5EDCD" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="48" y="256" w="64" h="32" xo="64" yo="0" id="10038868" name="inst_51485060" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="112" y="256" w="64" h="32" xo="64" yo="0" id="10038869" name="inst_1B0CBB76" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="32" y="416" w="64" h="32" xo="64" yo="0" id="10038870" name="inst_DEE0FDC5" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="96" y="416" w="64" h="32" xo="64" yo="0" id="10038871" name="inst_FAB4E75E" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="512" y="448" w="64" h="32" xo="64" yo="0" id="10038872" name="inst_7FD3EE61" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="592" y="448" w="64" h="32" xo="64" yo="0" id="10038873" name="inst_D53014A6" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="656" y="448" w="64" h="32" xo="64" yo="0" id="10038874" name="inst_C06D9733" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="512" y="224" w="64" h="32" xo="64" yo="0" id="10038875" name="inst_C6DFD775" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="576" y="224" w="64" h="32" xo="64" yo="0" id="10038876" name="inst_BC125BF8" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="640" y="224" w="64" h="32" xo="64" yo="0" id="10038877" name="inst_CFF17F47" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="128" y="32" w="64" h="64" xo="64" yo="32" id="10009384" name="inst_E4AF2285" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="192" y="32" w="64" h="64" xo="64" yo="32" id="10009385" name="inst_DFDE72E9" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="256" y="32" w="64" h="64" xo="64" yo="32" id="10009386" name="inst_97CAA605" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -228,8 +244,6 @@
     <tile bgName="bShipWoodTileBG" x="768" y="320" w="64" h="64" xo="0" yo="32" id="10009434" name="inst_AC291F5E" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="704" y="384" w="64" h="64" xo="0" yo="32" id="10009435" name="inst_7E07F591" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="768" y="384" w="64" h="64" xo="0" yo="32" id="10009436" name="inst_F1937F72" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bShipWoodTileBG" x="480" y="384" w="64" h="64" xo="0" yo="0" id="10009437" name="inst_EA15E89A" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bShipWoodTileBG" x="416" y="416" w="64" h="64" xo="0" yo="0" id="10009438" name="inst_76DBE25E" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="96" y="192" w="64" h="32" xo="0" yo="0" id="10009440" name="inst_78CA5F2A" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="32" y="192" w="64" h="32" xo="0" yo="0" id="10009441" name="inst_89CC5ABD" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="96" y="256" w="64" h="32" xo="64" yo="64" id="10009442" name="inst_CCFF25A1" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -239,6 +253,13 @@
     <tile bgName="bShipWoodTileBG" x="256" y="0" w="64" h="32" xo="0" yo="64" id="10009468" name="inst_89F3E361" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="320" y="0" w="32" h="32" xo="0" yo="64" id="10009469" name="inst_AAAE3FCA" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="224" y="0" w="32" h="32" xo="32" yo="64" id="10009470" name="inst_2545019B" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="416" y="416" w="64" h="32" xo="0" yo="64" id="10038879" name="inst_E1842CDC" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="480" y="416" w="64" h="32" xo="0" yo="64" id="10038881" name="inst_A50E4B41" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="416" y="448" w="64" h="32" xo="0" yo="64" id="10038882" name="inst_6ECCD12E" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="416" y="384" w="64" h="32" xo="0" yo="64" id="10038885" name="inst_EBC5DDA3" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG2" x="480" y="384" w="64" h="32" xo="0" yo="64" id="10038886" name="inst_BB578347" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="416" y="384" w="64" h="32" xo="0" yo="0" id="10038887" name="inst_C9018639" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="480" y="384" w="64" h="32" xo="0" yo="0" id="10038888" name="inst_5BEB0838" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="176" y="128" w="32" h="32" xo="0" yo="0" id="10014249" name="inst_0F5F27B0" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="208" y="128" w="32" h="32" xo="0" yo="0" id="10014250" name="inst_9CD8096B" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="240" y="128" w="32" h="32" xo="0" yo="0" id="10014251" name="inst_23D50FA4" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -4,7 +4,7 @@
   <width>800</width>
   <height>608</height>
   <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -59,11 +59,17 @@
     <instance objName="objBlock" x="672" y="416" name="inst_BA7DDEA0" locked="0" code="" scaleX="4" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objBeachIntroCutscene" x="192" y="32" name="inst_C649BBD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBeachSand" x="192" y="352" name="inst_AC0FBE50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlatform" x="96" y="480" name="inst_09FBB76B" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="96" y="496" name="inst_9FE5D2AE" locked="0" code="" scaleX="1" scaleY="3.75" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeDown" x="96" y="480" name="inst_8330DDCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlatform" x="0" y="480" name="inst_09FBB76B" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_985E7883" locked="0" code="roomTo = rBeachHotel&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="13" colour="4294967295" rotation="0"/>
-    <instance objName="objRestartBlocker" x="96" y="-32" name="inst_063B1693" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRestartBlocker" x="64" y="32" name="inst_063B1693" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="144" y="448" name="inst_073E27A8" locked="0" code="sprite_index = sprVacationer1&#xA;image_speed = 0.2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="272" y="448" name="inst_399AB784" locked="0" code="sprite_index = sprVacationer5&#xA;image_speed = 0.2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueLBP" x="128" y="448" name="inst_FCAC8FD2" locked="0" code="dialogue[0] = &quot;What a long boat ride.&quot;&#xA;dialogue[1] = &quot;I thought those 30#seconds would never end.&quot;&#xA;&#xA;dialogueMax = 1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueLBP" x="256" y="448" name="inst_9436B8CE" locked="0" code="dialogue[0] = &quot;Time to kick back and relax.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="-32" y="0" name="inst_0918D671" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="-32" y="64" name="inst_16CD0C68" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="96" y="448" name="inst_79756545" locked="0" code="sprite_index = sprLuggage&#xA;image_speed = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="288" y="448" name="inst_C19BAD34" locked="0" code="sprite_index = sprLuggage&#xA;image_speed = 0&#xA;image_index = 1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bBeachTilesBG" x="416" y="416" w="96" h="96" xo="0" yo="0" id="10014446" name="inst_A53499C1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -90,6 +96,9 @@
     <tile bgName="bStormTiles" x="224" y="512" w="32" h="32" xo="32" yo="0" id="10014440" name="inst_278F22F9" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bStormTiles" x="224" y="544" w="32" h="32" xo="32" yo="0" id="10014441" name="inst_3ECB5087" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bStormTiles" x="224" y="576" w="32" h="32" xo="32" yo="0" id="10014442" name="inst_691CD51C" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bStormTiles" x="64" y="480" w="32" h="32" xo="0" yo="0" id="10038743" name="inst_907842B9" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bStormTiles" x="32" y="480" w="32" h="32" xo="0" yo="0" id="10038744" name="inst_280F1308" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bStormTiles" x="0" y="480" w="32" h="32" xo="0" yo="0" id="10038745" name="inst_D0D1E503" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

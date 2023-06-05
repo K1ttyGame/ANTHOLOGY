@@ -25,21 +25,26 @@
         <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndLegBreak</sound>
         <sound>sound\sndNumberBeep</sound>
+        <sound>sound\sndBoatFoghorn</sound>
         <sound>sound\sndTakePhoto</sound>
         <sound>sound\sndBasketballScore</sound>
         <sound>sound\sndSpringBounce</sound>
         <sound>sound\sndMMBossHit</sound>
+        <sound>sound\sndFileSelectVoice</sound>
         <sound>sound\sndPlasmaShoot</sound>
         <sound>sound\sndRobotBossDestroy</sound>
         <sound>sound\sndWarningSound</sound>
+        <sound>sound\sndBasketballBounce</sound>
         <sound>sound\sndLockedDoor</sound>
         <sound>sound\sndGeneralCrash</sound>
         <sound>sound\sndLightningBolt</sound>
+        <sound>sound\sndGulp</sound>
         <sound>sound\sndEyeOpen</sound>
         <sound>sound\sndChoose</sound>
         <sound>sound\sndSpeechBubbleOpen</sound>
         <sound>sound\sndClawClick</sound>
         <sound>sound\sndPaintShootBoss</sound>
+        <sound>sound\sndBubbleBounce</sound>
         <sound>sound\sndClearSound</sound>
         <sound>sound\sndSpaceSuitAir</sound>
         <sound>sound\sndSpeechBubbleClosed</sound>
@@ -62,6 +67,7 @@
         <sound>sound\musFrozenMMBossIntro</sound>
         <sound>sound\musFrozenIntro</sound>
         <sound>sound\musFrozenEndingCutscene</sound>
+        <sound>sound\musFileSelect</sound>
         <sound>sound\musFrozenClear</sound>
         <sound>sound\musFrozenPeople</sound>
         <sound>sound\musBeachAmbient</sound>
@@ -158,6 +164,7 @@
         <sprite>sprites\sprY2KSpikeRight</sprite>
         <sprite>sprites\sprY2KSpikeLeft</sprite>
         <sprite>sprites\sprY2KSpikeDown</sprite>
+        <sprite>sprites\sprPlatformSpikeUp</sprite>
       </sprites>
       <sprites name="Extra 1">
         <sprite>sprites\sprBlueSpikeUp</sprite>
@@ -348,6 +355,8 @@
         <sprite>sprites\sprConfetti</sprite>
         <sprite>sprites\sprHammock</sprite>
         <sprite>sprites\sprWhite</sprite>
+        <sprite>sprites\sprLuggage</sprite>
+        <sprite>sprites\sprPirateShip</sprite>
         <sprite>sprites\sprBeachBall</sprite>
       </sprites>
       <sprites name="Fall / Space">
@@ -434,6 +443,9 @@
         <sprite>sprites\sprGrassEdgeTexture</sprite>
         <sprite>sprites\sprSpinningGlobe</sprite>
         <sprite>sprites\sprShellBlock</sprite>
+        <sprite>sprites\sprBubbleAura</sprite>
+        <sprite>sprites\sprPinballCircle</sprite>
+        <sprite>sprites\sprAirPlatform</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
       </sprites>
       <sprites name="Hub / Menus">
@@ -460,13 +472,20 @@
       <sprites name="Characters">
         <sprite>sprites\sprSnarkySignpost</sprite>
       </sprites>
+      <sprites name="Title">
+        <sprite>sprites\sprTitleHoop</sprite>
+      </sprites>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bGlow</background>
+    <background>background\bBeachTitle</background>
     <background>background\bUndergroundBG</background>
+    <backgrounds name="Title + Menu">
+      <background>background\bTitleScreenGrad</background>
+    </backgrounds>
     <background>background\bAllTiles</background>
     <backgrounds name="Y2K">
       <background>background\bGrassTexture10</background>
@@ -553,7 +572,6 @@
       <background>background\bShipWoodTexture</background>
       <background>background\bShipWoodTileBG</background>
       <background>background\bShipWoodTileBG2</background>
-      <background>background\bShipBG</background>
       <background>background\bPiratePrisonTile</background>
       <background>background\bGreenGlow</background>
     </backgrounds>
@@ -667,6 +685,8 @@
       <object>objects\objExplosion</object>
       <object>objects\objDoor</object>
       <object>objects\objCameraShutterFX</object>
+      <object>objects\objTutorialAppear</object>
+      <object>objects\objTitleCardAdvance</object>
       <object>objects\objDialogueLBP</object>
     </objects>
     <objects name="Extra 1">
@@ -685,6 +705,7 @@
       <object>objects\objHubVisualControl</object>
       <object>objects\objHubFloatingSign</object>
       <object>objects\objTutorialVisuals</object>
+      <object>objects\objNewFileMenu</object>
     </objects>
     <objects name="Gimmicks">
       <objects name="Frozen Over">
@@ -750,6 +771,8 @@
         <object>objects\objPirateApple</object>
         <object>objects\objBeachBasketballPlayer</object>
         <object>objects\objBeachIntroCutscene</object>
+        <object>objects\objThunderTransition</object>
+        <object>objects\objThunderTransition2</object>
       </objects>
       <objects name="Fall / Space">
         <object>objects\objSpaceStarGlow</object>
@@ -815,7 +838,11 @@
         <object>objects\objY2KBGTextureDrawer</object>
         <object>objects\objY2KTextureDrawer</object>
         <object>objects\objShell</object>
+        <object>objects\objShellSpawner</object>
+        <object>objects\objPinballBumper</object>
+        <object>objects\objBubbleShadow</object>
         <object>objects\objSpikeExtender</object>
+        <object>objects\objPBFlyingPlatform</object>
       </objects>
     </objects>
     <objects name="world">
@@ -909,6 +936,7 @@
     </rooms>
     <rooms name="Beachventure">
       <room>rooms\rBeachDemo</room>
+      <room>rooms\rBeachCard</room>
       <room>rooms\rBeachIntro</room>
       <room>rooms\rBeachHotel</room>
       <room>rooms\rBeachHammock</room>
@@ -917,12 +945,15 @@
       <room>rooms\rBeachDrink1</room>
       <room>rooms\rBeachDrink2</room>
       <room>rooms\rBeachCombo</room>
+      <room>rooms\rBeachCutscene</room>
+      <room>rooms\rStorm1</room>
       <room>rooms\rStormDemo</room>
       <room>rooms\rStorm2</room>
       <room>rooms\rStorm3</room>
       <room>rooms\rStorm4</room>
       <room>rooms\rStorm5</room>
       <room>rooms\rStorm6</room>
+      <room>rooms\rStormCutscene</room>
       <room>rooms\rPirate1</room>
       <room>rooms\rPirate2</room>
       <room>rooms\rPirate3</room>
@@ -999,6 +1030,13 @@
     <rooms name="Panasonic Prequel">
       <room>rooms\rField1</room>
       <room>rooms\rField2</room>
+      <room>rooms\rField3</room>
+      <room>rooms\rField4</room>
+      <room>rooms\rField5</room>
+      <room>rooms\rField6</room>
+      <room>rooms\rField7</room>
+      <room>rooms\rField8</room>
+      <room>rooms\rField9</room>
       <room>rooms\rDungeon1</room>
       <room>rooms\rDungeon2</room>
       <room>rooms\rDungeon3</room>

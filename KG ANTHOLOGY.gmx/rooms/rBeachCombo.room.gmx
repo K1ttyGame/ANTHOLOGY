@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -135,6 +135,7 @@
     <instance objName="objBlock" x="400" y="368" name="inst_400942C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="336" name="inst_D56B448C" locked="0" code="" scaleX="1" scaleY="1.03225803375244" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="720" y="160" name="inst_5DC32B4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="0" name="inst_5CB77B60" locked="0" code="roomTo = rBeachCutscene&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="16" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bBeachTilesBG" x="0" y="288" w="96" h="96" xo="0" yo="0" id="10014165" name="inst_A4989895" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
