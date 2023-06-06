@@ -138,6 +138,7 @@
     <instance objName="objHubFloatingSign" x="1504" y="704" name="inst_B1DE0602" locked="0" code="sprite_index = sprMMTitleCard&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1440" y="832" name="inst_3546E50B" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1440" y="736" name="inst_9FDA00DC" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAchievementGet" x="1024" y="864" name="inst_F2707AD8" locked="0" code="achievementPortrait = sprAchievement1 //set to a sprite index&#xA;achievementName = &quot;Wish Granted&quot; //set to name of achievement&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSpaceStationBGTiles" x="864" y="960" w="32" h="32" xo="0" yo="0" id="10035411" name="inst_63360BBB" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

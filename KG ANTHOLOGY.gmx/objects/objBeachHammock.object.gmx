@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>objPlayer.vspeed = -8
+audio_stop_sound(sndBounce)
+audio_play_sound(sndBounce, 10, false)
 </string>
           </argument>
         </arguments>

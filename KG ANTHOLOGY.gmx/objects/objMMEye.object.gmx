@@ -207,6 +207,14 @@ if (phase == 7) {
         instance_destroy();
         if (instance_exists(objPlayer)) instance_destroy(objPlayer)
         room_goto_next();
+        if (global.cheevoFlag[0] == false) {
+            with instance_create(16, 16, objAchievementGet) {
+                achievementPortrait = sprAchievement1 //set to a sprite index
+                achievementName = "Wish Granted" //set to name of achievement
+            }
+            global.cheevoFlag[0] = true
+        }
+        scrSaveGame(false)
     }
     with other instance_destroy()
 }

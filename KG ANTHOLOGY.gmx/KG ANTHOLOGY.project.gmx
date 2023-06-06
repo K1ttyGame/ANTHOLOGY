@@ -21,6 +21,7 @@
         <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndArrowShoot</sound>
         <sound>sound\sndShellBounce</sound>
+        <sound>sound\sndBounce</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndLegBreak</sound>
@@ -29,10 +30,12 @@
         <sound>sound\sndTakePhoto</sound>
         <sound>sound\sndBasketballScore</sound>
         <sound>sound\sndSpringBounce</sound>
+        <sound>sound\sndAchievementGet</sound>
         <sound>sound\sndMMBossHit</sound>
         <sound>sound\sndFileSelectVoice</sound>
         <sound>sound\sndPlasmaShoot</sound>
         <sound>sound\sndRobotBossDestroy</sound>
+        <sound>sound\sndRocksCrumble</sound>
         <sound>sound\sndWarningSound</sound>
         <sound>sound\sndBasketballBounce</sound>
         <sound>sound\sndLockedDoor</sound>
@@ -44,6 +47,7 @@
         <sound>sound\sndSpeechBubbleOpen</sound>
         <sound>sound\sndClawClick</sound>
         <sound>sound\sndPaintShootBoss</sound>
+        <sound>sound\sndBasketballSwish</sound>
         <sound>sound\sndBubbleBounce</sound>
         <sound>sound\sndClearSound</sound>
         <sound>sound\sndSpaceSuitAir</sound>
@@ -62,6 +66,7 @@
         <sound>sound\musFrozenIceWorld</sound>
         <sound>sound\musFrozenTransitionLoop</sound>
         <sound>sound\musFrozenCavern</sound>
+        <sound>sound\musAchievementLoop</sound>
         <sound>sound\musFrozenNoise</sound>
         <sound>sound\musFrozenMMBoss</sound>
         <sound>sound\musFrozenMMBossIntro</sound>
@@ -133,6 +138,7 @@
           <sprite>sprites\sprVacationer4</sprite>
           <sprite>sprites\sprVacationer4Happy</sprite>
           <sprite>sprites\sprVacationer5</sprite>
+          <sprite>sprites\sprTropicalFlowers</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -450,9 +456,13 @@
       </sprites>
       <sprites name="Hub / Menus">
         <sprites name="Achievements">
+          <sprite>sprites\sprAchievementWheel</sprite>
           <sprite>sprites\sprAchievement1</sprite>
           <sprite>sprites\sprAchievement2</sprite>
           <sprite>sprites\sprAchievement3</sprite>
+          <sprite>sprites\sprAchievement4</sprite>
+          <sprite>sprites\sprAchievement5</sprite>
+          <sprite>sprites\sprAchievement6</sprite>
           <sprite>sprites\sprAchievementUnknown</sprite>
         </sprites>
         <sprites name="Achievement Guys">
@@ -666,6 +676,7 @@
     </scripts>
   </scripts>
   <shaders name="shaders">
+    <shader type="GLSLES">shaders\shdGrayscale.shader</shader>
     <shader type="GLSLES">shaders\shdRemoveBlack.shader</shader>
   </shaders>
   <fonts name="fonts">
@@ -688,6 +699,7 @@
       <object>objects\objTutorialAppear</object>
       <object>objects\objTitleCardAdvance</object>
       <object>objects\objDialogueLBP</object>
+      <object>objects\objAchievementGet</object>
     </objects>
     <objects name="Extra 1">
       <object>objects\objBlueSpikeUp</object>
@@ -859,8 +871,10 @@
       <object>objects\objPlayer</object>
       <object>objects\objBow</object>
       <object>objects\objBullet</object>
+      <object>objects\objBeachDeath</object>
       <object>objects\objBloodEmitter</object>
       <object>objects\objBlood</object>
+      <object>objects\objBeachFlowerDeath</object>
       <object>objects\objGameOver</object>
     </objects>
     <objects name="blocks and platforms">

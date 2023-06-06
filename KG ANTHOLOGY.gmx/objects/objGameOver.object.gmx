@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>timer = 0
-alpha = 0
+
+y -= 400
+drawY = -400
 </string>
           </argument>
         </arguments>
@@ -49,12 +51,22 @@ alpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (timer &lt; 20)
+            <string>if (timer &lt; 30) {
     timer++
+    }
     
-if (timer == 20) {
-    if (alpha &lt; 1)
-        alpha += .02
+if (timer == 30) {
+    //if (alpha &lt; 1)
+    //    alpha += .02
+    vspeed += .4
+    if (y + vspeed &gt;= ystart) {
+        vspeed = -vspeed/2
+        if (abs(vspeed) &lt; 1) {
+            timer++
+            vspeed = 0
+        }
+    }
+    drawY = y
 }
 </string>
           </argument>
@@ -78,9 +90,11 @@ if (timer == 20) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(alpha)
-draw_sprite(sprite_index, -1, display_get_gui_width()/2, display_get_gui_height()/2);
-draw_set_alpha(1)
+            <string>image_speed = .1
+
+draw_sprite_ext(sprite_index, -1, display_get_gui_width()/2 + 8, display_get_gui_height()/2 + drawY + 8, 1, 1, 0, c_black, .4);
+
+draw_sprite(sprite_index, -1, display_get_gui_width()/2, display_get_gui_height()/2 + drawY);
 </string>
           </argument>
         </arguments>

@@ -42,6 +42,10 @@ for (var i = 0; i < 17; i++) { //set 3 to total items in game
     global.gotItem[i] = 0
 } 
 
+for (var i = 0; i < 20; i++) { //init all 20 achievements
+    global.cheevoFlag[i] = false
+} 
+
 for (var i = global.secretItemTotal-1; i >= 0; i--)
 {
     global.secretItem[i] = false;

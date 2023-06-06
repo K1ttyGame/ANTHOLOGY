@@ -29,6 +29,8 @@
 
 phase = 0;
 cooldown = 0
+
+soundFlag = false
 </string>
           </argument>
         </arguments>
@@ -119,6 +121,10 @@ if (phase == 2) {
     vspeed += .1
     if (instance_exists(objBasketballNet)) {
         x = lerp(x, objBasketballNet.x+15, .1)
+        if (y &gt;= objBasketballNet.y+40 &amp;&amp; y &lt;= objBasketballNet.y+115&amp;&amp; soundFlag == false) {
+            audio_play_sound(sndBasketballSwish, 10, false)
+            soundFlag = true
+        }
         if (y &gt; objBasketballNet.y+116) {
             phase = 0
             hspeed = -5
@@ -127,11 +133,14 @@ if (phase == 2) {
                 objBasketballNet.spawnPart = true
                 }
             }
+            soundFlag = false
         }
 }
 
 if (cooldown &gt; 0)
     cooldown--
+    
+audio_sound_gain(sndBasketballBounce, speed/4, 0)
 </string>
           </argument>
         </arguments>

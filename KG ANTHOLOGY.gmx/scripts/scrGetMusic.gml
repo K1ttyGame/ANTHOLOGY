@@ -62,6 +62,9 @@ switch (room)                       //determines which song to play
     case rMenu:
         roomSong = musFileSelect
         break;
+    case rAchievementCheck:
+        roomSong = musAchievementLoop
+        break;
     default:                        //default option in case the room does not have a song set
         roomSong = -1;
         break;

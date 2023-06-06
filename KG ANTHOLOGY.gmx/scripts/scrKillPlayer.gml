@@ -23,9 +23,52 @@ if (instance_exists(objPlayer) && !global.noDeath)
             }
         }
         
-        with (objPlayer)
-        {
-            instance_create(x,y,objBloodEmitter);
+        with (objPlayer) {
+            switch (room) {
+                case rBeachHotel:
+                case rBeachIntro:
+                case rBeachHammock:
+                case rBeachHammock2:
+                case rBeachBasketball:
+                case rBeachDrink1:
+                case rBeachDrink2:
+                case rBeachCombo:
+                case rBeachCutscene:
+                case rStorm2:
+                case rStorm3:
+                case rStorm4:
+                case rStorm5:
+                case rStorm6:
+                case rStormCutscene:
+                case rPirate1:
+                case rPirate2:
+                case rPirate3:
+                case rPirate4:
+                case rPirate5:
+                    instance_create(x,y,objBeachDeath);
+                    break;
+                case rSnow0:
+                case rSnowTransition:
+                case rSnow1:
+                case rSnow2:
+                case rSnow3:
+                case rSnow4:
+                case rSnow5:
+                case rSnow6:
+                case rSnow7:
+                case rSnow8:
+                case rSnowTransition2:
+                case rCave1:
+                case rCave2:
+                case rCave3:
+                case rCave4:
+                case rCave5:
+                case rCave6:
+                case rCave7:
+                case rFrozenBoss:
+                    instance_create(x,y,objBloodEmitter);
+                    break;
+            }
             instance_destroy();
         }
         

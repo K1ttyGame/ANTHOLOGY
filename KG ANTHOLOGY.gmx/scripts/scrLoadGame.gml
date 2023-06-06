@@ -47,6 +47,11 @@ if (loadFile)
             global.saveSecretItem[i] = ds_map_find_value(saveMap,"saveSecretItem["+string(i)+"]");
         }
         
+        for (var i = 0; i < 20; i++)
+        {
+            global.cheevoFlag[i] = ds_map_find_value(saveMap,"cheevoFlag["+string(i)+"]");
+        }
+        
         for (var i = 0; i < global.bossItemTotal; i++)
         {
             global.saveBossItem[i] = ds_map_find_value(saveMap,"saveBossItem["+string(i)+"]");

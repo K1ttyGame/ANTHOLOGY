@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>aTitle = "Alien No More" //set in creation code
-aDetails = "blah blah blah blah, hundreds of words that may or may not mean anything in the grand scheme of things, lol"
+aDetails = "blah blah blah blah, hundreds of words that may or may not mean anything in the grand scheme of things, lol" //set in creation code
+aID = 0 //set in creation code
 
 drawY = 0
 pos = 0 //1 for bottom, 0 for top
@@ -36,7 +37,7 @@ else {drawY = 448; pos = 0} //should be at 480
 
 drawAlpha = 0
 
-found = false
+found = global.cheevoFlag[aID]
 hidden = false
 flag = false
 j = 0
@@ -82,7 +83,7 @@ else {
     drawAlpha = 0
 }
 
-
+found = global.cheevoFlag[aID]
 </string>
           </argument>
         </arguments>
@@ -111,6 +112,7 @@ draw_set_alpha(drawAlpha)
 
 if (mouse_x &gt;= x &amp;&amp; mouse_x &lt;= x+96 &amp;&amp; mouse_y &gt;= y &amp;&amp; mouse_y &lt;= y+96) { //if active
     draw_set_color(c_black)
+    draw_set_font(fDefault12) //DELETE IF NOTHING HAPPENS
     if (pos == 0) { //drawing the box at the bottom 
         draw_rectangle(room_width/4-8, drawY - 16, 3*room_width/4+8, drawY+string_height_ext(aDetails, 24, room_width/2)+48, false)
         draw_triangle(room_width/2-64, drawY-16-1, room_width/2+64, drawY-16-1, x+48, y+48, false)
@@ -156,8 +158,14 @@ draw_set_alpha(1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = .1
+            <string>if (found == false) {
+    shader_set(shdGrayscale)
+    image_speed = 0
+}
+else
+    image_speed = .1
 draw_self()
+shader_reset()
 </string>
           </argument>
         </arguments>
