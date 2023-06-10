@@ -3,7 +3,7 @@
   <spriteName>bDungeonSpikeBlock</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>objBlock</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -37,7 +37,15 @@ if (active)
 else
     topSpike.y = y-32
     
+with topSpike {
+    sprite_index = sprDungeonPhantomSpike
+    mask_index = sprSpikeUp
+    depth = other.depth
+    image_index = other.active
+}
+    
 image_speed = 0
+timer = 0
 </string>
           </argument>
         </arguments>
@@ -61,17 +69,32 @@ image_speed = 0
           <argument>
             <kind>1</kind>
             <string>if (active) {
-    if (topSpike.y &gt; y-32-extendDistance) {
-        topSpike.y -= 4
-    }
+    //if (topSpike.y &gt; y-32-extendDistance) {
+    //    topSpike.y -= 4
+    //}
+    topSpike.y = lerp(topSpike.y, y-32-extendDistance, .1)
     image_index = 1
 }
 
 else {
-    if (topSpike.y &lt; y-32) {
-        topSpike.y += 4
-    }
+    //if (topSpike.y &lt; y-32) {
+    //    topSpike.y += 4
+    //}
+    topSpike.y = lerp(topSpike.y, y-32, .025)
     image_index = 0
+}
+
+with topSpike {
+    image_index = other.active
+}
+
+timer++
+if (timer == 10) {
+    with instance_create(x+4+random_range(0,24), y+16, objBlockSpikePart) {
+        partner = other.topSpike
+        master = other.id
+    }
+    timer = 0
 }
 </string>
           </argument>
@@ -97,6 +120,8 @@ else {
             <kind>1</kind>
             <string>with other instance_destroy()
 active = !active
+
+audio_play_sound(sndChoose, 10, false)
 </string>
           </argument>
         </arguments>

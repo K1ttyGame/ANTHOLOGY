@@ -32,6 +32,9 @@ if (loadFile)
         global.drawKillBorders = ds_map_find_value(saveMap, "drawKillBorder")
         ds_list_read(global.inventory, ds_map_find_value(saveMap, "inventory"))
         
+        global.startTime = ds_map_find_value(saveMap, "startTime")
+        global.startDeath = ds_map_find_value(saveMap, "startDeath")
+        
         if (is_string(global.saveRoom))   //check if the saved room loaded properly
         {
             if (!room_exists(asset_get_index(global.saveRoom)))  //check if the room index in the save is valid

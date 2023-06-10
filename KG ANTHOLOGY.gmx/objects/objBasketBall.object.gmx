@@ -121,10 +121,10 @@ if (phase == 2) {
     vspeed += .1
     if (instance_exists(objBasketballNet)) {
         x = lerp(x, objBasketballNet.x+15, .1)
-        if (y &gt;= objBasketballNet.y+40 &amp;&amp; y &lt;= objBasketballNet.y+115&amp;&amp; soundFlag == false) {
-            audio_play_sound(sndBasketballSwish, 10, false)
-            soundFlag = true
-        }
+        //if (y &gt;= objBasketballNet.y+80 &amp;&amp; soundFlag == false) {
+        //    audio_play_sound(sndBasketballSwish, 10, false)
+        //    soundFlag = true
+        //}
         if (y &gt; objBasketballNet.y+116) {
             phase = 0
             hspeed = -5

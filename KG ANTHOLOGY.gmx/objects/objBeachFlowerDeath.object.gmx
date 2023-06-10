@@ -55,7 +55,7 @@ image_blend = make_color_hsv(random(255), 255, 255)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle -= speed
+            <string>if (sprite_index != sprButterflyDeath) image_angle -= speed
 image_alpha -= .01
 if (image_alpha == 0) instance_destroy()
 </string>

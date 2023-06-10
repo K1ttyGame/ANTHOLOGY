@@ -65,6 +65,9 @@ ds_map_add(saveMap,"drawKillBorder", global.drawKillBorders);
 
 ds_map_add(saveMap, "inventory", ds_list_write(global.inventory));
 
+ds_map_add(saveMap, "startTime", global.startTime)
+ds_map_add(saveMap, "startDeath", global.startDeath)
+
 for (var i = 0; i < global.secretItemTotal; i++)
 {
     ds_map_add(saveMap,"saveSecretItem["+string(i)+"]",global.saveSecretItem[i]);

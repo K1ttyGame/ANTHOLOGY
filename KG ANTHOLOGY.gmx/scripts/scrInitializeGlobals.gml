@@ -6,13 +6,13 @@
 global.noDeath = false;         //enables god mode
 global.infJump = false;         //enables infinite jump
 
-global.roomCaptionDef = "Monmouth Has Frozen Over And So Have I";  //sets default window caption (only works with the Professional version of Studio)
+global.roomCaptionDef = "A SUPERPLANET CALLED KG";  //sets default window caption (only works with the Professional version of Studio)
 global.roomCaptionLast = global.roomCaptionDef;
 window_set_caption(global.roomCaptionDef);
 
 global.md5StrAdd = "qweiuyrhzxcbnvzghd";  //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-global.startRoom = rMansionCenter;    //sets which room to begin with
+global.startRoom = rHub1;    //sets which room to begin with
 
 global.menuSound = sndJump;     //sets what sound to use for navigating the main menu
 global.deathMusicMode = 0;      //sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
@@ -46,6 +46,10 @@ for (var i = 0; i < 20; i++) { //init all 20 achievements
     global.cheevoFlag[i] = false
 } 
 
+global.startTime = 0 //used for the time-keeping achievements
+global.startDeath = 0 //used for the death keeping achievements
+
+//back to old :D
 for (var i = global.secretItemTotal-1; i >= 0; i--)
 {
     global.secretItem[i] = false;

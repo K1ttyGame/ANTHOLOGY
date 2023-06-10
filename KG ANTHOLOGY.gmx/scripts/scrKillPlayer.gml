@@ -68,6 +68,18 @@ if (instance_exists(objPlayer) && !global.noDeath)
                 case rFrozenBoss:
                     instance_create(x,y,objBloodEmitter);
                     break;
+                case rField1:
+                case rField2:
+                case rField3:
+                case rField4:
+                case rField5:
+                case rField6:
+                case rField7:
+                case rField8:
+                case rField9:
+                case rFieldBoss:
+                    instance_create(x, y, objComputerDeath);
+                    break;
             }
             instance_destroy();
         }

@@ -16,38 +16,53 @@
       <sounds name="New">
         <sound>sound\sndPlatformBreak</sound>
         <sound>sound\sndPlatformCrash</sound>
+        <sound>sound\sndSlam</sound>
         <sound>sound\sndNumberBeep2</sound>
         <sound>sound\sndPuzzleGetItem</sound>
         <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndArrowShoot</sound>
         <sound>sound\sndShellBounce</sound>
         <sound>sound\sndBounce</sound>
+        <sound>sound\sndSaveThumbsUp</sound>
         <sound>sound\sndSwitch</sound>
         <sound>sound\sndInventoryCantAccess</sound>
         <sound>sound\sndLegBreak</sound>
+        <sound>sound\sndWarn</sound>
         <sound>sound\sndNumberBeep</sound>
         <sound>sound\sndBoatFoghorn</sound>
         <sound>sound\sndTakePhoto</sound>
+        <sound>sound\sndPingWarning</sound>
+        <sound>sound\sndMemberAppear</sound>
+        <sound>sound\sndFireworkExplosion</sound>
         <sound>sound\sndBasketballScore</sound>
+        <sound>sound\sndBossAlarm</sound>
+        <sound>sound\sndTypewriter</sound>
         <sound>sound\sndSpringBounce</sound>
         <sound>sound\sndAchievementGet</sound>
         <sound>sound\sndMMBossHit</sound>
         <sound>sound\sndFileSelectVoice</sound>
+        <sound>sound\sndAppleBurst</sound>
+        <sound>sound\sndLockedUp</sound>
         <sound>sound\sndPlasmaShoot</sound>
         <sound>sound\sndRobotBossDestroy</sound>
         <sound>sound\sndRocksCrumble</sound>
         <sound>sound\sndWarningSound</sound>
         <sound>sound\sndBasketballBounce</sound>
+        <sound>sound\sndFutureTyping</sound>
         <sound>sound\sndLockedDoor</sound>
         <sound>sound\sndGeneralCrash</sound>
         <sound>sound\sndLightningBolt</sound>
+        <sound>sound\sndHamsterVoice</sound>
         <sound>sound\sndGulp</sound>
         <sound>sound\sndEyeOpen</sound>
         <sound>sound\sndChoose</sound>
+        <sound>sound\sndCatVoice</sound>
         <sound>sound\sndSpeechBubbleOpen</sound>
         <sound>sound\sndClawClick</sound>
         <sound>sound\sndPaintShootBoss</sound>
+        <sound>sound\sndDogVoice</sound>
         <sound>sound\sndBasketballSwish</sound>
+        <sound>sound\sndNarrationVoice</sound>
         <sound>sound\sndBubbleBounce</sound>
         <sound>sound\sndClearSound</sound>
         <sound>sound\sndSpaceSuitAir</sound>
@@ -58,31 +73,46 @@
       </sounds>
     </sounds>
     <sounds name="music">
-      <sound>sound\musOnDeath</sound>
       <sounds name="New Music">
-        <sound>sound\musFrozenTitle</sound>
-        <sound>sound\musFrozenIntroAlt</sound>
-        <sound>sound\musWindAmbient1</sound>
-        <sound>sound\musFrozenIceWorld</sound>
-        <sound>sound\musFrozenTransitionLoop</sound>
-        <sound>sound\musFrozenCavern</sound>
-        <sound>sound\musAchievementLoop</sound>
-        <sound>sound\musFrozenNoise</sound>
-        <sound>sound\musFrozenMMBoss</sound>
-        <sound>sound\musFrozenMMBossIntro</sound>
-        <sound>sound\musFrozenIntro</sound>
-        <sound>sound\musFrozenEndingCutscene</sound>
-        <sound>sound\musFileSelect</sound>
-        <sound>sound\musFrozenClear</sound>
-        <sound>sound\musFrozenPeople</sound>
-        <sound>sound\musBeachAmbient</sound>
-        <sound>sound\musRainstorm</sound>
-        <sound>sound\musPirateShip</sound>
-        <sound>sound\musStormAmbient</sound>
-        <sound>sound\musBeach</sound>
+        <sounds name="Frozen">
+          <sound>sound\musFrozenTitle</sound>
+          <sound>sound\musWindAmbient1</sound>
+          <sound>sound\musFrozenIceWorld</sound>
+          <sound>sound\musFrozenTransitionLoop</sound>
+          <sound>sound\musFrozenCavern</sound>
+          <sound>sound\musFrozenNoise</sound>
+          <sound>sound\musFrozenMMBossIntro</sound>
+          <sound>sound\musFrozenEndingCutscene</sound>
+          <sound>sound\musFrozenIntro</sound>
+          <sound>sound\musFrozenMMBoss</sound>
+          <sound>sound\musFrozenClear</sound>
+          <sound>sound\musFrozenIntroAlt</sound>
+        </sounds>
+        <sounds name="Beach">
+          <sound>sound\musBeach</sound>
+          <sound>sound\musStormAmbient</sound>
+          <sound>sound\musBeachAmbient</sound>
+          <sound>sound\musBeachEnding</sound>
+          <sound>sound\musRainstorm</sound>
+          <sound>sound\musPirateShip</sound>
+        </sounds>
         <sounds name="Fall / Space">
           <sound>sound\musRobotBossLoop2</sound>
           <sound>sound\musRobotBossLoop1</sound>
+        </sounds>
+        <sounds name="Misc">
+          <sound>sound\musAchievementLoop</sound>
+          <sound>sound\musFileSelect</sound>
+          <sound>sound\musFrozenPeople</sound>
+          <sound>sound\musOnDeath</sound>
+        </sounds>
+        <sounds name="PB">
+          <sound>sound\musComputerBoss</sound>
+          <sound>sound\musMeeting</sound>
+          <sound>sound\musPBTitleCard</sound>
+          <sound>sound\musDungeon</sound>
+          <sound>sound\musComputerCutscene</sound>
+          <sound>sound\musComputer</sound>
         </sounds>
       </sounds>
     </sounds>
@@ -188,6 +218,7 @@
         <sprite>sprites\sprDungeonSpikeRight</sprite>
         <sprite>sprites\sprDungeonSpikeLeft</sprite>
         <sprite>sprites\sprDungeonSpikeDown</sprite>
+        <sprite>sprites\sprDungeonPhantomSpike</sprite>
       </sprites>
       <sprites name="Mansion">
         <sprite>sprites\sprMansionBathroomSUp</sprite>
@@ -363,6 +394,8 @@
         <sprite>sprites\sprWhite</sprite>
         <sprite>sprites\sprLuggage</sprite>
         <sprite>sprites\sprPirateShip</sprite>
+        <sprite>sprites\sprBeachAirplane</sprite>
+        <sprite>sprites\sprFirework</sprite>
         <sprite>sprites\sprBeachBall</sprite>
       </sprites>
       <sprites name="Fall / Space">
@@ -452,7 +485,35 @@
         <sprite>sprites\sprBubbleAura</sprite>
         <sprite>sprites\sprPinballCircle</sprite>
         <sprite>sprites\sprAirPlatform</sprite>
+        <sprite>sprites\sprCouncilHamster</sprite>
+        <sprite>sprites\sprCouncilCat</sprite>
+        <sprite>sprites\sprButterflyDeath</sprite>
+        <sprite>sprites\sprTextbox</sprite>
+        <sprite>sprites\sprCouncilDog</sprite>
+        <sprite>sprites\sprPBTitle</sprite>
+        <sprite>sprites\sprComputerTransitionBox</sprite>
         <sprite>sprites\sprSwingingAxe</sprite>
+        <sprites name="Computer Boss">
+          <sprite>sprites\sprDCGhostEffect</sprite>
+          <sprite>sprites\sprDCArrow</sprite>
+          <sprite>sprites\sprWarningDC</sprite>
+          <sprite>sprites\sprDCProj</sprite>
+          <sprite>sprites\sprDCMain</sprite>
+          <sprite>sprites\sprCherryPor</sprite>
+        </sprites>
+        <sprites name="Numbers">
+          <sprite>sprites\sprNegativeSign</sprite>
+          <sprite>sprites\spr0</sprite>
+          <sprite>sprites\spr1</sprite>
+          <sprite>sprites\spr2</sprite>
+          <sprite>sprites\spr3</sprite>
+          <sprite>sprites\spr4</sprite>
+          <sprite>sprites\spr5</sprite>
+          <sprite>sprites\spr6</sprite>
+          <sprite>sprites\spr7</sprite>
+          <sprite>sprites\spr8</sprite>
+          <sprite>sprites\spr9</sprite>
+        </sprites>
       </sprites>
       <sprites name="Hub / Menus">
         <sprites name="Achievements">
@@ -476,15 +537,18 @@
           <sprite>sprites\sprAGuy8</sprite>
         </sprites>
         <sprites name="Hub">
+          <sprite>sprites\sprBeachTitleCard</sprite>
           <sprite>sprites\sprMMTitleCard</sprite>
         </sprites>
       </sprites>
       <sprites name="Characters">
+        <sprite>sprites\sprJackSparrow</sprite>
         <sprite>sprites\sprSnarkySignpost</sprite>
       </sprites>
       <sprites name="Title">
         <sprite>sprites\sprTitleHoop</sprite>
       </sprites>
+      <sprite>sprites\sprThumbsUpStick</sprite>
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprDialoguePrompt</sprite>
     </sprites>
@@ -492,15 +556,29 @@
   <backgrounds name="background">
     <background>background\bGlow</background>
     <background>background\bBeachTitle</background>
+    <background>background\bAllTiles</background>
     <background>background\bUndergroundBG</background>
+    <backgrounds name="PB Imported">
+      <background>background\bCastle</background>
+      <background>background\bTitleAtmosphere</background>
+      <background>background\bCastleCloud</background>
+      <background>background\bCastleDeco</background>
+      <background>background\bPBCutscene1</background>
+      <background>background\bCastleWindow</background>
+    </backgrounds>
     <backgrounds name="Title + Menu">
       <background>background\bTitleScreenGrad</background>
     </backgrounds>
-    <background>background\bAllTiles</background>
     <backgrounds name="Y2K">
       <background>background\bGrassTexture10</background>
       <background>background\bGrassTextureBG</background>
       <background>background\bY2KSky</background>
+      <backgrounds name="Boss Imported">
+        <background>background\bWarningStripFlipped</background>
+        <background>background\bAlarmGrid</background>
+        <background>background\bAlarmBG</background>
+        <background>background\bWarningStrip</background>
+      </backgrounds>
     </backgrounds>
     <backgrounds name="Hub / Menus">
       <background>background\bAchieveChecker</background>
@@ -575,6 +653,8 @@
       <background>background\bBeachSky</background>
       <background>background\bPalmTree</background>
       <background>background\bHotel</background>
+      <background>background\bBeachMoon</background>
+      <background>background\bBeachNight</background>
       <background>background\bBeachBoat</background>
     </backgrounds>
     <backgrounds name="Pirate">
@@ -583,6 +663,7 @@
       <background>background\bShipWoodTileBG</background>
       <background>background\bShipWoodTileBG2</background>
       <background>background\bPiratePrisonTile</background>
+      <background>background\bPirateShipWheel</background>
       <background>background\bGreenGlow</background>
     </backgrounds>
     <backgrounds name="Storm">
@@ -677,6 +758,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shdGrayscale.shader</shader>
+    <shader type="GLSLES">shaders\shdPixelate.shader</shader>
     <shader type="GLSLES">shaders\shdRemoveBlack.shader</shader>
   </shaders>
   <fonts name="fonts">
@@ -689,9 +771,20 @@
     <font>fonts\fPirate</font>
     <font>fonts\fAchievementTitle</font>
     <font>fonts\fIkaruga</font>
+    <fonts name="Computer Imported Fonts">
+      <font>fonts\fBossWarning16</font>
+      <font>fonts\fBossWarning10</font>
+      <font>fonts\fBossWarning60</font>
+    </fonts>
   </fonts>
   <objects name="objects">
     <object>objects\objBETTERBossTemplate</object>
+    <objects name="Transitions">
+      <object>objects\objTransitionWarp</object>
+      <object>objects\objFadeTransition</object>
+      <object>objects\objComputerSpinningSquare</object>
+      <object>objects\objComputerTransition</object>
+    </objects>
     <objects name="Devices">
       <object>objects\objExplosion</object>
       <object>objects\objDoor</object>
@@ -784,7 +877,11 @@
         <object>objects\objBeachBasketballPlayer</object>
         <object>objects\objBeachIntroCutscene</object>
         <object>objects\objThunderTransition</object>
+        <object>objects\objBeachAirplane</object>
         <object>objects\objThunderTransition2</object>
+        <object>objects\objFirework</object>
+        <object>objects\objFireworkParticle</object>
+        <object>objects\objBeachPirateShip</object>
       </objects>
       <objects name="Fall / Space">
         <object>objects\objSpaceStarGlow</object>
@@ -852,9 +949,36 @@
         <object>objects\objShell</object>
         <object>objects\objShellSpawner</object>
         <object>objects\objPinballBumper</object>
+        <object>objects\objBlockSpikePart</object>
         <object>objects\objBubbleShadow</object>
         <object>objects\objSpikeExtender</object>
         <object>objects\objPBFlyingPlatform</object>
+        <objects name="PB Import">
+          <object>objects\objHamsterCutscene</object>
+          <object>objects\objDogCutscene</object>
+          <object>objects\objCatCutscene</object>
+          <object>objects\objDialogueBox</object>
+          <object>objects\objPBComputerCutscene</object>
+          <object>objects\objDialogueTemplate</object>
+          <object>objects\objFirstEncounterCutscene</object>
+          <object>objects\objEnteringCastleCutscene</object>
+        </objects>
+        <objects name="Computer Boss">
+          <object>objects\objSpawnComputerBoss</object>
+          <object>objects\objBossWarning1</object>
+          <object>objects\objBossWarning1BG</object>
+          <object>objects\objBossWarning2BG</object>
+          <object>objects\objBossWarning2</object>
+          <object>objects\objSkipBossIntro</object>
+          <object>objects\objBDCSpawnCherry</object>
+          <object>objects\objDCWarningArrow</object>
+          <object>objects\objBDCGroundCherry</object>
+          <object>objects\objDeliciousConstructDeath</object>
+          <object>objects\objDCWarningSign</object>
+          <object>objects\objBossDCGhost</object>
+          <object>objects\objDeliciousConstructIntro</object>
+          <object>objects\objBossDeliciousConstruct</object>
+        </objects>
       </objects>
     </objects>
     <objects name="world">
@@ -871,8 +995,9 @@
       <object>objects\objPlayer</object>
       <object>objects\objBow</object>
       <object>objects\objBullet</object>
-      <object>objects\objBeachDeath</object>
       <object>objects\objBloodEmitter</object>
+      <object>objects\objBeachDeath</object>
+      <object>objects\objComputerDeath</object>
       <object>objects\objBlood</object>
       <object>objects\objBeachFlowerDeath</object>
       <object>objects\objGameOver</object>
@@ -925,9 +1050,11 @@
       <object>objects\objSaveMediumFlip</object>
       <object>objects\objSaveFlip</object>
       <object>objects\objSaveVHardFlip</object>
+      <object>objects\objSaveEffect</object>
     </objects>
     <objects name="warps">
       <object>objects\objRoomChanger</object>
+      <object>objects\objRoomChangerAutosave</object>
       <object>objects\objOutsideRoomChanger</object>
       <object>objects\objSpecialSnowstormORC</object>
       <object>objects\objWarp</object>
@@ -973,6 +1100,10 @@
       <room>rooms\rPirate3</room>
       <room>rooms\rPirate4</room>
       <room>rooms\rPirate5</room>
+      <room>rooms\rPirate6</room>
+      <room>rooms\rBeachNight1</room>
+      <room>rooms\rBeachNight2</room>
+      <room>rooms\rBeachNight3</room>
     </rooms>
     <rooms name="Frozen Over">
       <room>rooms\rMMCard</room>
@@ -1042,6 +1173,8 @@
       <room>rooms\rMansionAttic</room>
     </rooms>
     <rooms name="Panasonic Prequel">
+      <room>rooms\rPBCard</room>
+      <room>rooms\rPBCutscene1</room>
       <room>rooms\rField1</room>
       <room>rooms\rField2</room>
       <room>rooms\rField3</room>
@@ -1051,6 +1184,8 @@
       <room>rooms\rField7</room>
       <room>rooms\rField8</room>
       <room>rooms\rField9</room>
+      <room>rooms\rFieldBoss</room>
+      <room>rooms\rFieldTransition</room>
       <room>rooms\rDungeon1</room>
       <room>rooms\rDungeon2</room>
       <room>rooms\rDungeon3</room>
@@ -1060,6 +1195,11 @@
       <room>rooms\rDungeon7</room>
       <room>rooms\rDungeon8</room>
       <room>rooms\rDungeon9</room>
+      <room>rooms\r7</room>
+      <room>rooms\r8</room>
+      <room>rooms\r9</room>
+      <room>rooms\r10</room>
+      <room>rooms\rTransition1</room>
     </rooms>
     <rooms name="Hub">
       <room>rooms\rTutorial</room>

@@ -3,7 +3,7 @@
   <spriteName>sprArrow</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-102</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>flag = false
+timer = 0
 </string>
           </argument>
         </arguments>
@@ -55,6 +56,17 @@
     image_angle += 3
     if (image_alpha &lt;= 0) instance_destroy()
 }
+
+timer++
+if (timer == 50) {
+    with instance_create(x, y, objBubbleShadow) {
+        sprite_index = other.sprite_index
+        image_alpha = other.image_alpha/5
+        image_angle = other.image_angle
+        image_xscale = other.image_xscale
+        depth = other.depth
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -81,6 +93,8 @@
     if (objPlayer.y &lt;= y) {
         flag = true
         objPlayer.vspeed = -10
+        objPlayer.djump = 1
+        audio_play_sound(sndBounce, 10, false)
     }
     else {
         scrKillPlayer()

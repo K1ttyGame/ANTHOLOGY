@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -33,7 +33,7 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bStormSky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
+    <background visible="-1" foreground="-1" name="" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="0" y="0" htiled="-1" vtiled="-1" hspeed="4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="200" y="250" htiled="-1" vtiled="-1" hspeed="-4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bDungeonBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -117,6 +117,8 @@
     <instance objName="objOutsideRoomChanger" x="-32" y="64" name="inst_383D9681" locked="0" code="roomTo = rDungeon6&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="576" y="-32" name="inst_19C1B2F2" locked="0" code="roomTo = rDungeon8&#xA;smoothTransition = true&#xA;" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objDungeonVisualControl" x="288" y="96" name="inst_843EF563" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="224" y="560" name="inst_D221E921" locked="0" code="sprite_index = sprNegativeSign&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="256" y="560" name="inst_C2FBF16B" locked="0" code="sprite_index = spr3&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bDungeonBGTiles" x="128" y="320" w="32" h="32" xo="64" yo="32" id="10033280" name="inst_EE78A983" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

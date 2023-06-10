@@ -57,8 +57,10 @@ with objSaveBlocker visible = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(objPlayer)
+            <string>if instance_exists(objPlayer) {
     objPlayer.frozen = true
+    objPlayer.visible = false
+    }
     
 if (phase == 0) {
     timer++
@@ -91,6 +93,7 @@ if (phase == 3) {
     angle -= pi/1000
     if (angle == 0) {
         objPlayer.frozen = false
+        objPlayer.visible = true
         instance_destroy()
     }
 }

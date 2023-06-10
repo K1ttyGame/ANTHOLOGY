@@ -4,7 +4,7 @@
   <width>2400</width>
   <height>1216</height>
   <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -109,7 +109,6 @@
     <instance objName="objBlock" x="480" y="640" name="inst_BC206ED8" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="896" y="512" name="inst_A82D7AE7" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="928" y="384" name="inst_8E066F56" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objGravityUp" x="672" y="768" name="inst_FF0728BD" locked="0" code="//one game goes here" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="512" y="640" name="inst_2C7CAEB8" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="768" y="608" name="inst_F2CD389E" locked="0" code="" scaleX="4.12903213500977" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="800" y="736" name="inst_2FA8BB75" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
@@ -129,7 +128,6 @@
     <instance objName="objBlock" x="160" y="384" name="inst_705B1816" locked="0" code="" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="192" y="352" name="inst_9A837807" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="224" y="320" name="inst_DD1DCCC4" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objGravityUp" x="288" y="224" name="inst_B5ADF8BD" locked="0" code="//one game goes here" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="448" name="inst_576CCC54" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHubVisualControl" x="1216" y="1184" name="inst_1C897F3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="1312" y="960" name="inst_6C834B5B" locked="0" code="roomTo = rTutorial&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
@@ -138,7 +136,11 @@
     <instance objName="objHubFloatingSign" x="1504" y="704" name="inst_B1DE0602" locked="0" code="sprite_index = sprMMTitleCard&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1440" y="832" name="inst_3546E50B" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1440" y="736" name="inst_9FDA00DC" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objAchievementGet" x="1024" y="864" name="inst_F2707AD8" locked="0" code="achievementPortrait = sprAchievement1 //set to a sprite index&#xA;achievementName = &quot;Wish Granted&quot; //set to name of achievement&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoor" x="672" y="864" name="inst_92CE225F" locked="0" code="roomTo = rBeachCard&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="512" y="832" name="inst_DC6DED73" locked="0" code="roomTo = rBeachCard&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="512" y="736" name="inst_9A82956F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="688" y="736" name="inst_10CCD981" locked="0" code="sprite_index = sprBeachTitleCard&#xA;image_xscale = .5&#xA;image_yscale = .5&#xA;depth = -200&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoor" x="288" y="256" name="inst_8B01A03C" locked="0" code="roomTo = rPBCard&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSpaceStationBGTiles" x="864" y="960" w="32" h="32" xo="0" yo="0" id="10035411" name="inst_63360BBB" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2116,6 +2118,12 @@
     <tile bgName="bSpaceStationTileset" x="1472" y="832" w="32" h="32" xo="0" yo="0" id="10038531" name="inst_E0E0414A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="1472" y="736" w="32" h="32" xo="0" yo="0" id="10038532" name="inst_A236BDED" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="1440" y="736" w="32" h="32" xo="0" yo="0" id="10038533" name="inst_BAA33CE9" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="512" y="832" w="32" h="32" xo="0" yo="0" id="10039183" name="inst_BB3C7595" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="544" y="832" w="32" h="32" xo="0" yo="0" id="10039184" name="inst_B3736382" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="512" y="736" w="32" h="32" xo="0" yo="0" id="10039185" name="inst_6EF884C0" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="544" y="736" w="32" h="32" xo="0" yo="0" id="10039186" name="inst_93C61D01" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="544" y="768" w="32" h="64" xo="32" yo="0" id="10039187" name="inst_830E8D67" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="544" y="672" w="32" h="64" xo="32" yo="0" id="10039188" name="inst_12595295" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassTileset" x="960" y="992" w="64" h="64" xo="32" yo="0" id="10035257" name="inst_888BDC50" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassTileset" x="224" y="928" w="32" h="64" xo="0" yo="0" id="10035258" name="inst_429C4BC2" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassTileset" x="352" y="928" w="32" h="64" xo="64" yo="0" id="10035260" name="inst_EA045F21" depth="-101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

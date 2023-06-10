@@ -44,6 +44,8 @@ background_x[4] = irandom_range(-800,800)
 background_hspeed[2] = .3
 background_hspeed[3] = .45
 background_hspeed[4] = .6
+
+fireworkTimer = 125
 </string>
           </argument>
         </arguments>
@@ -81,6 +83,14 @@ backgroundY2 = 480 + wobble_distance*sin(aa/4);
 backgroundX2++
 if (backgroundX2 &gt;= 160)
     backgroundX2 -= 160
+    
+if (room == rBeachNight1 || room == rBeachNight2 || room == rBeachNight3) {
+    if (fireworkTimer == 250) {
+        fireworkTimer = 0
+        instance_create(random_range(0, 800), 608, objFirework)
+    }
+    fireworkTimer++
+}
 </string>
           </argument>
         </arguments>

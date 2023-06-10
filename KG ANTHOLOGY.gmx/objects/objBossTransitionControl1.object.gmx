@@ -123,7 +123,7 @@ if (phase == 3) {
     if (timer &gt;= 345) {
         if (drawCoverAlpha &gt; 0) drawCoverAlpha -= .02
     }
-    if (timer == 1410 || keyboard_check_pressed(ord('S'))) {
+    if (timer == 1410) {
         instance_destroy();
         audio_stop_sound(musFrozenMMBossIntro)
         room_goto_next();

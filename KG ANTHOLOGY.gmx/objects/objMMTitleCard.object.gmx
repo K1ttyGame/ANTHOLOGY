@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(global.menuAcceptButton))
+            <string>if (keyboard_check_pressed(global.menuAcceptButton)) {
     room_goto_next()
+    global.startTime = global.time
+    global.startDeath = global.death
+    scrSaveGame(false)
+    }
 </string>
           </argument>
         </arguments>

@@ -213,12 +213,12 @@ if (!frozen)    //don't move if frozen
 }
 
 //frozen code
-if (frozen) {
-    visible = false
-}
-else
-    visible = true
-
+//if (frozen) {
+//    visible = false
+//}
+//else {
+//    visible = true
+//}
 
 
 var slipBlockTouching = instance_place(x,y+(1*global.grav),objSlipBlock);   //check if near a slip block
@@ -444,6 +444,10 @@ switch (room) {
     case rPirate3:
     case rPirate4:
     case rPirate5:
+    case rPirate6:
+    case rBeachNight1:
+    case rBeachNight2:
+    case rBeachNight3:
     {
         if (sprite_index = sprPlayerIdle)
             sprite_index = sprBPlayerIdle

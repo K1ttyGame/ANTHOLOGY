@@ -33,7 +33,7 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bStormSky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
+    <background visible="-1" foreground="-1" name="" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="0" y="0" htiled="-1" vtiled="-1" hspeed="4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="200" y="250" htiled="-1" vtiled="-1" hspeed="-4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bDungeonBG" x="0" y="-75" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -61,7 +61,7 @@
     <instance objName="objBlock" x="736" y="64" name="inst_DA4614FD" locked="0" code="" scaleX="2" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="640" y="480" name="inst_8F6B5B99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="672" y="480" name="inst_6DE38236" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="608" y="480" name="inst_3A171C35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="512" y="480" name="inst_3A171C35" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objArrowShooterR" x="32" y="512" name="inst_6E778A2F" locked="0" code="simulate = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="640" y="512" name="inst_6EC30692" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSwingingAxe" x="496" y="352" name="inst_FC72B57B" locked="0" code="" scaleX="0.858823537826538" scaleY="0.932203412055969" colour="4294967295" rotation="0"/>
@@ -72,7 +72,6 @@
     <instance objName="objSpikeExtender" x="192" y="288" name="inst_2F038421" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeExtender" x="320" y="288" name="inst_6CAC21F8" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeExtender" x="448" y="288" name="inst_33C6E780" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeExtender" x="560" y="288" name="inst_B8473EB3" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objArrowShooterL" x="736" y="256" name="inst_A4DD09AB" locked="0" code="simulate = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="64" y="320" name="inst_B39D6CBB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="96" y="320" name="inst_F88821D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -87,6 +86,9 @@
     <instance objName="objSpikeDown" x="128" y="96" name="inst_CF9C7AE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="544" y="608" name="inst_10592223" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDungeonVisualControl" x="288" y="96" name="inst_A75333ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="32" y="96" name="inst_BCE68C1A" locked="0" code="sprite_index = sprNegativeSign&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="64" y="96" name="inst_F779BB35" locked="0" code="sprite_index = spr1&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRoomChanger" x="320" y="-32" name="inst_DF358640" locked="0" code="roomTo = r7&#xA;" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bDungeonBGTiles" x="640" y="224" w="32" h="32" xo="0" yo="32" id="10033997" name="inst_FA3F0790" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -292,13 +294,6 @@
     <tile bgName="bDungeonExtras" x="448" y="448" w="32" h="32" xo="32" yo="32" id="10034282" name="inst_6A36709F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="448" y="480" w="32" h="32" xo="32" yo="32" id="10034283" name="inst_76182345" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="448" y="512" w="32" h="32" xo="32" yo="32" id="10034284" name="inst_8F473029" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="256" w="32" h="32" xo="32" yo="32" id="10034290" name="inst_3A1072C5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="224" w="32" h="32" xo="32" yo="32" id="10034291" name="inst_2EC4A2AC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="192" w="32" h="32" xo="32" yo="32" id="10034292" name="inst_5422795C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="160" w="32" h="32" xo="32" yo="32" id="10034293" name="inst_1DB93080" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="128" w="32" h="32" xo="32" yo="32" id="10034294" name="inst_71CE782E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="64" w="32" h="32" xo="32" yo="32" id="10034297" name="inst_4AFB4110" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonExtras" x="560" y="96" w="32" h="32" xo="32" yo="32" id="10034298" name="inst_F05B3641" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="320" y="256" w="32" h="32" xo="32" yo="32" id="10034299" name="inst_30287585" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="320" y="224" w="32" h="32" xo="32" yo="32" id="10034300" name="inst_E2634A0E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="320" y="192" w="32" h="32" xo="32" yo="32" id="10034301" name="inst_1D01D6FB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

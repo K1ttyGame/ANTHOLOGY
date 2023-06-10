@@ -155,6 +155,7 @@
     <instance objName="objPirateAvoidanceTrigger" x="592" y="352" name="inst_11AA01F6" locked="0" code="mode = 7&#xA;boundX1 = 544&#xA;boundY1 = 320&#xA;boundX2 = 688&#xA;boundY2 = 448&#xA;&#xA;spawnCherryX1 = 528&#xA;spawnCherryY1 = 336&#xA;spawnCherryX2 = 704&#xA;spawnCherryY2 = 336&#xA;&#xA;maxTimer = 400&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpotlightControl" x="64" y="0" name="inst_5342F476" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBeachSand" x="128" y="0" name="inst_ED05F3DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="768" y="288" name="inst_9718ABDD" locked="0" code="roomTo = rPirate6&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bShipWoodTileBG2" x="32" y="384" w="64" h="64" xo="0" yo="0" id="10009984" name="inst_60061DDC" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -243,6 +244,7 @@
     <tile bgName="bShipWoodTileBG" x="320" y="128" w="32" h="32" xo="32" yo="64" id="10038939" name="inst_4A8A175F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="288" y="128" w="32" h="32" xo="0" yo="64" id="10038940" name="inst_B6FF3E7A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTileBG" x="320" y="192" w="32" h="32" xo="96" yo="64" id="10038941" name="inst_D42E0D5A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bShipWoodTileBG" x="704" y="288" w="32" h="32" xo="32" yo="64" id="10039135" name="inst_36DC2F17" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="240" y="576" w="32" h="32" xo="0" yo="0" id="10014346" name="inst_C04D5149" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="272" y="576" w="32" h="32" xo="0" yo="0" id="10014347" name="inst_A52AF4AC" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bShipWoodTile" x="304" y="576" w="32" h="32" xo="0" yo="0" id="10014348" name="inst_33B8BEDB" depth="-1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

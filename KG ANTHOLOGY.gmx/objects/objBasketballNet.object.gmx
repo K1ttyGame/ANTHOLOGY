@@ -142,6 +142,9 @@ if (spawnPart = true) {
     part_emitter_burst(confettiSys, confettiEmitter, partTypeConfetti, 55);
     audio_play_sound(sndBasketballScore, 10, false)
 }
+
+if (instance_exists(objPlayer) &amp;&amp; objPlayer.x &gt;= 700)
+    instance_destroy()
 </string>
           </argument>
         </arguments>

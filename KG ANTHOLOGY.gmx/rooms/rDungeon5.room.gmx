@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -33,7 +33,7 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bStormSky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
+    <background visible="-1" foreground="-1" name="" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="0" y="0" htiled="-1" vtiled="-1" hspeed="4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bBeachClouds" x="200" y="250" htiled="-1" vtiled="-1" hspeed="-4" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bDungeonBG" x="-50" y="-100" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -65,7 +65,7 @@
     <instance objName="objSpikeUp" x="384" y="528" name="inst_86BC24BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="352" y="528" name="inst_D691C136" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="288" y="528" name="inst_9AF9C9F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSwingingAxe" x="384" y="320" name="inst_3737C8EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSwingingAxe" x="384" y="320" name="inst_3737C8EB" locked="0" code="aa = 270&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="416" y="480" name="inst_2DAB266A" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeExtender" x="256" y="480" name="inst_32522E7D" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="480" y="416" name="inst_FD66C8C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -126,6 +126,8 @@
     <instance objName="objSaveBlocker" x="480" y="384" name="inst_575B2B09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="96" name="inst_D3F0A9EC" locked="0" code="roomTo = rDungeon6&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDungeonVisualControl" x="160" y="96" name="inst_AC9363A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="16" y="448" name="inst_4803B880" locked="0" code="sprite_index = sprNegativeSign&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="48" y="448" name="inst_89AFFC07" locked="0" code="sprite_index = spr5&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bDungeonBGTiles" x="640" y="64" w="32" h="32" xo="0" yo="32" id="10032546" name="inst_E95BCB00" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

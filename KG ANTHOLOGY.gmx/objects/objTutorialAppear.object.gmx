@@ -29,6 +29,7 @@
 
 textAlpha = 0
 myString = "" //creation code
+drawTop = false
 </string>
           </argument>
         </arguments>
@@ -102,7 +103,8 @@ myString = "" //creation code
             <string>draw_set_alpha(textAlpha)
 draw_set_font(fDefault24)
 draw_set_halign(fa_center)
-scrDrawTextOutline(room_width/2, room_height-64, myString, c_black, c_white)
+if (drawTop == false) scrDrawTextOutline(room_width/2, room_height-64, myString, c_black, c_white)
+else scrDrawTextOutline(room_width/2, 16, myString, c_black, c_white)
 draw_set_alpha(1)
 </string>
           </argument>

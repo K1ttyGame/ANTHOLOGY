@@ -109,6 +109,8 @@
     <instance objName="objSpikeRight" x="672" y="96" name="inst_7EA01A8A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="544" y="-32" name="inst_DC9F332D" locked="0" code="roomTo = rDungeon9&#xA;smoothTransition = true&#xA;" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objDungeonVisualControl" x="288" y="96" name="inst_2DC0CA15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="64" y="64" name="inst_6F5DEA15" locked="0" code="sprite_index = sprNegativeSign&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="96" y="64" name="inst_202AA951" locked="0" code="sprite_index = spr2&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bDungeonBGTiles" x="544" y="320" w="32" h="32" xo="64" yo="0" id="10033578" name="inst_FD7166FD" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

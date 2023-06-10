@@ -43,6 +43,7 @@ switch (room) {
         case rPirate3:
         case rPirate4:
         case rPirate5:
+        case rPirate6:
             mode = 1
             break;
         case rFall1:

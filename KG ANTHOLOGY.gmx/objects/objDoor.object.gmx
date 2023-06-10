@@ -33,6 +33,8 @@ warpX = 0
 warpY = 0
 
 scale = 0
+
+created = false
 </string>
           </argument>
         </arguments>
@@ -69,15 +71,20 @@ scale = 0
     }
 }
 
-if (activate) {
-    room_goto(roomTo)
+if (activate &amp;&amp; created == false) {
+    /*room_goto(roomTo)
     if (warpX == 0)
         with objPlayer {instance_destroy()} 
     else {
         objPlayer.x = warpX
         objPlayer.y = warpY
     }
-    audio_play_sound(sndDoorOpen, 10, false)
+    audio_play_sound(sndDoorOpen, 10, false)*/
+    with instance_create(x, y, objFadeTransition) {
+        roomTo = other.roomTo
+        fadeSpeed = .05
+        }
+    created = true
 }
 </string>
           </argument>

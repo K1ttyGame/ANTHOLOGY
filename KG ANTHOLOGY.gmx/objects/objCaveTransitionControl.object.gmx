@@ -143,11 +143,11 @@ drawX = room_width/2 + wobble_distance*sin(aa);
 if (room != rSnow8 &amp;&amp; room != rSnowCaveTransition)
     instance_destroy();
     
-if ((phase &gt;= 0) &amp;&amp; keyboard_check_pressed(ord('S'))) {
-    global.autosave = true
-    room_goto_next()
-    instance_destroy()
-}
+//if ((phase &gt;= 0) &amp;&amp; keyboard_check_pressed(ord('S'))) {
+//    global.autosave = true
+//    room_goto_next()
+//    instance_destroy()
+//}
 </string>
           </argument>
         </arguments>

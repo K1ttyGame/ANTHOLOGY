@@ -52,11 +52,11 @@ image_angle = random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_xview += random_range(-5,5)
+            <string>/*view_xview += random_range(-5,5)
 view_yview += random_range (-5,5)
 
 view_xview = lerp(view_xview, 0, .4)
-view_yview = lerp(view_yview, 0, .4)
+view_yview = lerp(view_yview, 0, .4)*/
 
 room_speed = 30
 </string>

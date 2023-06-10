@@ -3,7 +3,7 @@
   <spriteName>sprSwingingAxe</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-103</depth>
+  <depth>-100000000</depth>
   <persistent>0</persistent>
   <parentName>objPlayerKiller</parentName>
   <maskName>&lt;undefined&gt;</maskName>

@@ -136,8 +136,11 @@
     <instance objName="objY2KBG" x="544" y="0" name="inst_EE5D7F1F" locked="0" code="" scaleX="5.5" scaleY="5.5" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="0" y="576" name="inst_BE0C857D" locked="0" code="roomTo = rField5&#xA;smoothTransition = true&#xA;" scaleX="22" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="0" y="-32" name="inst_FFD8C50C" locked="0" code="roomTo = rField7&#xA;smoothTransition = true&#xA;" scaleX="22" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="448" y="32" name="inst_975396AF" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="0" y="448" name="inst_1A358453" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="688" y="112" name="inst_2DDFC62E" locked="0" code="sprite_index = sprNegativeSign&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="720" y="112" name="inst_145F415A" locked="0" code="sprite_index = spr1&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="752" y="112" name="inst_7F9F9E36" locked="0" code="sprite_index = spr4&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGravityDown" x="0" y="448" name="inst_12D7C1EF" locked="0" code="x = room_width/2&#xA;y = room_height/2&#xA;&#xA;visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGravityDown" x="448" y="32" name="inst_1F65D64E" locked="0" code="x = room_width/2&#xA;y = room_height/2&#xA;&#xA;visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

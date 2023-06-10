@@ -207,12 +207,29 @@ if (phase == 7) {
         instance_destroy();
         if (instance_exists(objPlayer)) instance_destroy(objPlayer)
         room_goto_next();
-        if (global.cheevoFlag[0] == false) {
+        
+        if (global.cheevoFlag[0] == false) { //give beat achievement
             with instance_create(16, 16, objAchievementGet) {
                 achievementPortrait = sprAchievement1 //set to a sprite index
                 achievementName = "Wish Granted" //set to name of achievement
             }
             global.cheevoFlag[0] = true
+        }
+        
+        if (global.cheevoFlag[1] == false &amp;&amp; global.death-global.startDeath &lt;= 30) { //give death achievement
+            with instance_create(16, 16, objAchievementGet) {
+                achievementPortrait = sprAchievement2 //set to a sprite index
+                achievementName = "Forever In My Memory" //set to name of achievement
+            }
+            global.cheevoFlag[1] = true
+        }
+        
+        if (global.cheevoFlag[2] == false &amp;&amp; global.time-global.startTime &lt;= 1200) { //give death achievement
+            with instance_create(16, 16, objAchievementGet) {
+                achievementPortrait = sprAchievement3 //set to a sprite index
+                achievementName = "Really, Really Hungry" //set to name of achievement
+            }
+            global.cheevoFlag[2] = true
         }
         scrSaveGame(false)
     }

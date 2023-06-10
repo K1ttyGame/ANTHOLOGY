@@ -67,14 +67,14 @@ audio_play_sound(sndLegBreak, 10, false)
           <argument>
             <kind>1</kind>
             <string>//skip code
-if (keyboard_check_pressed(ord('S')) &amp;&amp; phase &lt;= 1) {
+/*if (keyboard_check_pressed(ord('S')) &amp;&amp; phase &lt;= 1) {
     room_goto(rFrozenBoss)
     room_speed = 50
     audio_stop_sound(musFrozenNoise)
     audio_stop_sound(musFrozenMMBossIntro)
     audio_stop_sound(musFrozenIntro)
     global.autosave = true
-}
+}*/
 
 if (phase == 0) {
     timer++
