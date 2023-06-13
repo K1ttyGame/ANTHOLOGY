@@ -141,6 +141,9 @@
     <instance objName="objBlock" x="512" y="736" name="inst_9A82956F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHubFloatingSign" x="688" y="736" name="inst_10CCD981" locked="0" code="sprite_index = sprBeachTitleCard&#xA;image_xscale = .5&#xA;image_yscale = .5&#xA;depth = -200&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="288" y="256" name="inst_8B01A03C" locked="0" code="roomTo = rPBCard&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveEasy" x="1008" y="800" name="inst_6BC9337F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveEasy" x="1088" y="800" name="inst_F18A0196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveEasy" x="1168" y="800" name="inst_E3D6E669" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSpaceStationBGTiles" x="864" y="960" w="32" h="32" xo="0" yo="0" id="10035411" name="inst_63360BBB" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

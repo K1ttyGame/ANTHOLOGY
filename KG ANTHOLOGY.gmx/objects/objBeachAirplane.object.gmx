@@ -59,6 +59,22 @@
             }
             global.cheevoFlag[3] = true
         }
+        
+        if (global.cheevoFlag[4] == false &amp;&amp; global.death-global.startDeath &lt;= 6) { //give death achievement
+            with instance_create(16, 16, objAchievementGet) {
+                achievementPortrait = sprAchievement5 //set to a sprite index
+                achievementName = "Forgot the Sunscreen" //set to name of achievement
+            }
+            global.cheevoFlag[4] = true
+        }
+        
+        if (global.cheevoFlag[5] == false &amp;&amp; global.time-global.startTime &lt;= 420) { //give death achievement
+            with instance_create(16, 16, objAchievementGet) {
+                achievementPortrait = sprAchievement6 //set to a sprite index
+                achievementName = "No Paid Time Off" //set to name of achievement
+            }
+            global.cheevoFlag[5] = true
+        }
         scrSaveGame(false)
     }
 }

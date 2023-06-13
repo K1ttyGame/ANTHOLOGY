@@ -14,7 +14,7 @@ audio_sound_gain(sndBubbleBounce, .7, 0)
 audio_sound_gain(sndRocksCrumble, .5, 0)
 audio_sound_gain(sndAppleBurst, .3, 0)
 audio_sound_gain(sndLockedUp, .6, 0)
-
+audio_sound_gain(objPlayerDeathAnim, .7, 0)
 
 //music balancing
 audio_sound_gain(musWindAmbient1, .5, 0)

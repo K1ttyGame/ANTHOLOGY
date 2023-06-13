@@ -148,13 +148,16 @@ if (phase &gt;= 1) {
         vspeed += .25;
     if (place_meeting(x-hspeed, y, objBasketballBlock)) or (place_meeting(x+hspeed, y, objBasketballBlock)) { //bounce at walls
         hspeed = -hspeed;
-        //audio_play_sound(sndBounce, 10, false)
+        audio_stop_sound(sndBounce)
+        audio_play_sound(sndBounce, 10, false)
         }
     if (place_meeting(x, y+vspeed, objBasketballBlock)){ //bounce at floor
         vspeed += -.2;
         vspeed = -vspeed;
         //scrScreenShake(8);
         //audio_play_sound(sndBounce, 10, false)
+        audio_stop_sound(sndBounce)
+        audio_play_sound(sndBounce, 10, false)
         if (phase &lt;= 5) {
             repeat(10)
             instance_create(x+irandom_range(-20,20), y+sprite_height/2, objBDCGroundCherry);

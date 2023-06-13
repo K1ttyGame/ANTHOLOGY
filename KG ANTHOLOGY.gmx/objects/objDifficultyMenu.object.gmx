@@ -143,14 +143,14 @@ for (var i = 0; i &lt; 3; i++)
 appleIndex = (appleIndex + 1/15) mod 2;
 playerIndex = (playerIndex + 1/5) mod 4;
 
-if (keyboard_check_pressed(global.menuOptionsButton))
+if (keyboard_check_pressed(global.menuOptionsButton)) //go to options
 {
     global.menuSelectPrev[0] = select;
     room_goto(rOptions);
 }
 else
 {
-    if (!difSelect)
+    if (!difSelect) //initial selecting the file
     {
         if (keyboard_check_pressed(global.menuLeftButton))
         {
@@ -173,14 +173,14 @@ else
         }
         else if (keyboard_check_pressed(global.menuAcceptButton))
         {
-            difSelect = true;
+            difSelect = true; //move on to line 42
             if (exists[select]) //check if there is a save in the current slot
                 select2 = -1;   //default to load game
             else
                 select2 = 0;    //default to medium
         }
     }
-    else
+    else //after selecting a file go here
     {
         if (!warnText)
         {
@@ -203,7 +203,8 @@ else
                         select2 = 0;
                 }
             }
-            else if (keyboard_check_pressed(global.menuBackButton))
+            else if (keyboard_check_pressed(global.menuBackButton)) //go back
+            
             {
                 difSelect = false;
             }

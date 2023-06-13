@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>timer = 0
+drawHintAlpha = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,8 +49,90 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(global.menuAcceptButton))
-    room_goto(rMenu);
+            <string>if (keyboard_check_pressed(global.menuAcceptButton) &amp;&amp; !instance_exists(objFadeTransition)) {
+    with instance_create(x, y, objFadeTransition) roomTo = rMenu
+    scrStopMusic(musTitleScreen)
+    audio_play_sound(sndGameStart, 10, false)
+}
+
+if (keyboard_check_pressed(ord('9'))) {
+    if file_exists("Data\save"+string(3))
+        file_delete("Data\save"+string(3));
+    if file_exists("Data\save"+string(1))
+        file_delete("Data\save"+string(1));
+    if file_exists("Data\save"+string(2))
+        file_delete("Data\save"+string(2));
+    audio_play_sound(sndDeath, 10, false)
+}
+
+timer++
+if (timer &lt; 750)
+    timer++
+    
+if (timer &gt;= 750) {
+    if (drawHintAlpha &lt; 1) drawHintAlpha += .025
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_play_sound(sndFileSelectVoice, 10, false)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_halign(fa_center)
+draw_set_valign(fa_center)
+draw_set_font(fTitleFont)
+draw_set_color(c_black)
+
+draw_text(400, 72, "A Superplanet Called KG")
+
+draw_set_font(fDefault12)
+draw_set_halign(fa_right)
+draw_set_alpha(drawHintAlpha)
+
+scrDrawTextOutline(784, 584, "Press [Shift] To Start", c_white, c_black)
+
+draw_set_alpha(1)
+draw_set_valign(fa_top)
+draw_set_color(c_white)
 </string>
           </argument>
         </arguments>

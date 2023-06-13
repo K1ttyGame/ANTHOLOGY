@@ -97,6 +97,8 @@ switch (room)                       //determines which song to play
         roomSong = musPBTitleCard
         break;
     case rTitle:
+        roomSong = musTitleScreen
+        break;
     case rMenu:
         roomSong = musFileSelect
         break;

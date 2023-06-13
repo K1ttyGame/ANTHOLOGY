@@ -2,13 +2,13 @@
 <room>
   <caption></caption>
   <width>800</width>
-  <height>608</height>
+  <height>1216</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
-  <colour>16777215</colour>
+  <colour>1609212</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
@@ -31,7 +31,7 @@
     <yoffset>11010215</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bTitleScreenGrad" x="0" y="304" htiled="-1" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bTitleScreenGrad" x="0" y="0" htiled="-1" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,7 +52,10 @@
   </views>
   <instances>
     <instance objName="objNewFileMenu" x="64" y="64" name="inst_57892E24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDifficultyMenu" x="96" y="64" name="inst_69D1A0F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="480" y="128" name="inst_94021ED3" locked="0" code="" scaleX="7" scaleY="11" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="448" y="128" name="inst_B3238D7C" locked="0" code="" scaleX="9" scaleY="12" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="64" y="128" name="inst_0E615E95" locked="0" code="" scaleX="9" scaleY="12" colour="4294967295" rotation="0"/>
+    <instance objName="objMenusParticles" x="0" y="0" name="inst_1CD96005" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -121,7 +121,6 @@
     <instance objName="objY2KBG" x="320" y="192" name="inst_BF61ECF7" locked="0" code="" scaleX="7" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objY2KBG" x="544" y="352" name="inst_16FA8873" locked="0" code="" scaleX="6" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="objY2KBG" x="576" y="0" name="inst_AC765041" locked="0" code="" scaleX="3" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="256" y="-128" name="inst_822A364B" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="-32" y="0" name="inst_29114B2B" locked="0" code="roomTo = rField1&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="400" name="inst_CF7A4AE7" locked="0" code="roomTo = rField3&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objCherry" x="384" y="544" name="inst_CE1A9F60" locked="0" code="visible = false&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

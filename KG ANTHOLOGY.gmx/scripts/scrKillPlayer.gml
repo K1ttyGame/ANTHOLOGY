@@ -4,7 +4,27 @@ if (instance_exists(objPlayer) && !global.noDeath)
 {
     if (global.gameStarted) //normal death
     {
-        global.deathSound = audio_play_sound(sndDeath,0,false);
+        switch (room) {
+            case rDungeon1:
+            case rDungeon2:
+            case rDungeon3:
+            case rDungeon4:
+            case rDungeon5:
+            case rDungeon6:
+            case rDungeon7:
+            case rDungeon8:
+            case rDungeon9:
+            case r7:
+            case r8:
+            case r9:
+            case r10:
+                global.deathSound = audio_play_sound(sndPBDeath,0,false);
+                break;
+            default:
+                global.deathSound = audio_play_sound(sndDeath,0,false);
+                break;
+        }
+        
         
         if (!global.muteMusic)  //play death music
         {
@@ -79,6 +99,21 @@ if (instance_exists(objPlayer) && !global.noDeath)
                 case rField9:
                 case rFieldBoss:
                     instance_create(x, y, objComputerDeath);
+                    break;
+                case rDungeon1:
+                case rDungeon2:
+                case rDungeon3:
+                case rDungeon4:
+                case rDungeon5:
+                case rDungeon6:
+                case rDungeon7:
+                case rDungeon8:
+                case rDungeon9:
+                case r7:
+                case r8:
+                case r9:
+                case r10:
+                    instance_create(x, y, objPlayerDeathAnim)
                     break;
             }
             instance_destroy();

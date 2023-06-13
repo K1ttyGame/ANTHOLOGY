@@ -29,8 +29,8 @@
 canSave = true;
 grav = 1;       //sets which player gravity this save works with
 
-if (global.difficulty &gt; 1)  //destroy if on a higher difficulty than hard
-    instance_destroy();
+//if (global.difficulty &gt; 1)  //destroy if on a higher difficulty than hard
+//    instance_destroy();
     
 switch (room) {
     case rSnow1:
@@ -50,6 +50,15 @@ switch (room) {
     case rCave5:
     case rCave6:
     case rCave7:
+    case rDungeon1:
+    case rDungeon2:
+    case rDungeon3:
+    case rDungeon4:
+    case rDungeon5:
+    case rDungeon6:
+    case rDungeon7:
+    case rDungeon8:
+    case rDungeon9:
         sprite_index = sprSaveFrozen2
         break;
     case rBeachHotel:
@@ -78,6 +87,22 @@ switch (room) {
     case rPirate5:
     case rPirate6:
         sprite_index = sprSavePirate
+        break;
+    case rField1:
+    case rField2:
+    case rField3:
+    case rField4:
+    case rField5:
+    case rField6:
+    case rField7:
+    case rField8:
+    case rField9:
+        sprite_index = sprFieldSave
+        break;
+    case r7:
+    case r8:
+    case r9:
+        sprite_index = sprPBSave
         break;
 }
 </string>

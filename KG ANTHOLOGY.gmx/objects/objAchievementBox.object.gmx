@@ -126,6 +126,7 @@ if (mouse_x &gt;= x &amp;&amp; mouse_x &lt;= x+96 &amp;&amp; mouse_y &gt;= y &am
     draw_set_color(c_white)
     draw_set_font(fDefault18)
     draw_set_halign(fa_center)
+    draw_set_valign(fa_top)
     if (!hidden) draw_text(room_width/2, drawY-8, aTitle)
     else draw_text(room_width/2, drawY-8, "?????")
     

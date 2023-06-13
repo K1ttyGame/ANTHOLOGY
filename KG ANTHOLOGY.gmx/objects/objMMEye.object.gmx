@@ -216,7 +216,7 @@ if (phase == 7) {
             global.cheevoFlag[0] = true
         }
         
-        if (global.cheevoFlag[1] == false &amp;&amp; global.death-global.startDeath &lt;= 30) { //give death achievement
+        if (global.cheevoFlag[1] == false &amp;&amp; global.death-global.startDeath &lt;= 11) { //give death achievement
             with instance_create(16, 16, objAchievementGet) {
                 achievementPortrait = sprAchievement2 //set to a sprite index
                 achievementName = "Forever In My Memory" //set to name of achievement
@@ -224,7 +224,7 @@ if (phase == 7) {
             global.cheevoFlag[1] = true
         }
         
-        if (global.cheevoFlag[2] == false &amp;&amp; global.time-global.startTime &lt;= 1200) { //give death achievement
+        if (global.cheevoFlag[2] == false &amp;&amp; global.time-global.startTime &lt;= 660) { //give death achievement
             with instance_create(16, 16, objAchievementGet) {
                 achievementPortrait = sprAchievement3 //set to a sprite index
                 achievementName = "Really, Really Hungry" //set to name of achievement

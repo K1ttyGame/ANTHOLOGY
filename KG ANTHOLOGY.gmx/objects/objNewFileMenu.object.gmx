@@ -25,7 +25,116 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>currentFile = 0
+phase = 0
+
+globeScale1 = 1
+globeScale2 = 1
+globeScale3 = 1
+
+drawGlobeX1 = 144
+drawGlobeX2 = 400
+drawGlobeX3 = 656
+
+alphaPhase1 = 0
+phase1Select = 0
+
+drawGlobeAngleChange1 = 0
+drawGlobeAngleChange2 = 0
+drawGlobeAngleChange3 = 0
+
+drawGlobeAngleSpeed1 = random_range(1,2)*choose(1,-1)
+drawGlobeAngleSpeed2 = random_range(1,2)*choose(1,-1)
+drawGlobeAngleSpeed3 = random_range(1,2)*choose(1,-1)
+
+alphaPhase2 = 0
+phase2Select = 0
+
+phase3Select = 0
+alphaPhase3 = 0
+
+drawTextSide = 552
+
+drawFadeAlpha = 0
+
+//completion of files
+
+for (var i = 0; i &lt; 3; i++)
+{
+    if (file_exists("Data\save"+string(i+1)))  //check if current save exists
+    {
+        //load save data
+        exists[i] = true;
+        
+        //load the save map
+        var saveMap;
+        
+        var f = file_text_open_read("Data\save"+string(i+1));
+        
+        saveMap = json_decode(base64_decode(file_text_read_string(f)));
+        
+        file_text_close(f);
+        
+        if (saveMap != -1)  //check if the save map loaded correctly
+        {
+            death[i] = ds_map_find_value(saveMap,"death");
+            if (is_undefined(death[i])) //check for undefined value in case the save was messed with or got corrupted
+                death[i] = 0;
+            
+            time[i] = ds_map_find_value(saveMap,"time");
+            if (is_undefined(time[i]))
+                time[i] = 0;
+    
+            difficulty[i] = ds_map_find_value(saveMap,"difficulty");
+            if (is_undefined(difficulty[i]))
+                difficulty[i] = 5; //check the difficulty for 5 to see if the file doesn't exist
+            
+            completion[i] = 0
+            var j;
+            for (var j = 0; j &lt; 20; j++){
+                if (ds_map_find_value(saveMap,"cheevoFlag["+string(j)+"]") == true) {
+                    completion[i]++
+                }
+            }
+            
+            completion[i] = 100*completion[i]/20
+            
+            ds_map_destroy(saveMap);
+        }
+        else
+        {
+            //save map didn't load correctly, set the variables to the defaults
+            death[i] = 0;
+            time[i] = 0;
+            difficulty[i] = 0;
+            completion[i] = 0
+            for (var j = 0; j &lt; 8; j++)
+            {
+                boss[j,i] = false;
+            }
+            clear[i] = false;
+        }
+    }
+    else
+    {
+        exists[i] = false;
+        death[i] = 0;
+        time[i] = 0;
+    }
+    
+    var t = time[i];
+    
+    timeStr[i] = string(t div 3600) + ":";
+    t = t mod 3600;
+    timeStr[i] += string(t div 600);
+    t = t mod 600;
+    timeStr[i] += string(t div 60) + ":";
+    t = t mod 60;
+    timeStr[i] += string(t div 10);
+    t = t mod 10;
+    timeStr[i] += string(floor(t));
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -41,43 +150,220 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>objNewFileMenu</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_destroy();
-part_particles_clear(y2kSys);
-part_emitter_destroy(y2kSys, pemi);
+            <string>if (phase == 0) { //selecting globe
+    //changign file with arrow keys
+    if (keyboard_check_pressed(vk_left)) {
+        currentFile--
+        audio_play_sound(sndMenuMove, 10, false)
+        }
+    else if (keyboard_check_pressed(vk_right)) {
+        currentFile++
+        audio_play_sound(sndMenuMove, 10, false)
+        }
+        
+    if (currentFile &lt; 0) currentFile = 2
+    if (currentFile &gt; 2) currentFile = 0
+    
+    //changing scale of globes
+    if (currentFile == 0)
+        globeScale1 = lerp(globeScale1, 1.4, .1)
+    else
+        globeScale1 = lerp(globeScale1, .8, .1)
+        
+    if (currentFile == 1)
+        globeScale2 = lerp(globeScale2, 1.4, .1)
+    else
+        globeScale2 = lerp(globeScale2, .8, .1)
+        
+    if (currentFile == 2)
+        globeScale3 = lerp(globeScale3, 1.4, .1)
+    else
+        globeScale3 = lerp(globeScale3, .8, .1)
+        
+    //keeping position accurate
+    drawGlobeX1 = lerp(drawGlobeX1, 144, .1)
+    drawGlobeX2 = lerp(drawGlobeX2, 400, .1)
+    drawGlobeX3 = lerp(drawGlobeX3, 656, .1)
+        
+    if (keyboard_check_pressed(vk_shift)) {
+        global.savenum = currentFile+1
+        if (exists[currentFile])
+            phase = 1 //move to file inspect phase if file exists
+        else
+            phase = 3
+        audio_play_sound(sndAcceptFile, 10, false)
+    }
+    
+    if (keyboard_check_pressed(vk_enter)) {
+        instance_destroy()
+        audio_play_sound(sndAcceptFile, 10, false)
+        instance_create(128, 128+608, objOptionsMenu)
+    }
+    
+    //reset alphas
+    if (alphaPhase1 &gt; 0) alphaPhase1 -= .025
+}
+
+else if (phase == 1) { //existing file
+    //fade alpha in
+    if (alphaPhase1 &lt; 1) alphaPhase1 += .025
+    
+    //change option
+    //0 is load selected, 1 is erase selected
+    if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_down)) {
+        phase1Select = !phase1Select
+        audio_play_sound(sndMenuMove, 10, false)
+        }
+    
+    if (keyboard_check_pressed(ord('Z'))) {
+        phase = 0
+        phase1Select = 0
+        audio_play_sound(sndAcceptFile, 10, false)
+    }
+    
+    if (keyboard_check_pressed(vk_shift) &amp;&amp; phase1Select == 0 &amp;&amp; alphaPhase1 == 1) { //load game
+        //scrLoadGame(true);
+        phase = 4
+        audio_play_sound(sndGameStart, 10, false)
+    }
+    
+    if (keyboard_check_pressed(vk_shift) &amp;&amp; phase1Select == 1 &amp;&amp; alphaPhase1 == 1) {
+        phase = 2
+        audio_play_sound(sndAcceptFile, 10, false)
+    }
+}
+
+else if (phase == 2) { //in existing file, erase the file
+    //change option
+    //0 is no (go back), 1 is yes (erase file)
+    if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_down)) {
+        phase2Select = !phase2Select
+        audio_play_sound(sndMenuMove, 10, false)
+        }
+    
+    alphaPhase2 = 1
+    alphaPhase1 = 0
+    
+    if (keyboard_check_pressed(vk_shift) &amp;&amp; phase2Select == 0 &amp;&amp; alphaPhase2 == 1) {
+        phase = 1
+        alphaPhase1 = 0
+        alphaPhase2 = 0
+        audio_play_sound(sndAcceptFile, 10, false)
+    }
+    
+    if (keyboard_check_pressed(vk_shift) &amp;&amp; phase2Select == 1 &amp;&amp; alphaPhase2 == 1) {
+        if (file_exists("Data\save"+string(global.savenum)))
+            file_delete("Data\save"+string(global.savenum));
+        phase = 3
+        audio_play_sound(sndAcceptFile, 10, false)
+    }
+}
+
+else if (phase == 3) { //new file, picking difficulty
+    if (alphaPhase3 &lt; 1) alphaPhase3 += .05
+    if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) {
+        phase3Select = !phase3Select
+        audio_play_sound(sndMenuMove, 10, false)
+        }
+        
+    if (keyboard_check_pressed(vk_shift))
+        {
+            phase = 5
+            /*
+            global.gameStarted = true; //sets game in progress (enables saving, restarting, etc.)
+            global.autosave = true;
+            if (phase3Select == 0)
+                global.difficulty = 0;
+            if (phase3Select == 1)
+                global.difficulty = 1;
+            
+            room_goto(global.startRoom);*/
+            
+            audio_play_sound(sndGameStart, 10, false)
+        }
+}
+
+if (phase == 4) { //fade and load
+    drawFadeAlpha += .025
+    if (drawFadeAlpha == 1) {
+        scrLoadGame(true)
+        instance_create(0, 0, objFadeTransitionEndSided)
+    }
+}
+
+if (phase == 5) { //fade and start new game
+    drawFadeAlpha += .025
+    if (drawFadeAlpha == 1) {
+        global.gameStarted = true; //sets game in progress (enables saving, restarting, etc.)
+        global.autosave = true;
+        if (phase3Select == 0)
+            global.difficulty = 0;
+        if (phase3Select == 1)
+            global.difficulty = 1;
+        
+        room_goto(global.startRoom);
+        instance_create(0, 0, objFadeTransitionEndSided)
+    }
+}
+
+//visual coding
+if (phase &gt;= 1 &amp;&amp; phase &lt;= 5 &amp;&amp; phase != 3) { //home in on globe if 
+    if (currentFile == 0) { //left globe
+        drawGlobeX1 = lerp(drawGlobeX1, 176, .1)
+        globeScale1 = lerp(globeScale1, 1.4, .1)
+        
+        drawGlobeX2 = lerp(drawGlobeX2, 1008, .1)
+        globeScale2 = lerp(globeScale2, .8, .1)
+        
+        drawGlobeX3 = lerp(drawGlobeX3, 1008, .1)
+        globeScale3 = lerp(globeScale3, .8, .1)
+        drawTextSide = 552
+    }
+    
+    if (currentFile == 1) { //center globe
+        drawGlobeX1 = lerp(drawGlobeX1, -208, .1)
+        globeScale1 = lerp(globeScale1, 0.8, .1)
+        
+        drawGlobeX2 = lerp(drawGlobeX2, 176, .1)
+        globeScale2 = lerp(globeScale2, 1.4, .1)
+        
+        drawGlobeX3 = lerp(drawGlobeX3, 1008, .1)
+        globeScale3 = lerp(globeScale3, .8, .1)
+        drawTextSide = 552
+    }
+    
+    if (currentFile == 2) { //right globe
+        drawGlobeX1 = lerp(drawGlobeX1, -208, .1)
+        globeScale1 = lerp(globeScale1, 0.8, .1)
+        
+        drawGlobeX2 = lerp(drawGlobeX2, -208, .1)
+        globeScale2 = lerp(globeScale2, .8, .1)
+        
+        drawGlobeX3 = lerp(drawGlobeX3, 624, .1)
+        globeScale3 = lerp(globeScale3, 1.4, .1)
+        drawTextSide = 248
+    }
+}
+
+//lerp the view when leaving options menu
+view_yview[0] = lerp(view_yview[0], 0, .1)
+
+//rotate the globes
+drawGlobeAngleChange1 += drawGlobeAngleSpeed1
+drawGlobeAngleChange2 += drawGlobeAngleSpeed2
+drawGlobeAngleChange3 += drawGlobeAngleSpeed3
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -94,26 +380,11 @@ part_emitter_destroy(y2kSys, pemi);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y2kSys = part_system_create();
-part_system_depth(y2kSys, 10000);
-
-y2lPart = part_type_create();
-part_type_sprite(y2lPart, sprTitleHoop, 0, 0, 0)
-part_type_alpha3(y2lPart, 0, 0.2, 0);
-part_type_life(y2lPart, 300, 300);
-part_type_size(y2lPart, .01, 1, 0.0025, 0);
-part_type_speed(y2lPart, 0, 0, 0, 0);
-part_type_direction(y2lPart, 0, 0, 0, 0);
-part_type_gravity(y2lPart, 0, 270);
-
-pemi = part_emitter_create(y2kSys);
-part_emitter_region(y2kSys, pemi, 0, 800, 0, 608, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(y2kSys, pemi, y2lPart, -150);
-
-repeat (room_speed*3)
-    part_system_update(y2kSys)
-    
-audio_play_sound(sndFileSelectVoice, 10, false)
+            <string>draw_set_alpha(drawFadeAlpha)
+draw_set_color(c_black)
+draw_rectangle(-1, -1, 800, 608, false)
+draw_set_color(c_white)
+draw_set_alpha(1)
 </string>
           </argument>
         </arguments>
@@ -136,7 +407,133 @@ audio_play_sound(sndFileSelectVoice, 10, false)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if (phase != 3 &amp;&amp; phase != 5) {
+    draw_sprite_ext(sprGlobeMenuPlaceholder, 0, drawGlobeX1, 304, globeScale1, globeScale1, drawGlobeAngleChange1, c_white, 1)
+    draw_sprite_ext(sprGlobeMenuPlaceholder, 0, drawGlobeX2, 304, globeScale2, globeScale2, drawGlobeAngleChange2, c_white, 1)
+    draw_sprite_ext(sprGlobeMenuPlaceholder, 0, drawGlobeX3, 304, globeScale3, globeScale3, drawGlobeAngleChange3, c_white, 1)
+}
+
+if (phase == 0) {
+    draw_set_color(c_black)
+    scrDrawButtonInfo()
+}
+
+if (phase == 1) {
+    draw_set_alpha(alphaPhase1)
+    draw_set_halign(fa_center)
+    draw_set_valign(fa_center)
+    draw_set_font(fTitleFont)
+    draw_set_color(c_black)
+    
+    if (currentFile == 0)
+        draw_text(drawGlobeX1, 304, string(completion[currentFile]) + "%")
+    if (currentFile == 1)
+        draw_text(drawGlobeX2, 304, string(completion[currentFile]) + "%")
+    if (currentFile == 2) {
+        draw_text(drawGlobeX3, 304, string(completion[currentFile]) + "%")
+    }
+    
+    draw_text(400, 112, "File " + string(currentFile+1))
+    
+    draw_text(drawTextSide, 208, "Time: " + string(timeStr[currentFile]))
+    draw_text(drawTextSide, 272, "Deaths: " + string(death[currentFile])) //access save file later
+    
+    if (phase1Select == 0) {
+        draw_rectangle(drawTextSide - 104, 304, drawTextSide + 104, 368, false)
+        draw_text(drawTextSide, 400, "Restart")
+        draw_set_color(c_white)
+        draw_text(drawTextSide, 336, "Load")
+    }
+    else {
+        draw_rectangle(drawTextSide - 104, 368, drawTextSide + 104, 432, false)
+        draw_text(drawTextSide, 336, "Load")
+        draw_set_color(c_white)
+        draw_text(drawTextSide, 400, "Restart")
+    }
+    
+    if (difficulty[currentFile] == 0) draw_text(400, 496, "Easy Mode")
+    
+    draw_set_alpha(1)
+    //draw_set_color(c_white)
+    draw_set_valign(fa_top)
+    draw_set_halign(fa_left)
+}
+
+if (phase == 0 || phase == 1) {
+    draw_set_color(c_black)
+    draw_set_halign(fa_center)
+    draw_set_valign(fa_center)
+    
+    draw_set_font(fTitleFont)
+    draw_text(400, 112, "File " + string(currentFile+1))
+}
+
+if (phase == 2) {
+    draw_set_alpha(alphaPhase2)
+    draw_set_halign(fa_center)
+    draw_set_valign(fa_center)
+    draw_set_font(fTitleFont)
+    draw_set_color(c_black)
+    
+    draw_text(drawTextSide, 208, "U sure?")
+    draw_text(drawTextSide, 272, "Restart file?")
+    
+    if (phase2Select == 0) {
+        draw_rectangle(drawTextSide - 104, 304, drawTextSide + 104, 368, false)
+        draw_text(drawTextSide, 400, "Yes")
+        draw_set_color(c_white)
+        draw_text(drawTextSide, 336, "No")
+    }
+    else {
+        draw_rectangle(drawTextSide - 104, 368, drawTextSide + 104, 432, false)
+        draw_text(drawTextSide, 336, "No")
+        draw_set_color(c_white)
+        draw_text(drawTextSide, 400, "Yes")
+    }
+    
+    draw_set_alpha(1)
+    draw_set_valign(fa_top)
+    draw_set_halign(fa_left)
+}
+
+if (phase == 3 || phase == 5) {
+    draw_set_alpha(alphaPhase3)
+    draw_set_halign(fa_center)
+    draw_set_valign(fa_center)
+    draw_set_font(fTitleFont)
+    draw_set_color(c_black)
+    
+    draw_text(208, 64, "Easy Mode")
+    draw_text(592, 64, "Normal Mode")
+    
+    if (phase3Select == 0) {
+        draw_rectangle(64, 128, 352, 512, false)
+        
+        draw_set_color(c_white)
+        draw_set_font(fTitleFontSmall)
+        draw_text(208, 320, "Adds lots of extra#saves throughout the game.##Intended for new players#or people who have never#played a fangame.##Estimated difficulty:#35-50##No access to Extra.")
+        
+        draw_set_color(c_black)
+        draw_text(592, 320, "The intended difficulty#for the game.##Intended for average players#or those who want#a challenge.##Estimated difficulty:#50-70##Access to Extra.")
+    }
+    
+    if (phase3Select == 1) {
+        draw_rectangle(448, 128, 736, 512, false)
+        
+        draw_set_color(c_white)
+        draw_set_font(fTitleFontSmall)
+        draw_text(592, 320, "The intended difficulty#for the game.##Intended for average players#or those who want#a challenge.##Estimated difficulty:#50-70##Access to Extra.")
+        
+        draw_set_color(c_black)
+        draw_text(208, 320, "Adds lots of extra#saves throughout the game.##Intended for new players#or people who have never#played a fangame.##Estimated difficulty:#35-50##No access to Extra.")
+    }
+    
+    draw_set_color(c_white)
+    draw_set_alpha(1)
+    draw_set_valign(fa_top)
+    draw_set_halign(fa_left)
+}
+</string>
           </argument>
         </arguments>
       </action>

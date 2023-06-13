@@ -46,6 +46,8 @@ else
     
     room_goto_next();
 }
+
+drawStatY = -128
 </string>
           </argument>
         </arguments>
@@ -123,6 +125,12 @@ if (keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(ord("M")) &amp;
     scrSaveConfig();    //save mute setting
 }
 
+//show level info
+if (keyboard_check(ord('1')))
+    drawStatY = lerp(drawStatY, 0, .1)
+else
+    drawStatY = lerp(drawStatY, -128, .1)
+    
 
 //debug keys: REMOVE UPON RELEASE
 
@@ -484,6 +492,13 @@ if (global.gamePaused)  //check if game is paused to draw the pause screen
 }
 
 //debug code
+draw_set_halign(fa_right)
+draw_set_valign(fa_top)
+draw_set_font(fFrozenTitle)
+
+scrDrawTextOutline(792, 0+drawStatY, "IL Time: " + string(global.time-global.startTime), c_black, c_white)
+scrDrawTextOutline(792, 32+drawStatY, "IL Deaths: " + string(global.death-global.startDeath), c_black, c_white)
+
 //draw_text(64, 16, "Run Time:" + string(global.time-global.startTime))
 //draw_text(64, 48, "Run Deaths:" + string(global.death-global.startDeath))
 </string>

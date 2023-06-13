@@ -35,6 +35,10 @@ timer = 25
 spawnDepth = -10000
 
 audio_sound_gain(musComputerCutscene, 0, 6000)
+if (room == rFieldBoss) scrPlayMusic(musWindAmbient1, true)
+audio_sound_gain(musWindAmbient1, 0, 0)
+audio_sound_gain(musComputerCutscene, 1, 6000)
+audio_sound_gain(musWindAmbient1, 1, 6000)
 </string>
           </argument>
         </arguments>
@@ -150,6 +154,7 @@ if (phase == 2) {
           <argument>
             <kind>1</kind>
             <string>audio_sound_gain(musComputerCutscene, .7, 0)
+audio_sound_gain(musWindAmbient1, .5, 0)
 </string>
           </argument>
         </arguments>

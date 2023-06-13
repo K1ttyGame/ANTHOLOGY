@@ -39,17 +39,21 @@
         <sound>sound\sndTypewriter</sound>
         <sound>sound\sndSpringBounce</sound>
         <sound>sound\sndAchievementGet</sound>
+        <sound>sound\sndMenuMove</sound>
         <sound>sound\sndMMBossHit</sound>
         <sound>sound\sndFileSelectVoice</sound>
+        <sound>sound\sndGameStart</sound>
         <sound>sound\sndAppleBurst</sound>
         <sound>sound\sndLockedUp</sound>
         <sound>sound\sndPlasmaShoot</sound>
         <sound>sound\sndRobotBossDestroy</sound>
         <sound>sound\sndRocksCrumble</sound>
+        <sound>sound\sndPBDeath</sound>
         <sound>sound\sndWarningSound</sound>
         <sound>sound\sndBasketballBounce</sound>
         <sound>sound\sndFutureTyping</sound>
         <sound>sound\sndLockedDoor</sound>
+        <sound>sound\sndAcceptFile</sound>
         <sound>sound\sndGeneralCrash</sound>
         <sound>sound\sndLightningBolt</sound>
         <sound>sound\sndHamsterVoice</sound>
@@ -103,6 +107,7 @@
         <sounds name="Misc">
           <sound>sound\musAchievementLoop</sound>
           <sound>sound\musFileSelect</sound>
+          <sound>sound\musTitleScreen</sound>
           <sound>sound\musFrozenPeople</sound>
           <sound>sound\musOnDeath</sound>
         </sounds>
@@ -169,6 +174,9 @@
           <sprite>sprites\sprVacationer4Happy</sprite>
           <sprite>sprites\sprVacationer5</sprite>
           <sprite>sprites\sprTropicalFlowers</sprite>
+        </sprites>
+        <sprites name="PB">
+          <sprite>sprites\sprPlayerDeath</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -297,9 +305,11 @@
       <sprite>sprites\sprSaveFrozen1</sprite>
       <sprite>sprites\sprSaveFrozen2</sprite>
       <sprite>sprites\sprSave</sprite>
+      <sprite>sprites\sprFieldSave</sprite>
       <sprite>sprites\sprSaveBeach</sprite>
       <sprite>sprites\sprSaveStorm</sprite>
       <sprite>sprites\sprSavePirate</sprite>
+      <sprite>sprites\sprPBSave</sprite>
       <sprite>sprites\sprSaveVHard</sprite>
       <sprite>sprites\sprSaveMediumFlip</sprite>
       <sprite>sprites\sprSaveFlip</sprite>
@@ -412,6 +422,7 @@
         <sprite>sprites\sprFallZiplineBolt</sprite>
         <sprite>sprites\sprSpaceSpike</sprite>
         <sprite>sprites\sprPaintBox</sprite>
+        <sprite>sprites\sprSpaceAlien</sprite>
         <sprite>sprites\sprFallZipline</sprite>
         <sprites name="Robot Parts">
           <sprite>sprites\sprPlasmaBall</sprite>
@@ -524,6 +535,9 @@
           <sprite>sprites\sprAchievement4</sprite>
           <sprite>sprites\sprAchievement5</sprite>
           <sprite>sprites\sprAchievement6</sprite>
+          <sprite>sprites\sprAchievement13</sprite>
+          <sprite>sprites\sprAchievement14</sprite>
+          <sprite>sprites\sprAchievement15</sprite>
           <sprite>sprites\sprAchievementUnknown</sprite>
         </sprites>
         <sprites name="Achievement Guys">
@@ -548,9 +562,12 @@
       <sprites name="Title">
         <sprite>sprites\sprTitleHoop</sprite>
       </sprites>
-      <sprite>sprites\sprThumbsUpStick</sprite>
-      <sprite>sprites\sprExplosion</sprite>
-      <sprite>sprites\sprDialoguePrompt</sprite>
+      <sprites name="Misc">
+        <sprite>sprites\sprDialoguePrompt</sprite>
+        <sprite>sprites\sprThumbsUpStick</sprite>
+        <sprite>sprites\sprGlobeMenuPlaceholder</sprite>
+        <sprite>sprites\sprExplosion</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -767,6 +784,8 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
     <font>fonts\fDialogue</font>
+    <font>fonts\fTitleFont</font>
+    <font>fonts\fTitleFontSmall</font>
     <font>fonts\fFrozenTitle</font>
     <font>fonts\fPirate</font>
     <font>fonts\fAchievementTitle</font>
@@ -782,6 +801,7 @@
     <objects name="Transitions">
       <object>objects\objTransitionWarp</object>
       <object>objects\objFadeTransition</object>
+      <object>objects\objFadeTransitionEndSided</object>
       <object>objects\objComputerSpinningSquare</object>
       <object>objects\objComputerTransition</object>
     </objects>
@@ -809,6 +829,7 @@
       <object>objects\objAchievementBox</object>
       <object>objects\objHubVisualControl</object>
       <object>objects\objHubFloatingSign</object>
+      <object>objects\objMenusParticles</object>
       <object>objects\objTutorialVisuals</object>
       <object>objects\objNewFileMenu</object>
     </objects>
@@ -957,6 +978,7 @@
           <object>objects\objHamsterCutscene</object>
           <object>objects\objDogCutscene</object>
           <object>objects\objCatCutscene</object>
+          <object>objects\objPlayerDeathAnim</object>
           <object>objects\objDialogueBox</object>
           <object>objects\objPBComputerCutscene</object>
           <object>objects\objDialogueTemplate</object>
@@ -1046,6 +1068,7 @@
     <objects name="saves">
       <object>objects\objSaveMedium</object>
       <object>objects\objSave</object>
+      <object>objects\objSaveEasy</object>
       <object>objects\objSaveVHard</object>
       <object>objects\objSaveMediumFlip</object>
       <object>objects\objSaveFlip</object>

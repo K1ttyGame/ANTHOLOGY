@@ -60,6 +60,8 @@ strKey[9] = scrGetKeybind(global.pauseButton);
 strKey[10] = "";
 
 playerIndex = 0;
+
+audio_play_sound(sndAcceptFile, 10, false)
 </string>
           </argument>
         </arguments>
@@ -112,14 +114,14 @@ if (!settingKey)
 {
     if (keyboard_check_pressed(global.menuUpButton))
     {
-        audio_play_sound(global.menuSound,0,false);
+        audio_play_sound(sndMenuMove,0,false);
         select -= 1;
         if(select &lt; 0)
             select = 10;
     }
     else if (keyboard_check_pressed(global.menuDownButton))
     {
-        audio_play_sound(global.menuSound,0,false);
+        audio_play_sound(sndMenuMove,0,false);
         select += 1;
         if(select &gt; 10)
             select = 0;
@@ -129,12 +131,14 @@ if (!settingKey)
         scrSaveConfig();    //save changes
         instance_create(x,y,objOptionsMenu);
         instance_destroy();
+        audio_play_sound(sndAcceptFile, 10, false)
     }
     else if (keyboard_check_pressed(global.menuAcceptButton))
     {
         if (select != 10)
         {
             settingKey = true;
+            audio_play_sound(sndAcceptFile, 10, false)
         }
         else
         {
@@ -149,6 +153,8 @@ if (!settingKey)
             global.skipButton = ord("S");
             global.suicideButton = ord("Q");
             global.pauseButton = ord("P");
+            
+            audio_play_sound(sndAcceptFile, 10, false) //new
             
             resetPrompt = true;
             alarm[0] = 60;
@@ -178,6 +184,8 @@ else
         else if (select == 9) {global.pauseButton = keyChange;}
         
         settingKey = false;
+        
+        audio_play_sound(sndAcceptFile, 10, false)
     }
 }
 
@@ -221,32 +229,48 @@ draw_set_font(fDefault24);
 for(var i = 0; i &lt; 11; i += 1)
 {
     draw_set_halign(fa_left);
-    draw_text(xSelector,ySelector+i*ySeperation+32,strSelect[i]);
+    draw_text(xSelector,608+ySelector+i*ySeperation+32,strSelect[i]);
     
     draw_set_halign(fa_right);
     
     if(i == select)
     {
-        draw_sprite(sprPlayerIdle,playerIndex,xSelector-20,ySelector+i*ySeperation+52);
+        draw_sprite(sprPlayerIdle,playerIndex,xSelector-20,608+ySelector+i*ySeperation+52);
         
         if (settingKey) //key prompt
         {
-            draw_text(xSelector+xSeperation,ySelector+i*ySeperation+32,"Press the key to set");
+            draw_text(xSelector+xSeperation,608+ySelector+i*ySeperation+32,"Press the key to set");
         }
     }
     
     if (!settingKey || i != select)    //shows current key
     {
-        draw_text(xSelector+xSeperation,ySelector+i*ySeperation+32,strKey[i]);
+        draw_text(xSelector+xSeperation,608+ySelector+i*ySeperation+32,strKey[i]);
     }
     
     if (resetPrompt &amp;&amp; i == 10) //reset controls prompt
     {
-        draw_text(xSelector+xSeperation,ySelector+i*ySeperation+32,"Controls reset!");
+        draw_text(xSelector+xSeperation,608+ySelector+i*ySeperation+32,"Controls reset!");
     }
 }
 
-scrDrawButtonInfo(false);
+draw_set_font(fTitleFontSmall); //new font, replace if too big
+draw_set_valign(fa_top)
+draw_set_halign(fa_left);
+draw_text(34,608+572,"[Shift] Select");
+draw_set_halign(fa_right);
+draw_text(766,608+572,"[Z] Leave Menu");
+
+//draw button info for the options menu
+//draw_set_halign(fa_middle);
+//draw_text(400,572,"[&lt;] Browse Files [&gt;]");
+
+draw_set_valign(fa_top)
+draw_set_halign(fa_left)
+
+draw_set_color(c_white)
+
+//scrDrawButtonInfo(false);
 </string>
           </argument>
         </arguments>
