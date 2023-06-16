@@ -31,6 +31,7 @@ if (loadFile)
         global.saveGrav = ds_map_find_value(saveMap,"saveGrav");
         global.drawKillBorders = ds_map_find_value(saveMap, "drawKillBorder")
         ds_list_read(global.inventory, ds_map_find_value(saveMap, "inventory"))
+        global.openDoor1 = ds_map_find_value(saveMap, "openDoor1")
         
         global.startTime = ds_map_find_value(saveMap, "startTime")
         global.startDeath = ds_map_find_value(saveMap, "startDeath")

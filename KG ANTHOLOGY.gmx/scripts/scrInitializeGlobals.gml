@@ -40,7 +40,8 @@ global.saveGrav = 1;
 global.inventory = ds_list_create()
 for (var i = 0; i < 17; i++) { //set 3 to total items in game
     global.gotItem[i] = 0
-} 
+}
+global.openDoor1 = 0 //for the puzzle door in puzzle world 1
 
 for (var i = 0; i < 20; i++) { //init all 20 achievements
     global.cheevoFlag[i] = false

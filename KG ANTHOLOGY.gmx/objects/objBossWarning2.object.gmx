@@ -85,11 +85,11 @@ bName = "Delicious Construct";
         bPicture = sprCherryPor;
 
 drawXPicture = view_wview + 1; //draw position of picture (used to be room_width)
-drawXName = view_wview + string_width("Alias: " + bName); //draw position of name (used to be room_width)
-drawXAge = view_wview + string_width("Age: " + bAge); //draw position of age (used to be room_width)
-drawXAlign = view_wview + string_width("Alignment: " + bAlign); //etc. for alignment (used to be room_width)
-drawXHeight = view_wview + string_width("Height: " + bHeight + "ft") //etc. for height (used to be room_width)
-drawXThreat = view_wview + string_width("Threat Level: " + bThreat); //etc. for threat (used to be room_width)
+drawXName = view_wview + string_width("Alias: " + bName)+100; //draw position of name (used to be room_width)
+drawXAge = view_wview + string_width("Age: " + bAge)+100; //draw position of age (used to be room_width)
+drawXAlign = view_wview + string_width("Alignment: " + bAlign)+100; //etc. for alignment (used to be room_width)
+drawXHeight = view_wview + string_width("Height: " + bHeight + "ft")+100 //etc. for height (used to be room_width)
+drawXThreat = view_wview + string_width("Threat Level: " + bThreat)+100; //etc. for threat (used to be room_width)
 
 //control
 phase = 0; //control

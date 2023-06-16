@@ -118,8 +118,8 @@
     <instance objName="objHubFloatingSign" x="736" y="208" name="inst_A8FFE1B6" locked="0" code="sprite_index = spr1&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHubFloatingSign" x="768" y="208" name="inst_929E4979" locked="0" code="sprite_index = spr3&#xA;image_speed = .1&#xA;depth = -100000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="0" y="576" name="inst_98E73B37" locked="0" code="roomTo = rField6&#xA;smoothTransition = true&#xA;" scaleX="25" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objGravityDown" x="-16" y="448" name="inst_36E139A9" locked="0" code="x = room_width/2&#xA;y = room_height/2&#xA;&#xA;visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objGravityDown" x="560" y="-48" name="inst_D7C53C6D" locked="0" code="x = room_width/2&#xA;y = room_height/2&#xA;&#xA;visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGravityDown" x="-16" y="448" name="inst_36E139A9" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGravityDown" x="560" y="-48" name="inst_D7C53C6D" locked="0" code="visible = true&#xA;sprite_index = sprSpinningGlobe&#xA;image_speed = .5&#xA;&#xA;image_xscale = 3&#xA;image_yscale = image_xscale&#xA;&#xA;depth = 10000000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

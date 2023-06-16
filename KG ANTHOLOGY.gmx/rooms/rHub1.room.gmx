@@ -3,7 +3,7 @@
   <caption></caption>
   <width>2400</width>
   <height>1216</height>
-  <vsnap>32</vsnap>
+  <vsnap>16</vsnap>
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
@@ -126,8 +126,7 @@
     <instance objName="objBlock" x="416" y="736" name="inst_3C808AA4" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="160" y="608" name="inst_1538B744" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="160" y="384" name="inst_705B1816" locked="0" code="" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="192" y="352" name="inst_9A837807" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="224" y="320" name="inst_DD1DCCC4" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="160" y="352" name="inst_9A837807" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="448" name="inst_576CCC54" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHubVisualControl" x="1216" y="1184" name="inst_1C897F3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="1312" y="960" name="inst_6C834B5B" locked="0" code="roomTo = rTutorial&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
@@ -140,10 +139,8 @@
     <instance objName="objBlock" x="512" y="832" name="inst_DC6DED73" locked="0" code="roomTo = rBeachCard&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="512" y="736" name="inst_9A82956F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHubFloatingSign" x="688" y="736" name="inst_10CCD981" locked="0" code="sprite_index = sprBeachTitleCard&#xA;image_xscale = .5&#xA;image_yscale = .5&#xA;depth = -200&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDoor" x="288" y="256" name="inst_8B01A03C" locked="0" code="roomTo = rPBCard&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveEasy" x="1008" y="800" name="inst_6BC9337F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveEasy" x="1088" y="800" name="inst_F18A0196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveEasy" x="1168" y="800" name="inst_E3D6E669" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoor" x="256" y="288" name="inst_8B01A03C" locked="0" code="roomTo = rPBCard&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objHubFloatingSign" x="272" y="176" name="inst_5915F310" locked="0" code="sprite_index = sprPBTitleCard&#xA;image_speed = .1&#xA;depth = -200&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bSpaceStationBGTiles" x="864" y="960" w="32" h="32" xo="0" yo="0" id="10035411" name="inst_63360BBB" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1311,6 +1308,12 @@
     <tile bgName="bSpaceGrassBGTiles" x="1632" y="800" w="96" h="96" xo="0" yo="0" id="10038523" name="inst_C0B72530" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassBGTiles" x="1632" y="896" w="96" h="32" xo="0" yo="64" id="10038524" name="inst_2696225B" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassBGTiles" x="1632" y="928" w="96" h="32" xo="0" yo="64" id="10038525" name="inst_F4396777" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="320" y="320" w="32" h="32" xo="0" yo="0" id="10039823" name="inst_DD0920BE" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="352" y="320" w="32" h="32" xo="0" yo="0" id="10039824" name="inst_04D78E2F" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="384" y="352" w="32" h="32" xo="0" yo="0" id="10039825" name="inst_149EB0FE" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="224" y="320" w="32" h="32" xo="0" yo="0" id="10039826" name="inst_A7B07423" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="256" y="320" w="32" h="32" xo="0" yo="0" id="10039827" name="inst_2691535E" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationBGTiles" x="288" y="320" w="32" h="32" xo="0" yo="0" id="10039828" name="inst_BE1CA581" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassExtras" x="1040" y="848" w="64" h="64" xo="0" yo="0" id="10037891" name="inst_1EF1A733" depth="50000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassExtras" x="1040" y="912" w="64" h="64" xo="0" yo="64" id="10037892" name="inst_0AEBDC1E" depth="50000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceGrassExtras" x="1040" y="952" w="64" h="64" xo="0" yo="64" id="10037893" name="inst_044DF9A9" depth="50000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1571,18 +1574,13 @@
     <tile bgName="bSpaceStationTileset" x="384" y="576" w="32" h="32" xo="0" yo="0" id="10034718" name="inst_5E822F23" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="416" y="576" w="32" h="32" xo="0" yo="0" id="10034719" name="inst_953B78E1" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="448" y="576" w="32" h="32" xo="0" yo="0" id="10034720" name="inst_E7EFFCC6" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="224" y="320" w="32" h="32" xo="0" yo="0" id="10034721" name="inst_401E978F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="256" y="320" w="32" h="32" xo="0" yo="0" id="10034722" name="inst_86AAD5B0" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="288" y="320" w="32" h="32" xo="0" yo="0" id="10034723" name="inst_60B5491F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="320" y="320" w="32" h="32" xo="0" yo="0" id="10034724" name="inst_71CF999B" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="352" y="320" w="32" h="32" xo="0" yo="0" id="10034725" name="inst_ED3FC9E6" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="192" y="352" w="32" h="32" xo="0" yo="0" id="10034726" name="inst_54CF8821" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="160" y="352" w="32" h="32" xo="0" yo="0" id="10034726" name="inst_54CF8821" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="224" y="352" w="32" h="32" xo="0" yo="0" id="10034727" name="inst_42BC31E8" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="256" y="352" w="32" h="32" xo="0" yo="0" id="10034728" name="inst_BBD86D34" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="288" y="352" w="32" h="32" xo="0" yo="0" id="10034729" name="inst_6D1BC24E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="320" y="352" w="32" h="32" xo="0" yo="0" id="10034730" name="inst_B555BF34" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="352" y="352" w="32" h="32" xo="0" yo="0" id="10034731" name="inst_062224F5" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="384" y="352" w="32" h="32" xo="0" yo="0" id="10034732" name="inst_918A6EFC" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="192" y="352" w="32" h="32" xo="0" yo="0" id="10034732" name="inst_918A6EFC" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="160" y="384" w="32" h="32" xo="0" yo="0" id="10034733" name="inst_AACEA82E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="192" y="384" w="32" h="32" xo="0" yo="0" id="10034734" name="inst_39D91F0C" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="224" y="384" w="32" h="32" xo="0" yo="0" id="10034735" name="inst_867D30E7" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2086,7 +2084,7 @@
     <tile bgName="bSpaceStationTileset" x="128" y="480" w="32" h="64" xo="32" yo="0" id="10037081" name="inst_9399804A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="576" y="384" w="32" h="64" xo="32" yo="0" id="10037082" name="inst_2616C648" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="800" y="384" w="32" h="64" xo="32" yo="0" id="10037083" name="inst_E4EFFCB5" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="448" y="320" w="32" h="64" xo="32" yo="0" id="10037084" name="inst_0C761DE4" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="416" y="320" w="32" h="64" xo="32" yo="0" id="10037084" name="inst_0C761DE4" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="768" y="544" w="32" h="64" xo="32" yo="0" id="10037085" name="inst_A42D1E23" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="896" y="448" w="32" h="64" xo="32" yo="0" id="10037086" name="inst_294256B7" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="928" y="320" w="32" h="64" xo="32" yo="0" id="10037087" name="inst_16CFF01C" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2115,7 +2113,7 @@
     <tile bgName="bSpaceStationTileset" x="800" y="672" w="32" h="64" xo="32" yo="0" id="10037119" name="inst_2B9D473A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="800" y="768" w="32" h="64" xo="32" yo="0" id="10037120" name="inst_57B8AEC0" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="768" y="896" w="32" h="64" xo="32" yo="0" id="10037121" name="inst_B633FD09" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bSpaceStationTileset" x="384" y="288" w="32" h="64" xo="32" yo="0" id="10037122" name="inst_9841829C" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bSpaceStationTileset" x="352" y="288" w="32" h="64" xo="32" yo="0" id="10037122" name="inst_9841829C" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="1504" y="224" w="32" h="64" xo="32" yo="0" id="10037123" name="inst_5E7F832D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="1440" y="832" w="32" h="32" xo="0" yo="0" id="10038530" name="inst_68F90948" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bSpaceStationTileset" x="1472" y="832" w="32" h="32" xo="0" yo="0" id="10038531" name="inst_E0E0414A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -7,29 +7,43 @@ if (itemID == 0 || itemID == 8 || itemID == 9 || itemID == 10 || itemID == 11 ||
 
 else if (itemID == 7 && (instance_exists(objGardenItemDoor) && objGardenItemDoor.glass == false && objPlayer.x >= objGardenItemDoor.x && objPlayer.x <= objGardenItemDoor.x+96 && objPlayer.y >= objGardenItemDoor.y && objPlayer.y <= objGardenItemDoor.y+64)) {
     ds_list_delete(global.inventory, puzzleIndex)
+    
+    instance_create(objGardenItemDoor.x, objGardenItemDoor.y, objPuzzleFireDoorAnim)
+    
     puzzleGUI = false
     puzzleIndex = 0
     with objGardenItemDoor instance_destroy()
     audio_play_sound(sndPuzzleSolved, 10, false)
     interact = false
+    puzzleUIAlpha = 0
 }
 
 else if (itemID == 2 && (instance_exists(objGardenItemDoor) && objGardenItemDoor.glass == true && objPlayer.x >= objGardenItemDoor.x-96 && objPlayer.x <= objGardenItemDoor.x && objPlayer.y >= objGardenItemDoor.y && objPlayer.y <= objGardenItemDoor.y+64)) {
+    spawnGlass = 0
+    repeat (7) { //shitty for-loop
+        with instance_create(objGardenItemDoor.x, objGardenItemDoor.y, objPuzzleGlassPart) {image_index = other.spawnGlass}
+        spawnGlass++
+    }
+    audio_play_sound(sndGlassBreak, 10, false)
+    
     ds_list_delete(global.inventory, puzzleIndex)
     puzzleGUI = false
     puzzleIndex = 0
     with objGardenItemDoor instance_destroy()
     audio_play_sound(sndPuzzleSolved, 10, false)
     interact = false
+    puzzleUIAlpha = 0
 }
 
 else if (itemID == 4 && (instance_exists(objPuzzleInteract) && objPuzzleInteract.mode == 7 && objPlayer.x >= objPuzzleInteract.x && objPlayer.x <= objPuzzleInteract.x+32 && objPlayer.y >= objPuzzleInteract.y && objPlayer.y <= objPuzzleInteract.y+32)) {
     ds_list_delete(global.inventory, puzzleIndex)
+    with (objMansionNumpad) phase = 1
     puzzleGUI = false
     puzzleIndex = 0
     audio_play_sound(sndPuzzleSolved, 10, false)
     scrSaveGame(false)
     interact = false
+    puzzleUIAlpha = 0
 }
 
 else if (itemID == 12 && x >= 344 && x <= 480 && y >= 96 && y <= 160) {
@@ -39,6 +53,7 @@ else if (itemID == 12 && x >= 344 && x <= 480 && y >= 96 && y <= 160) {
     audio_play_sound(sndPuzzleSolved, 10, false)
     scrSaveGame(false)
     interact = false
+    puzzleUIAlpha = 0
     with instance_create(288, 64, objSaveBlocker) {
         visible = true
         sprite_index = sprBookOnBookshelf
@@ -52,6 +67,7 @@ else if (itemID == 13 && instance_place(x, y, objPuzzleFridge)) {
     audio_play_sound(sndPuzzleSolved, 10, false)
     scrSaveGame(false)
     interact = false
+    puzzleUIAlpha = 0
     if instance_exists(objPuzzleFridge) {
         objPuzzleFridge.unlocked = true
     }
@@ -61,6 +77,7 @@ else if (itemID == 14 && instance_place(x, y, objPuzzleInteract)) {
     puzzleGUI = false
     puzzleIndex = 0
     scrSaveGame(false)
+    puzzleUIAlpha = 0
     if (objPuzzleInteract.mode == 9) {
         ds_list_add(global.inventory, 15)
         global.gotItem[15] = true
@@ -84,7 +101,7 @@ else if (itemID == 14 && instance_place(x, y, objPuzzleInteract)) {
 
 
 else { //case for item you can't interact with
-    audio_play_sound(sndInventoryCantAccess, 10, false) //placeholder
+    audio_play_sound(sndGulp, 10, false) //placeholder
     interact = false
 }
 

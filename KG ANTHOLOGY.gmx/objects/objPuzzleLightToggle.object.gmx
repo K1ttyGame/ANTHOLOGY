@@ -57,6 +57,7 @@ image_index = irandom_range(0,1)
         if (x == other.x &amp;&amp; y == other.y+48) image_index = !image_index
         if (x == other.x &amp;&amp; y == other.y-48) image_index = !image_index
     }
+    audio_play_sound(sndNumberBeep2, 10, false)
 }
 </string>
           </argument>

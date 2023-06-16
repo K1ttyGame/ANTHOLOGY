@@ -33,7 +33,7 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bMansionBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="-1" foreground="-1" name="bGlow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="-1" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -123,8 +123,12 @@
     <instance objName="objBlock" x="128" y="384" name="inst_A46FA39C" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="768" y="416" name="inst_8FDC0F32" locked="0" code="roomTo = rGardenRight&#xA;smoothTransition = true&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSaveBlocker" x="512" y="480" name="inst_36480376" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPuzzleInteract" x="256" y="480" name="inst_9347A11F" locked="0" code="mode = 7&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSaveBlocker" x="272" y="448" name="inst_B9F48611" locked="0" code="visible = true&#xA;sprite_index = sprNumPad&#xA;image_xscale = 0.07017&#xA;image_yscale = 0.07017&#xA;depth = 0" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPuzzleInteract" x="256" y="480" name="inst_9347A11F" locked="0" code="mode = 7" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTutorialAppear" x="320" y="160" name="inst_CCF8909C" locked="0" code="myString = &quot;Press Control to open the inventory.&quot;&#xA;" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMansionNumpad" x="272" y="432" name="inst_06D46600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPuzzleMansionDoor" x="464" y="368" name="inst_8A38D8C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPuzzleMansionDoor" x="400" y="368" name="inst_B397C30B" locked="0" code="if (global.openDoor1 == false) {&#xA;    image_xscale = -1&#xA;}&#xA;leftMode = true&#xA;x -= 65&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="384" y="480" name="inst_34DA3FD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bMansionBGTIles" x="160" y="416" w="32" h="32" xo="0" yo="32" id="10015153" name="inst_389F74FE" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -215,7 +219,6 @@
     <tile bgName="bMansionBGTIles" x="640" y="480" w="32" h="32" xo="0" yo="32" id="10015290" name="inst_58B3F1AD" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="512" y="448" w="32" h="32" xo="0" yo="32" id="10015291" name="inst_A3C58468" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="512" y="480" w="32" h="32" xo="0" yo="32" id="10015292" name="inst_F6076A17" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bMansionBGTIles" x="480" y="480" w="32" h="32" xo="0" yo="32" id="10015293" name="inst_91FA6F12" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="288" y="288" w="32" h="32" xo="0" yo="32" id="10015294" name="inst_332A8512" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="288" y="256" w="32" h="32" xo="0" yo="32" id="10015295" name="inst_6CF3FDA8" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="352" y="128" w="32" h="32" xo="0" yo="32" id="10015299" name="inst_B30EBE1B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -229,6 +232,65 @@
     <tile bgName="bMansionBGTIles" x="448" y="192" w="32" h="32" xo="0" yo="32" id="10015315" name="inst_FBEC4480" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="448" y="224" w="32" h="32" xo="0" yo="32" id="10015316" name="inst_1AC57164" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionBGTIles" x="448" y="256" w="32" h="32" xo="0" yo="32" id="10015317" name="inst_9AA52185" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="224" y="448" w="32" h="32" xo="0" yo="32" id="10039803" name="inst_F06C00B7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="224" y="416" w="32" h="32" xo="0" yo="32" id="10039804" name="inst_3D9234EA" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="224" y="384" w="32" h="32" xo="0" yo="32" id="10039807" name="inst_FF5E9178" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="224" y="352" w="32" h="32" xo="0" yo="32" id="10039808" name="inst_723640A0" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="224" y="320" w="32" h="32" xo="0" yo="32" id="10039809" name="inst_09D9F9B9" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="320" w="32" h="32" xo="0" yo="32" id="10039810" name="inst_BC9E0E8A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="288" y="352" w="32" h="32" xo="0" yo="32" id="10039811" name="inst_B0787B2C" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="288" y="384" w="32" h="32" xo="0" yo="32" id="10039812" name="inst_30A9C256" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="288" y="416" w="32" h="32" xo="0" yo="32" id="10039813" name="inst_21D918EF" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="288" y="448" w="32" h="32" xo="0" yo="32" id="10039814" name="inst_343B88FF" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="288" y="480" w="32" h="32" xo="0" yo="32" id="10039815" name="inst_9CEFDF9A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="352" w="32" h="32" xo="0" yo="32" id="10039816" name="inst_CFA12894" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="384" w="32" h="32" xo="0" yo="32" id="10039817" name="inst_8A3469EA" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="416" w="32" h="32" xo="0" yo="32" id="10039818" name="inst_022871FF" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="448" w="32" h="32" xo="0" yo="32" id="10039819" name="inst_F0BF59A6" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="256" y="480" w="32" h="32" xo="0" yo="32" id="10039820" name="inst_72C45818" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="480" w="32" h="32" xo="0" yo="32" id="10039829" name="inst_E5843CCF" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="480" w="32" h="32" xo="0" yo="32" id="10039830" name="inst_F74963D0" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="480" w="32" h="32" xo="0" yo="32" id="10039831" name="inst_0DE1CCAD" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="480" w="32" h="32" xo="0" yo="32" id="10039832" name="inst_49657889" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="480" w="32" h="32" xo="0" yo="32" id="10039833" name="inst_A05218B4" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="480" y="480" w="32" h="32" xo="0" yo="32" id="10039834" name="inst_F06D1236" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="480" y="448" w="32" h="32" xo="0" yo="32" id="10039835" name="inst_AAA85EA0" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="448" w="32" h="32" xo="0" yo="32" id="10039836" name="inst_1ABDE4C7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="448" w="32" h="32" xo="0" yo="32" id="10039837" name="inst_3CB5C1F2" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="448" w="32" h="32" xo="0" yo="32" id="10039838" name="inst_D21D7DE3" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="448" w="32" h="32" xo="0" yo="32" id="10039839" name="inst_AA48F200" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="448" w="32" h="32" xo="0" yo="32" id="10039840" name="inst_3CE2E789" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="416" w="32" h="32" xo="0" yo="32" id="10039841" name="inst_65E2DB82" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="416" w="32" h="32" xo="0" yo="32" id="10039842" name="inst_48853255" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="416" w="32" h="32" xo="0" yo="32" id="10039843" name="inst_1804C79D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="416" w="32" h="32" xo="0" yo="32" id="10039844" name="inst_9584241B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="416" w="32" h="32" xo="0" yo="32" id="10039845" name="inst_1540C759" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="480" y="416" w="32" h="32" xo="0" yo="32" id="10039846" name="inst_9B1D8D4B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="384" w="32" h="32" xo="0" yo="32" id="10039847" name="inst_54A3CC4D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="320" w="32" h="32" xo="0" yo="32" id="10039849" name="inst_702C8697" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="352" w="32" h="32" xo="0" yo="32" id="10039850" name="inst_FF9C4EB5" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="352" w="32" h="32" xo="0" yo="32" id="10039851" name="inst_F369A13C" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="352" w="32" h="32" xo="0" yo="32" id="10039852" name="inst_5C670B43" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="352" w="32" h="32" xo="0" yo="32" id="10039853" name="inst_4D0BF36B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="384" w="32" h="32" xo="0" yo="32" id="10039854" name="inst_3107C0B4" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="384" w="32" h="32" xo="0" yo="32" id="10039855" name="inst_635417C7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="480" y="352" w="32" h="32" xo="0" yo="32" id="10039857" name="inst_ADCBC8CD" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="480" y="384" w="32" h="32" xo="0" yo="32" id="10039858" name="inst_F8D5EC16" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="512" y="384" w="32" h="32" xo="0" yo="32" id="10039859" name="inst_D0D13160" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="384" w="32" h="32" xo="0" yo="32" id="10039860" name="inst_C143FAA7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="384" w="32" h="32" xo="0" yo="32" id="10039861" name="inst_965CCB02" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="352" w="32" h="32" xo="0" yo="32" id="10039862" name="inst_FA6A9646" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="320" w="32" h="32" xo="0" yo="32" id="10039863" name="inst_CC5C3A21" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="448" y="288" w="32" h="32" xo="0" yo="32" id="10039864" name="inst_1C6FAE7D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="512" y="416" w="32" h="32" xo="0" yo="32" id="10039865" name="inst_C619D9CD" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="320" w="32" h="32" xo="0" yo="32" id="10039866" name="inst_D46334AB" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="384" y="320" w="32" h="32" xo="0" yo="32" id="10039867" name="inst_202C4C16" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="320" w="32" h="32" xo="0" yo="32" id="10039868" name="inst_68F792F6" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="432" y="288" w="32" h="32" xo="0" yo="32" id="10039869" name="inst_A15F40F8" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="416" y="288" w="32" h="32" xo="0" yo="32" id="10039870" name="inst_4075818B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="256" w="32" h="32" xo="0" yo="32" id="10039872" name="inst_333ACCF9" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="320" y="288" w="32" h="32" xo="0" yo="32" id="10039873" name="inst_900C6FF1" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bMansionBGTIles" x="352" y="288" w="32" h="32" xo="0" yo="32" id="10039874" name="inst_D136239F" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionTiles" x="0" y="512" w="32" h="32" xo="0" yo="0" id="10014725" name="inst_CDCD4440" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionTiles" x="32" y="512" w="32" h="32" xo="0" yo="0" id="10014726" name="inst_67F6FBB2" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bMansionTiles" x="64" y="512" w="32" h="32" xo="0" yo="0" id="10014727" name="inst_E2610BD5" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

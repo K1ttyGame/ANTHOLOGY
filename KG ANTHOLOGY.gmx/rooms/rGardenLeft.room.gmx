@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -77,8 +77,6 @@
     <instance objName="objSpikeUp" x="368" y="16" name="inst_77B9F44A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="400" y="16" name="inst_1CF6B287" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="336" y="16" name="inst_4528DE6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMovingSpikeLeft" x="480" y="304" name="inst_4070BD81" locked="0" code="path = pSpikeBobUp&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objMovingSpikeLeft" x="480" y="272" name="inst_40ABF41F" locked="0" code="path = pSpikeBobUp&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="448" y="240" name="inst_25FD0D71" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="512" y="240" name="inst_DAD3F5EB" locked="0" code="" scaleX="1" scaleY="3.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="672" y="176" name="inst_1F2DBF4B" locked="0" code="" scaleX="1" scaleY="6.5" colour="4294967295" rotation="0"/>

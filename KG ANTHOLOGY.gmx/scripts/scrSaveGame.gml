@@ -86,6 +86,8 @@ for (var i = 0; i < 20; i++) {
     ds_map_add(saveMap,"cheevoFlag["+string(i)+"]",global.cheevoFlag[i])
 }
 
+ds_map_add(saveMap, "openDoor1", global.openDoor1)
+
 ds_map_add(saveMap,"saveGameClear",global.saveGameClear);
 
 //add md5 hash to verify saves and make them harder to hack

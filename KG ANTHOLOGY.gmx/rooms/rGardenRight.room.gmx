@@ -58,8 +58,6 @@
     <instance objName="objBlock" x="0" y="0" name="inst_782C66DF" locked="0" code="" scaleX="3" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="544" name="inst_BA13868A" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="128" y="480" name="inst_5D68CA03" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeRight" x="160" y="448" name="inst_9644819E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeLeft" x="128" y="448" name="inst_A803D494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="96" y="384" name="inst_5DBD5AD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMovingSpikeDown" x="192" y="400" name="inst_FC183D1D" locked="0" code="sprite_index = sprGardenSpikeDown&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="96" y="352" name="inst_4037FB42" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
@@ -146,6 +144,9 @@
     <instance objName="objBlock" x="608" y="320" name="inst_70BC36A7" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objPuzzleItem" x="352" y="80" name="inst_AE014AE7" locked="0" code="itemID = 7&#xA;sprite_index = sprLighter" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGardenItemDoor" x="448" y="368" name="inst_87E532CC" locked="0" code="sprite_index = sprGlassTexture&#xA;glass = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeUp" x="128" y="448" name="inst_55DDA61B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueLBP" x="192" y="448" name="inst_2717E371" locked="0" code="dialogue[0] = &quot;Listen guy, I don't blame you#if you're stuck.&quot;&#xA;dialogue[1] = &quot;Here's how you use items#with objects in the overworld.&quot;&#xA;dialogue[2] = &quot;Stand in range of#the item you think you are able#to interact with.&quot;&#xA;dialogue[3] = &quot;Then open your inventory and#navigate to the item you#think you can use.&quot;&#xA;dialogue[4] = &quot;Then just inspect the item#and see what happens!&quot;&#xA;dialogue[5] = &quot;You'll know when the item has#no effect. A sound#will play.&quot;&#xA;&#xA;dialogueMax = 5&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="224" y="448" name="inst_F5F243EE" locked="0" code="visible = true&#xA;sprite_index = sprSnarkySignpost&#xA;image_xscale = -1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bMansionBGTIles" x="0" y="416" w="32" h="32" xo="0" yo="32" id="10017494" name="inst_EADBA6B1" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

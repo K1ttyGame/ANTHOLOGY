@@ -37,7 +37,7 @@ spawnDepth = -10000
 audio_sound_gain(musComputerCutscene, 0, 6000)
 if (room == rFieldBoss) scrPlayMusic(musWindAmbient1, true)
 audio_sound_gain(musWindAmbient1, 0, 0)
-audio_sound_gain(musComputerCutscene, 1, 6000)
+//audio_sound_gain(musComputerCutscene, 1, 6000)
 audio_sound_gain(musWindAmbient1, 1, 6000)
 </string>
           </argument>

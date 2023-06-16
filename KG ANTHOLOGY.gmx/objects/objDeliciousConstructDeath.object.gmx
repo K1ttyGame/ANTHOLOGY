@@ -131,6 +131,7 @@ if (phase == 3) {
     value -= 2
     if (y-sprite_yoffset &gt;= room_height) {
         instance_destroy();
+        scrPlayMusic(sndFutureBossComplete, false)
         with instance_create(0, 0, objComputerTransition) roomTo = rFieldTransition
         }
 }

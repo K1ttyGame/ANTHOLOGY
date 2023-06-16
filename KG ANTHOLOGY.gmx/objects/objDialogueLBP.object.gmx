@@ -79,7 +79,7 @@ hintTimer = 300
             <string>if (activate == true) {
 
 if (phase == 0) {
-    if (instance_exists(objPlayer) &amp;&amp; objPlayer.x &gt;= x &amp;&amp; objPlayer.x &lt;= x+32*image_xscale &amp;&amp; objPlayer.y &gt;= y &amp;&amp; objPlayer.y &lt;= y+32*image_yscale) {
+    if (instance_exists(objPlayer) &amp;&amp; objPlayer.x &gt;= x &amp;&amp; objPlayer.x &lt;= x+32*image_xscale &amp;&amp; objPlayer.y &gt;= y &amp;&amp; objPlayer.y &lt;= y+32*image_yscale &amp;&amp; objPlayer.puzzleGUI == false) {
         drawArrowScale = lerp(drawArrowScale, 1, .1)
         if (keyboard_check_pressed(global.upButton)) {
         with objDialogueLBP {activate = false}
@@ -225,6 +225,12 @@ draw_set_alpha(1)
             <kind>1</kind>
             <string>if (phase == 0)  
     draw_sprite_ext(sprDialoguePrompt, 0, x+sprite_width/2, y-32+(bubbleChange), drawArrowScale, drawArrowScale, 0, c_white, 1)
+    
+/*if (phase == 1) {
+    draw_set_color(c_white)
+    //draw_triangle(view_xview+225, view_yview+string_height(dialogue[dialogueIndex])+10+drawBubble+(bubbleChange), view_xview+275, view_yview+string_height(dialogue[dialogueIndex])+10+drawBubble+(bubbleChange), x+sprite_width/2, y+sprite_height/2, false)
+    draw_triangle(view_xview, view_yview, view_xview+100, view_yview+50, x+sprite_width/2, y+sprite_height/2, false)
+    }
 </string>
           </argument>
         </arguments>

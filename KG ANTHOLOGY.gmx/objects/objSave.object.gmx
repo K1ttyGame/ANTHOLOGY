@@ -213,7 +213,8 @@ if (canSave &amp;&amp; instance_exists(objPlayer) &amp;&amp; global.grav == grav
         image_index = 1;
         image_speed = 0.017;
         scrSaveGame(true);
-        if !instance_exists(objSaveEffect) instance_create(x, y, objSaveEffect)
+        //if !instance_exists(objSaveEffect) instance_create(x, y, objSaveEffect)
+        instance_create(x, y, objSaveEffect)
     }
 }
 </string>

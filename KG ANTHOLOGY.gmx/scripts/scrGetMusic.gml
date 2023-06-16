@@ -90,6 +90,13 @@ switch (room)                       //determines which song to play
     case rDungeon9:
         roomSong = musDungeon
         break;
+    case rGardenFarLeft:
+    case rGardenLeft:
+    case rGardenMiddle:
+    case rGardenRight:
+    case rGardenFarRight:
+        roomSong = musGardenPuzzle;
+        break;
     case rPBCutscene1:
         roomSong = musComputerCutscene
         break;

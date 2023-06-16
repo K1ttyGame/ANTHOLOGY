@@ -56,8 +56,8 @@
     <instance objName="objBlock" x="0" y="512" name="inst_B0787424" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="704" y="0" name="inst_65174E7F" locked="0" code="" scaleX="3" scaleY="19" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="480" y="0" name="inst_BE70AB58" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="224" y="448" name="inst_5F9E124B" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeExtender" x="224" y="416" name="inst_F2C5D10D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="224" y="544" name="inst_5F9E124B" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeExtender" x="224" y="512" name="inst_F2C5D10D" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="288" y="384" name="inst_8B256CEF" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="160" y="448" name="inst_C5D6829A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="320" y="192" name="inst_82686D24" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
@@ -106,7 +106,7 @@
     <instance objName="objSpikeUp" x="416" y="192" name="inst_53D3AAE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="608" y="416" name="inst_F7C56CB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="640" y="448" name="inst_648A3C35" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="objSpikeExtender" x="96" y="352" name="inst_0808F2C7" locked="0" code="extendDistance = 64&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSpikeExtender" x="96" y="352" name="inst_0808F2C7" locked="0" code="extendDistance = 64" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="96" y="384" name="inst_E14A1ADA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="64" y="288" name="inst_59AA2177" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="192" y="192" name="inst_2E49C7B9" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
@@ -308,6 +308,7 @@
     <tile bgName="bDungeonExtras" x="576" y="128" w="32" h="32" xo="32" yo="32" id="10031739" name="inst_94DC003F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="576" y="96" w="32" h="32" xo="32" yo="32" id="10031740" name="inst_877211D9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonExtras" x="576" y="64" w="32" h="32" xo="32" yo="32" id="10031741" name="inst_E6FCBD31" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bDungeonExtras" x="224" y="448" w="32" h="32" xo="32" yo="32" id="10039821" name="inst_5363C994" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="32" y="512" w="64" h="64" xo="32" yo="0" id="10031373" name="inst_E0893281" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="0" y="512" w="32" h="64" xo="32" yo="0" id="10031374" name="inst_5A836837" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="0" y="576" w="32" h="32" xo="32" yo="32" id="10031375" name="inst_A218B48D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -368,22 +369,15 @@
     <tile bgName="bDungeonTiles" x="224" y="128" w="16" h="32" xo="0" yo="32" id="10031431" name="inst_E09D6E1E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="224" y="160" w="16" h="64" xo="0" yo="32" id="10031432" name="inst_CFFFD57A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="176" y="480" w="16" h="32" xo="80" yo="0" id="10031433" name="inst_ED31B423" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="240" y="448" w="16" h="32" xo="80" yo="0" id="10031434" name="inst_6BDABAE6" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="160" y="480" w="16" h="32" xo="0" yo="0" id="10031435" name="inst_935F5992" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="224" y="448" w="16" h="32" xo="0" yo="0" id="10031436" name="inst_C6823B67" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bDungeonTiles" x="224" y="544" w="16" h="32" xo="0" yo="0" id="10031436" name="inst_C6823B67" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="160" y="512" w="16" h="32" xo="0" yo="32" id="10031437" name="inst_2AEB8B71" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="160" y="544" w="16" h="32" xo="0" yo="32" id="10031438" name="inst_F9A7E540" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="160" y="576" w="16" h="32" xo="0" yo="32" id="10031439" name="inst_77434372" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="224" y="512" w="16" h="32" xo="0" yo="32" id="10031440" name="inst_C6955CA9" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="224" y="480" w="16" h="32" xo="0" yo="32" id="10031441" name="inst_964FB537" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="224" y="544" w="16" h="32" xo="0" yo="32" id="10031442" name="inst_F927BA7D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="224" y="576" w="16" h="32" xo="0" yo="32" id="10031443" name="inst_2930E691" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="176" y="512" w="16" h="32" xo="80" yo="32" id="10031444" name="inst_EE5C156F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="176" y="544" w="16" h="32" xo="80" yo="32" id="10031447" name="inst_FC5FD15D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="176" y="576" w="16" h="32" xo="80" yo="32" id="10031448" name="inst_6D10760E" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="240" y="480" w="16" h="32" xo="80" yo="32" id="10031449" name="inst_39C588C9" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="240" y="512" w="16" h="32" xo="80" yo="32" id="10031450" name="inst_44988EC2" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bDungeonTiles" x="240" y="544" w="16" h="32" xo="80" yo="32" id="10031451" name="inst_F86AB0AE" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="240" y="576" w="16" h="32" xo="80" yo="32" id="10031452" name="inst_F82A95CB" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="416" y="512" w="32" h="64" xo="0" yo="0" id="10031453" name="inst_98DDC7C2" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="448" y="512" w="32" h="64" xo="64" yo="0" id="10031454" name="inst_46F7A991" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -492,6 +486,7 @@
     <tile bgName="bDungeonTiles" x="624" y="416" w="16" h="32" xo="80" yo="0" id="10031560" name="inst_154FA92F" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="608" y="416" w="16" h="32" xo="0" yo="0" id="10031561" name="inst_87D0C6E8" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bDungeonTiles" x="192" y="544" w="32" h="64" xo="32" yo="0" id="10039193" name="inst_ACD6CC88" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bDungeonTiles" x="240" y="544" w="16" h="32" xo="80" yo="0" id="10039822" name="inst_F5F7B0FA" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

@@ -21,6 +21,8 @@
         <sound>sound\sndPuzzleGetItem</sound>
         <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndArrowShoot</sound>
+        <sound>sound\sndFutureBossComplete</sound>
+        <sound>sound\sndCombineItems</sound>
         <sound>sound\sndShellBounce</sound>
         <sound>sound\sndBounce</sound>
         <sound>sound\sndSaveThumbsUp</sound>
@@ -38,6 +40,7 @@
         <sound>sound\sndBossAlarm</sound>
         <sound>sound\sndTypewriter</sound>
         <sound>sound\sndSpringBounce</sound>
+        <sound>sound\sndHeavyDoor</sound>
         <sound>sound\sndAchievementGet</sound>
         <sound>sound\sndMenuMove</sound>
         <sound>sound\sndMMBossHit</sound>
@@ -49,11 +52,13 @@
         <sound>sound\sndRobotBossDestroy</sound>
         <sound>sound\sndRocksCrumble</sound>
         <sound>sound\sndPBDeath</sound>
+        <sound>sound\sndGlassBreak</sound>
         <sound>sound\sndWarningSound</sound>
         <sound>sound\sndBasketballBounce</sound>
         <sound>sound\sndFutureTyping</sound>
         <sound>sound\sndLockedDoor</sound>
         <sound>sound\sndAcceptFile</sound>
+        <sound>sound\sndFireBurn</sound>
         <sound>sound\sndGeneralCrash</sound>
         <sound>sound\sndLightningBolt</sound>
         <sound>sound\sndHamsterVoice</sound>
@@ -118,6 +123,9 @@
           <sound>sound\musDungeon</sound>
           <sound>sound\musComputerCutscene</sound>
           <sound>sound\musComputer</sound>
+        </sounds>
+        <sounds name="Puzzle">
+          <sound>sound\musGardenPuzzle</sound>
         </sounds>
       </sounds>
     </sounds>
@@ -466,16 +474,20 @@
           <sprite>sprites\sprMansionDoor1</sprite>
           <sprite>sprites\sprNumPadNumbers</sprite>
           <sprite>sprites\sprAnimalPuzzleFrame</sprite>
+          <sprite>sprites\sprCatKeychainFrame</sprite>
           <sprite>sprites\sprWoodFire</sprite>
           <sprite>sprites\sprGlassTexture</sprite>
+          <sprite>sprites\sprGrassFragments</sprite>
           <sprite>sprites\sprNumPad</sprite>
           <sprite>sprites\sprWoodTexture</sprite>
           <sprite>sprites\sprCatSetOpening</sprite>
           <sprite>sprites\sprBanana</sprite>
           <sprite>sprites\sprBookOnBookshelf</sprite>
+          <sprite>sprites\sprPuzzleFlame</sprite>
           <sprite>sprites\sprMansionPoster1</sprite>
           <sprite>sprites\sprMansionPoster2</sprite>
           <sprite>sprites\sprSink</sprite>
+          <sprite>sprites\sprMansionDoor</sprite>
           <sprite>sprites\sprToilet</sprite>
           <sprite>sprites\sprTub</sprite>
           <sprite>sprites\sprFridge</sprite>
@@ -552,7 +564,15 @@
         </sprites>
         <sprites name="Hub">
           <sprite>sprites\sprBeachTitleCard</sprite>
+          <sprite>sprites\sprPBTitleCard</sprite>
           <sprite>sprites\sprMMTitleCard</sprite>
+        </sprites>
+        <sprites name="Globes">
+          <sprite>sprites\sprGlobeEmpty</sprite>
+          <sprite>sprites\sprGlobe20_40Percent</sprite>
+          <sprite>sprites\sprGlobe60_80Percent</sprite>
+          <sprite>sprites\sprGlobe40_60Percent</sprite>
+          <sprite>sprites\sprTitleGlobeFull</sprite>
         </sprites>
       </sprites>
       <sprites name="Characters">
@@ -648,6 +668,7 @@
       <background>background\bMansionTiles</background>
       <background>background\bMansionBGTIles</background>
       <background>background\bMansionBGLighter</background>
+      <background>background\bMansionBGTrueTiles</background>
       <background>background\bMansionBG</background>
       <background>background\bGardenLeaves</background>
       <background>background\bGardenFence</background>
@@ -751,6 +772,7 @@
       <script>scripts\scrGetMusic.gml</script>
       <script>scripts\scrPlayMusic.gml</script>
       <script>scripts\scrStopMusic.gml</script>
+      <script>scripts\scrDrawFileGlobe.gml</script>
       <script>scripts\scrBalanceSound.gml</script>
     </scripts>
     <scripts name="misc">
@@ -946,16 +968,20 @@
         <object>objects\objPortraitDoor</object>
         <object>objects\objGardenItemDoor</object>
         <object>objects\objLightswitchDoor</object>
+        <object>objects\objPuzzleFireDoorAnim</object>
+        <object>objects\objPuzzleGlassPart</object>
         <object>objects\objPuzzleInteract</object>
         <object>objects\objSpaceSpike</object>
         <object>objects\objLibraryDoor</object>
         <object>objects\objBedroomDoor</object>
         <object>objects\objPuzzleBanana</object>
+        <object>objects\objPuzzleMansionDoor</object>
         <object>objects\objPuzzleFridge</object>
         <object>objects\objPuzzleSink</object>
         <object>objects\objPuzzleToilet</object>
         <object>objects\objPuzzleTub</object>
         <object>objects\objPuzzleCards</object>
+        <object>objects\objMansionNumpad</object>
       </objects>
       <objects name="PB">
         <object>objects\objSwingingAxe</object>
@@ -1182,12 +1208,12 @@
       <room>rooms\rSpaceEmpty</room>
     </rooms>
     <rooms name="Puzzle">
+      <room>rooms\rTemplate</room>
       <room>rooms\rGardenFarLeft</room>
       <room>rooms\rGardenLeft</room>
       <room>rooms\rGardenMiddle</room>
       <room>rooms\rGardenRight</room>
       <room>rooms\rGardenFarRight</room>
-      <room>rooms\rTemplate</room>
       <room>rooms\rMansionLeftUp</room>
       <room>rooms\rMansionLeft</room>
       <room>rooms\rMansionCenter</room>

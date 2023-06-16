@@ -85,7 +85,7 @@ else if (keyboard_check_pressed(global.menuBackButton))
     scrSaveConfig();
     global.menuSelectPrev[1] = 0;
     instance_destroy()
-    instance_create(0, 0, objNewFileMenu)
+    objNewFileMenu.phase = 0
     audio_play_sound(sndAcceptFile, 10, false)
     exit;
 }
@@ -160,31 +160,45 @@ view_yview[0] = lerp(view_yview[0], 608, .1)
 draw_set_font(fDefault30);
 draw_set_halign(fa_left);
 
-for(var i = 0; i &lt; optionsNum; i++)
-    draw_text(xSelector,608+ySelector+(ySeperation*i),strSelect[i]);
+for(var i = 0; i &lt; optionsNum; i++) {
+    //draw_text(xSelector,608+ySelector+(ySeperation*i),strSelect[i]);
+    scrDrawTextDropShadow(strSelect[i], c_black, xSelector, 608+ySelector+(ySeperation*i))
+    }
 
 draw_set_halign(fa_right);
 
-if (global.muteMusic)
-    draw_text(xSelector+xSeperation,608+ySelector,"Off");
-else
-    draw_text(xSelector+xSeperation,608+ySelector,"On");
+if (global.muteMusic) {
+    //draw_text(xSelector+xSeperation,608+ySelector,"Off");
+    scrDrawTextDropShadow("Off", c_black, xSelector+xSeperation, 608+ySelector)
+    }
+else {
+    //draw_text(xSelector+xSeperation,608+ySelector,"On");
+    scrDrawTextDropShadow("On", c_black, xSelector+xSeperation, 608+ySelector)
+    }
 
-draw_text(xSelector+xSeperation,608+ySelector+ySeperation,string(global.volumeLevel) + "%");
+//draw_text(xSelector+xSeperation,608+ySelector+ySeperation,string(global.volumeLevel) + "%");
+scrDrawTextDropShadow(string(global.volumeLevel) + "%", c_black, xSelector+xSeperation, 608+ySelector+ySeperation)
     
-if (global.fullscreenMode)
+if (global.fullscreenMode) {
     draw_text(xSelector+xSeperation,608+ySelector+(ySeperation*2),"Fullscreen");
-else
+    scrDrawTextDropShadow("Fullscreen", c_black, xSelector+xSeperation,608+ySelector+(ySeperation*2))
+    }
+else {
     draw_text(xSelector+xSeperation,608+ySelector+(ySeperation*2),"Windowed");
+    scrDrawTextDropShadow("Windowed", c_black, xSelector+xSeperation,608+ySelector+(ySeperation*2))
+    }
 
+draw_sprite_ext(sprPlayerIdle,playerIndex,xSelector-16+2,608+ySelector+(ySeperation*select)+26+2, 1, 1, 0, c_black, .4);
 draw_sprite(sprPlayerIdle,playerIndex,xSelector-16,608+ySelector+(ySeperation*select)+26);
 
 draw_set_font(fTitleFontSmall); //new font, replace if too big
 draw_set_valign(fa_top)
 draw_set_halign(fa_left);
-draw_text(34,608+572,"[Shift] Select");
+//draw_text(34,608+572,"[Shift] Select");
+scrDrawTextDropShadow("[Shift] Select", c_black, 34, 608+572)
 draw_set_halign(fa_right);
-draw_text(766,608+572,"[Z] Leave Menu");
+//draw_text(766,608+572,"[Z] Leave Menu");
+scrDrawTextDropShadow("[Z] Leave Menu", c_black, 766, 608+572)
 
 //draw button info for the options menu
 //draw_set_halign(fa_middle);

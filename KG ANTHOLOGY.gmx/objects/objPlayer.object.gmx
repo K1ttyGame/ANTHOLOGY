@@ -67,6 +67,8 @@ interact = false
 combine = false
 combineIndex = 0
 currentItem = 0
+puzzleUIAlpha = 0
+spawnGlass = 0 //stupid shit because gamemaker won't recognize a variable created in a script like a normal person. YoYoGames is amazing :D
 
 zipline = false
 ziplineCooldown = 0
@@ -596,13 +598,21 @@ if (space == true) {
 if (puzzle) {
     if (keyboard_check_pressed(vk_control)) {
         puzzleGUI = !puzzleGUI
+        
+        if (instance_exists(objDialogueLBP)) objDialogueLBP.phase = 0
+        
         if (puzzleGUI == false) {
             combine = false
             interact = false
         }
     }
+    
+    if (puzzleGUI)
+        {if (puzzleUIAlpha &lt; 1) puzzleUIAlpha += .05}
+    else
+        {if (puzzleUIAlpha &gt; 0) puzzleUIAlpha -= .05}
         
-    if (puzzleGUI) {
+    if (puzzleGUI &amp;&amp; puzzleUIAlpha == 1) {
         objPlayer.frozen = true
         objPlayer.visible = true
         
@@ -895,20 +905,22 @@ if (drink) {
 }
 
 //draw puzzle UI
-if (puzzleGUI) {
+//if (puzzleGUI) {
     draw_set_color(c_black)
-    draw_set_alpha(.8)
+    draw_set_alpha(.8*puzzleUIAlpha)
     //draw_rectangle(view_xview-1, view_yview-1, view_xview+view_wview+1, view_yview+view_hview+1, false)
     draw_rectangle(-1, -1, 801, 609, false) //delete if broken
     draw_set_color(c_white)
-    draw_set_alpha(1)
+    draw_set_alpha(puzzleUIAlpha)
     
     scrDrawInventory()
     
     if (interact) {
         scrInteractDraw(global.inventory[|puzzleIndex])
     }
-}
+    
+    draw_set_alpha(1)
+//}
 </string>
           </argument>
         </arguments>

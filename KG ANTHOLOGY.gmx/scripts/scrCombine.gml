@@ -14,6 +14,7 @@ else if (item1 == 3 && item2 == 1) || (item1 == 1 && item2 == 3){ //per instance
     combine = false
     global.gotItem[4] = true
     scrSaveGame(false)
+    audio_play_sound(sndCombineItems, 10, false)
 }
 
 else if (item1 == 5 && item2 == 6) || (item1 == 6 && item2 == 5){ //per instance cases for combination
@@ -25,6 +26,7 @@ else if (item1 == 5 && item2 == 6) || (item1 == 6 && item2 == 5){ //per instance
     combine = false
     global.gotItem[2] = true
     scrSaveGame(false)
+    audio_play_sound(sndCombineItems, 10, false)
 }
 
 else

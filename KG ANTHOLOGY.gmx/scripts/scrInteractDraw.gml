@@ -49,3 +49,10 @@ if (itemID == 16) {
     draw_sprite_ext(sprMansionPoster2, 0, 408, 312, 1, 1, 0, c_black, .8)
     draw_sprite(sprMansionPoster2, 0, 400, 304)
 }
+
+if (itemID == 15 || itemID == 16) {
+    draw_set_color(c_black)
+    draw_rectangle(-2, -32, -500, 608+32, false)
+    draw_rectangle(800, -32, 1300, 608+32, false)
+    draw_set_color(c_white)
+}

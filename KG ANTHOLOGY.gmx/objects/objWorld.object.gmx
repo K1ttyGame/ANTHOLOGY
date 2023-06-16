@@ -169,6 +169,12 @@ if (keyboard_check_pressed(vk_insert) &amp;&amp; !global.gamePaused){
         scrSaveGame(true)
     audio_play_sound(sndNumberBeep, 10, false)
 }
+
+if (keyboard_check_pressed(ord('8'))) {
+    var acheevo;
+    acheevo = get_string("Which achievement (num 0-19)?", 0);
+    global.cheevoFlag[acheevo] = true
+}
 </string>
           </argument>
         </arguments>
